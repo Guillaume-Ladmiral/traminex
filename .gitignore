@@ -1,0 +1,91 @@
+# Environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Compiled extension built by the documented Ubuntu pybind11 build
+# (docs/DEV_BUILD.md). The *.pyd rule above only covers the Windows suffix, and
+# development is Linux-only per AGENTS.md, so the .so was the one that actually
+# dirtied the tree.
+traminex/_pb_kernels*.so
+
+# Coverage data written into the checkout root by the CI command
+# (.github/workflows/ci.yml)
+.coverage
+.coverage.*
+
+# Example byproducts: examples/plot_index.py and examples/plot_chronograms.py
+# write these into the process working directory.
+/index_plot.png
+/index_grouped.png
+/chronograms_reps.png
+
+# Packaging
+*.egg-info/
+# Anchored to the repository root: `python -m build` writes ./build and ./dist.
+# Unanchored, `build/` also matched the vendored CRAN trees' own build/
+# directories, whose files are inside the retained archives and must stay
+# trackable for the byte-identity provenance proof.
+/build/
+/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+$OutputDir/
+# Audit and remediation runs write large evidence trees here, so the directory is
+# ignored by default and the artifacts the project actually maintains are
+# re-included explicitly below. Every tracked file under reports/audit/ needs a
+# negation: without one, `git add` REFUSES it once it leaves the index, which
+# would silently drop a regenerated authoritative artifact.
+reports/audit/*
+# Generated artifacts named authoritative by docs/DOCS_POLICY.md; refreshed by
+# `make audit` and `scripts/generate_semantic_parity_ledger.py`.
+!reports/audit/traminex_api_audit.csv
+!reports/audit/traminex_api_audit.json
+!reports/audit/traminex_api_audit.md
+!reports/audit/traminex_semantic_parity.json
+# Scratch audit output at the repository root. Anchored: unanchored, these also
+# matched the retained reports under archive/status_reports/.
+/.audit_*.txt
+/.audit_*.json
+/AUDIT_REPORT_*.txt
+/AUDIT_REPORT_*.md
+.vscode/
+
+# Vendor and external
+.external/
+vendor/
+pysan/
+
+# Quarto site output
+docs/_site/
+
+# graphify generated outputs (regenerate with /graphify traminex/ cpp/ docs/)
+# keep the human-readable report + graph data, ignore bulky/scratch artifacts
+graphify-out/graph.html
+graphify-out/cache/
+graphify-out/.graphify_chunk_*.json
+graphify-out/cost.json
+graphify-out/manifest.json
+.graphify_*
+
+# Archives
+*.tar.gz
+!SOURCES/TraMineR_2.2-14.tar.gz
+!SOURCES/TraMineRextras_0.6.9.tar.gz
+
+# Keep local graph caches and raw verification evidence out of Git. Retain the
+# compact study, verification and owner-decision records used by the prompts.
+/.codebase-memory/*

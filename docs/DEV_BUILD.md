@@ -321,9 +321,9 @@ checkout.
 
 ```bash
 make install-profiles \
-  SDIST=/absolute/path/to/traminex-0.2.2.tar.gz \
-  PURE_WHEEL=/absolute/path/to/traminex-0.2.2-py3-none-any.whl \
-  COMPILED_WHEEL=/absolute/path/to/traminex-0.2.2-cp312-cp312-linux_x86_64.whl \
+  SDIST=/absolute/path/to/traminex-0.2.3.tar.gz \
+  PURE_WHEEL=/absolute/path/to/traminex-0.2.3-py3-none-any.whl \
+  COMPILED_WHEEL=/absolute/path/to/traminex-0.2.3-cp312-cp312-linux_x86_64.whl \
   PYTHON311=/absolute/path/to/python3.11 \
   UV=/absolute/path/to/uv \
   DOT=/absolute/path/to/dot \

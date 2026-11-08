@@ -152,7 +152,8 @@ cross-project migrations, a traminex version change, tagging, or publication.
 On 2026-11-07 the maintainer decided to release below 1.0: traminex 0.2.0, with
 the same 226-name public API; on 2026-11-08, the patch release 0.2.1, with that API and
 the fixes of 2026-11-07, then the patch release 0.2.2, the same code without this machine's paths in
-the published files. The 1.0 release (R6) stays postponed until it is
+the published files, and the patch release 0.2.3, with part 4 of the consumed-component gaps
+tested, three defects fixed and a source package whose tests find every file they read. The 1.0 release (R6) stays postponed until it is
 explicitly resumed.
 
 ## 2. Who depends on whom (the layering)

@@ -498,4 +498,4 @@ Thank you for contributing to traminex.
 ---
 
 **Last Updated**: 2026-07-15
-**Version**: 0.2.2
+**Version**: 0.2.3

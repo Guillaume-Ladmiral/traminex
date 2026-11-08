@@ -13,7 +13,7 @@ import pytest
 from scripts import verify_install_profiles as verifier
 
 METADATA = (
-    "Metadata-Version: 2.3\n" "Name: traminex\n" "Version: 0.2.2\n" "Requires-Python: >=3.11\n"
+    "Metadata-Version: 2.3\n" "Name: traminex\n" "Version: 0.2.3\n" "Requires-Python: >=3.11\n"
 )
 
 
@@ -31,7 +31,7 @@ def _write_wheel(
         for index, content in enumerate(metadata):
             suffix = "" if index == 0 else f"-duplicate-{index}"
             archive.writestr(
-                f"traminex{suffix}-0.2.2.dist-info/METADATA",
+                f"traminex{suffix}-0.2.3.dist-info/METADATA",
                 content,
             )
         for name in binaries:
@@ -41,14 +41,14 @@ def _write_wheel(
 def _write_sdist(path: Path, *, py_typed: bool = True) -> None:
     with tarfile.open(path, "w:gz") as archive:
         for name, content in (
-            ("traminex-0.2.2/PKG-INFO", METADATA.encode()),
-            ("traminex-0.2.2/traminex/__init__.py", b""),
+            ("traminex-0.2.3/PKG-INFO", METADATA.encode()),
+            ("traminex-0.2.3/traminex/__init__.py", b""),
         ):
             info = tarfile.TarInfo(name)
             info.size = len(content)
             archive.addfile(info, io.BytesIO(content))
         if py_typed:
-            info = tarfile.TarInfo("traminex-0.2.2/traminex/py.typed")
+            info = tarfile.TarInfo("traminex-0.2.3/traminex/py.typed")
             info.size = 0
             archive.addfile(info, io.BytesIO())
 
@@ -88,8 +88,8 @@ def test_owned_root_refuses_symlinks_and_dangerous_paths(tmp_path):
 
 
 def test_artifact_inspection_hashes_and_classifies_wheels(tmp_path):
-    pure = tmp_path / "traminex-0.2.2-py3-none-any.whl"
-    compiled = tmp_path / "traminex-0.2.2-cp312-cp312-linux_x86_64.whl"
+    pure = tmp_path / "traminex-0.2.3-py3-none-any.whl"
+    compiled = tmp_path / "traminex-0.2.3-cp312-cp312-linux_x86_64.whl"
     _write_wheel(pure)
     _write_wheel(
         compiled,
@@ -102,7 +102,7 @@ def test_artifact_inspection_hashes_and_classifies_wheels(tmp_path):
     assert len(pure_info["sha256"]) == 64
     assert pure_info["compiled_extension"] is False
     assert compiled_info["compiled_extension"] is True
-    assert pure_info["version"] == compiled_info["version"] == "0.2.2"
+    assert pure_info["version"] == compiled_info["version"] == "0.2.3"
     assert pure_info["requires_python"] == ">=3.11"
 
 
@@ -110,7 +110,7 @@ def test_artifact_inspection_rejects_missing_corrupt_and_wrong_extension(tmp_pat
     missing = tmp_path / "missing.whl"
     corrupt = tmp_path / "corrupt.whl"
     corrupt.write_bytes(b"not a zip archive")
-    wrong_extension = tmp_path / "traminex-0.2.2.zip"
+    wrong_extension = tmp_path / "traminex-0.2.3.zip"
     _write_wheel(wrong_extension)
 
     with pytest.raises(FileNotFoundError):
@@ -123,7 +123,7 @@ def test_artifact_inspection_rejects_missing_corrupt_and_wrong_extension(tmp_pat
 
 @pytest.mark.parametrize("metadata_count", [0, 2])
 def test_wheel_inspection_requires_exactly_one_metadata_member(tmp_path, metadata_count):
-    wheel = tmp_path / "traminex-0.2.2-py3-none-any.whl"
+    wheel = tmp_path / "traminex-0.2.3-py3-none-any.whl"
     _write_wheel(wheel, metadata=(METADATA,) * metadata_count)
 
     with pytest.raises(ValueError, match="exactly one METADATA"):
@@ -133,12 +133,12 @@ def test_wheel_inspection_requires_exactly_one_metadata_member(tmp_path, metadat
 @pytest.mark.parametrize(
     "metadata",
     [
-        METADATA.replace("Version: 0.2.2", "Version: 0.0.9"),
+        METADATA.replace("Version: 0.2.3", "Version: 0.0.9"),
         METADATA.replace("Requires-Python: >=3.11", "Requires-Python: >=3.12"),
     ],
 )
 def test_wheel_inspection_rejects_metadata_contract_drift(tmp_path, metadata):
-    wheel = tmp_path / "traminex-0.2.2-py3-none-any.whl"
+    wheel = tmp_path / "traminex-0.2.3-py3-none-any.whl"
     _write_wheel(wheel, metadata=(metadata,))
 
     with pytest.raises(ValueError, match="metadata drift"):
@@ -146,8 +146,8 @@ def test_wheel_inspection_rejects_metadata_contract_drift(tmp_path, metadata):
 
 
 def test_wheel_inspection_rejects_malformed_binary_profiles(tmp_path):
-    pure_with_binary = tmp_path / "traminex-0.2.2-py3-none-any.whl"
-    compiled_without_kernel = tmp_path / "traminex-0.2.2-cp312-cp312-linux_x86_64.whl"
+    pure_with_binary = tmp_path / "traminex-0.2.3-py3-none-any.whl"
+    compiled_without_kernel = tmp_path / "traminex-0.2.3-cp312-cp312-linux_x86_64.whl"
     compiled_with_extra_binary = tmp_path / "traminex-extra-cp312-cp312-linux_x86_64.whl"
     _write_wheel(pure_with_binary, binaries=("traminex/unexpected.so",))
     _write_wheel(compiled_without_kernel)
@@ -168,8 +168,8 @@ def test_wheel_inspection_rejects_malformed_binary_profiles(tmp_path):
 
 
 def test_artifact_inspection_requires_packaged_typing_marker(tmp_path):
-    wheel = tmp_path / "traminex-0.2.2-py3-none-any.whl"
-    sdist = tmp_path / "traminex-0.2.2.tar.gz"
+    wheel = tmp_path / "traminex-0.2.3-py3-none-any.whl"
+    sdist = tmp_path / "traminex-0.2.3.tar.gz"
     _write_wheel(wheel, py_typed=False)
     _write_sdist(sdist, py_typed=False)
 

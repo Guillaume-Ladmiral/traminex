@@ -183,7 +183,7 @@ D_raw = seqdist(x, method="OM", subm="TRATE", norm=None)
 
 - `traminex.api_manifest.PUBLIC_API`, runtime `traminex.__all__`, and the root
   review stub are the same ordered 226-name list.
-- The package version is 0.2.2 and is derived from installed metadata.
+- The package version is 0.2.3 and is derived from installed metadata.
 - Bare `mypy` checks the complete configured package module set. Installed wheels expose inline
   annotations through `traminex/py.typed`; the separate `stubs/` tree is a
   bidirectional review gate and is not installed as a competing package.

@@ -55,10 +55,10 @@ def _build_sdist(
     )
     if result.returncode != 0:
         return result, set()
-    sdist = next(output_dir.glob("traminex-0.2.2.tar.gz"))
+    sdist = next(output_dir.glob("traminex-0.2.3.tar.gz"))
     with tarfile.open(sdist, "r:gz") as archive:
         members = {
-            member.name.removeprefix("traminex-0.2.2/")
+            member.name.removeprefix("traminex-0.2.3/")
             for member in archive.getmembers()
             if member.isfile()
         }
@@ -125,10 +125,10 @@ def test_sdist_excludes_internal_control_and_reference_artifacts(tmp_path: Path)
     )
 
     assert result.returncode == 0, result.stdout + result.stderr
-    sdist = next(output_dir.glob("traminex-0.2.2.tar.gz"))
+    sdist = next(output_dir.glob("traminex-0.2.3.tar.gz"))
     with tarfile.open(sdist, "r:gz") as archive:
         names = archive.getnames()
-    members = {name.removeprefix("traminex-0.2.2/") for name in names}
+    members = {name.removeprefix("traminex-0.2.3/") for name in names}
     assert members.isdisjoint(internal_paths)
     assert any(name.endswith("/pyproject.toml") for name in names)
     assert any(name.endswith("/traminex/py.typed") for name in names)
@@ -222,7 +222,7 @@ def test_default_wheel_build_is_compiler_free(tmp_path: Path):
     )
 
     assert result.returncode == 0, result.stdout + result.stderr
-    wheel = next(output_dir.glob("traminex-0.2.2-*.whl"))
+    wheel = next(output_dir.glob("traminex-0.2.3-*.whl"))
     assert wheel.name.endswith("-py3-none-any.whl")
     with zipfile.ZipFile(wheel) as archive:
         names = archive.namelist()

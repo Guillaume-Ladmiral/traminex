@@ -39,6 +39,10 @@ def _as_rectangular_object(data: object) -> np.ndarray:
             rows = [list(row) for row in source_rows]
         except (TypeError, ValueError):
             raise ValueError("seqdef expects a 2D table of states") from None
+        # A cell that is itself a sequence (rows given as matrices, say) is not a state;
+        # without this, its printed form became a state (2026-11-08, gap part 4).
+        if any(isinstance(cell, (list, tuple, np.ndarray)) for row in rows for cell in row):
+            raise ValueError("seqdef expects a 2D table of states")
         width = max((len(row) for row in rows), default=0)
         padded: np.ndarray = np.full((len(rows), width), None, dtype=object)
         for row_index, row in enumerate(rows):

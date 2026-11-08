@@ -2,7 +2,7 @@
 """
 Verification script for key audit improvements.
 
-This script is intentionally aligned with the current public APIs in version 0.2.2.
+This script is intentionally aligned with the current public APIs in version 0.2.3.
 """
 
 from __future__ import annotations

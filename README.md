@@ -2,7 +2,7 @@
 
 Python package for sequence analysis, inspired by TraMineR and TraMineRextras.
 
-Current package version: `0.2.2`.
+Current package version: `0.2.3`.
 
 > **Project family.** traminex is the **foundation** of a four-project family.
 > `pyweightedcluster` owns sequence clustering, `py_seqplot` owns the dedicated
@@ -11,6 +11,33 @@ Current package version: `0.2.2`.
 > [ECOSYSTEM.md](ECOSYSTEM.md) for the charter, [DUPLICATES.md](DUPLICATES.md)
 > for the duplicate inventory, and [MIGRATION_PLAN.md](MIGRATION_PLAN.md) for the
 > convergence plan. Any AI assistant should read [AGENTS.md](AGENTS.md) first.
+
+## Install a release
+
+traminex is not on PyPI. Each release is published on the project's GitHub
+[releases page](https://github.com/Guillaume-Ladmiral/traminex/releases), with
+its packages and a `SHA256SUMS` file. Python 3.11 or 3.12 is required. Install
+the pure-Python wheel of the current release; pip takes NumPy, pandas and SciPy
+from PyPI:
+
+```bash
+python -m pip install https://github.com/Guillaume-Ladmiral/traminex/releases/download/v0.2.3/traminex-0.2.3-py3-none-any.whl
+```
+
+To add an optional profile (`plot`, `perf`, `extras` or `tree`, described in the
+next section), put its name before the address:
+
+```bash
+python -m pip install "traminex[plot] @ https://github.com/Guillaume-Ladmiral/traminex/releases/download/v0.2.3/traminex-0.2.3-py3-none-any.whl"
+```
+
+On Linux x86-64 with CPython 3.12 you can install the compiled wheel instead,
+`traminex-0.2.3-cp312-cp312-linux_x86_64.whl` from the same release; it adds the
+optional pybind11/OpenMP distance backend (see "Packaging and optional compiled
+kernels" below). Both wheels need the ICU library, and tree plots need GraphViz;
+pip cannot install either, and the next section says how to get them. To check
+the files you downloaded, save `SHA256SUMS` from the release beside them and run
+`sha256sum -c --ignore-missing SHA256SUMS`.
 
 ## Install (development)
 

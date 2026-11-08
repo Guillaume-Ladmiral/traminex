@@ -922,6 +922,16 @@ def _r_state_text(value: object) -> str:
             exp_digits=2,
         )
         return scientific if len(scientific) < len(fixed) else fixed
+    if isinstance(value, (complex, np.complexfloating)):
+        # R's as.character: each part as a double, the imaginary sign between, "i" last
+        # ("1+1i", "-1-2.5i", "1+0i" for a negative zero, "Inf-Infi"); 2026-11-08, gap part 4.
+        number = complex(value)
+
+        def part(component: float) -> str:
+            return "NaN" if np.isnan(component) else _r_state_text(float(component))
+
+        sign = "-" if number.imag < 0 else "+"
+        return f"{part(number.real)}{sign}{part(abs(number.imag))}i"
     return str(value)
 
 

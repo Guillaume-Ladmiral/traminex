@@ -1,0 +1,1941 @@
+{
+  "generated_at_utc": "2026-11-08T11:29:30.964863+00:00",
+  "versions": {
+    "TraMineR": "2.2-14",
+    "TraMineRextras": "0.6.9",
+    "traminex": "0.2.3"
+  },
+  "summary": {
+    "TraMineR_exports": 125,
+    "TraMineR_s3": 65,
+    "TraMineR_total": 190,
+    "TraMineRextras_exports": 42,
+    "TraMineRextras_s3": 8,
+    "TraMineRextras_total": 50,
+    "R_total_unique": 240,
+    "Python_public_api": 226,
+    "exact_matches": 129,
+    "sanitized_name_matches": 24,
+    "with_suggestions": 67,
+    "missing": 20
+  },
+  "exact_matches": [
+    {
+      "r": "FCE_to_TSE",
+      "py": "FCE_to_TSE"
+    },
+    {
+      "r": "HSPELL_to_STS",
+      "py": "HSPELL_to_STS"
+    },
+    {
+      "r": "TSE_to_STS",
+      "py": "TSE_to_STS"
+    },
+    {
+      "r": "alphabet",
+      "py": "alphabet"
+    },
+    {
+      "r": "cpal",
+      "py": "cpal"
+    },
+    {
+      "r": "createdatadiscrete",
+      "py": "createdatadiscrete"
+    },
+    {
+      "r": "dissCompare",
+      "py": "dissCompare"
+    },
+    {
+      "r": "dissassoc",
+      "py": "dissassoc"
+    },
+    {
+      "r": "disscenter",
+      "py": "disscenter"
+    },
+    {
+      "r": "dissdomassoc",
+      "py": "dissdomassoc"
+    },
+    {
+      "r": "dissindic",
+      "py": "dissindic"
+    },
+    {
+      "r": "dissmergegroups",
+      "py": "dissmergegroups"
+    },
+    {
+      "r": "dissmfacw",
+      "py": "dissmfacw"
+    },
+    {
+      "r": "dissrep",
+      "py": "dissrep"
+    },
+    {
+      "r": "dissrf",
+      "py": "dissrf"
+    },
+    {
+      "r": "disstree",
+      "py": "disstree"
+    },
+    {
+      "r": "disstree2dot",
+      "py": "disstree2dot"
+    },
+    {
+      "r": "disstree2dotp",
+      "py": "disstree2dotp"
+    },
+    {
+      "r": "disstreedisplay",
+      "py": "disstreedisplay"
+    },
+    {
+      "r": "disstreeleaf",
+      "py": "disstreeleaf"
+    },
+    {
+      "r": "dissvar",
+      "py": "dissvar"
+    },
+    {
+      "r": "gower_matrix",
+      "py": "gower_matrix"
+    },
+    {
+      "r": "rowmode",
+      "py": "rowmode"
+    },
+    {
+      "r": "seqBIC",
+      "py": "seqBIC"
+    },
+    {
+      "r": "seqCompare",
+      "py": "seqCompare"
+    },
+    {
+      "r": "seqHtplot",
+      "py": "seqHtplot"
+    },
+    {
+      "r": "seqLLCP",
+      "py": "seqLLCP"
+    },
+    {
+      "r": "seqLLCS",
+      "py": "seqLLCS"
+    },
+    {
+      "r": "seqLRT",
+      "py": "seqLRT"
+    },
+    {
+      "r": "seqMD",
+      "py": "seqMD"
+    },
+    {
+      "r": "seqST",
+      "py": "seqST"
+    },
+    {
+      "r": "seqalign",
+      "py": "seqalign"
+    },
+    {
+      "r": "seqauto",
+      "py": "seqauto"
+    },
+    {
+      "r": "seqcomp",
+      "py": "seqcomp"
+    },
+    {
+      "r": "seqconc",
+      "py": "seqconc"
+    },
+    {
+      "r": "seqcost",
+      "py": "seqcost"
+    },
+    {
+      "r": "seqcta",
+      "py": "seqcta"
+    },
+    {
+      "r": "seqdHplot",
+      "py": "seqdHplot"
+    },
+    {
+      "r": "seqdecomp",
+      "py": "seqdecomp"
+    },
+    {
+      "r": "seqdef",
+      "py": "seqdef"
+    },
+    {
+      "r": "seqdiff",
+      "py": "seqdiff"
+    },
+    {
+      "r": "seqdim",
+      "py": "seqdim"
+    },
+    {
+      "r": "seqdist",
+      "py": "seqdist"
+    },
+    {
+      "r": "seqdistmc",
+      "py": "seqdistmc"
+    },
+    {
+      "r": "seqdomassoc",
+      "py": "seqdomassoc"
+    },
+    {
+      "r": "seqdss",
+      "py": "seqdss"
+    },
+    {
+      "r": "seqdur",
+      "py": "seqdur"
+    },
+    {
+      "r": "seqe2stm",
+      "py": "seqe2stm"
+    },
+    {
+      "r": "seqeapplysub",
+      "py": "seqeapplysub"
+    },
+    {
+      "r": "seqecmpgroup",
+      "py": "seqecmpgroup"
+    },
+    {
+      "r": "seqeconstraint",
+      "py": "seqeconstraint"
+    },
+    {
+      "r": "seqecontain",
+      "py": "seqecontain"
+    },
+    {
+      "r": "seqecreate",
+      "py": "seqecreate"
+    },
+    {
+      "r": "seqedist",
+      "py": "seqedist"
+    },
+    {
+      "r": "seqedplot",
+      "py": "seqedplot"
+    },
+    {
+      "r": "seqefsub",
+      "py": "seqefsub"
+    },
+    {
+      "r": "seqeid",
+      "py": "seqeid"
+    },
+    {
+      "r": "seqelength",
+      "py": "seqelength"
+    },
+    {
+      "r": "seqemlt",
+      "py": "seqemlt"
+    },
+    {
+      "r": "seqentrans",
+      "py": "seqentrans"
+    },
+    {
+      "r": "seqerulesdisc",
+      "py": "seqerulesdisc"
+    },
+    {
+      "r": "seqetm",
+      "py": "seqetm"
+    },
+    {
+      "r": "seqeweight",
+      "py": "seqeweight"
+    },
+    {
+      "r": "seqfind",
+      "py": "seqfind"
+    },
+    {
+      "r": "seqformat",
+      "py": "seqformat"
+    },
+    {
+      "r": "seqfplot",
+      "py": "seqfplot"
+    },
+    {
+      "r": "seqfpos",
+      "py": "seqfpos"
+    },
+    {
+      "r": "seqfposend",
+      "py": "seqfposend"
+    },
+    {
+      "r": "seqgen",
+      "py": "seqgen"
+    },
+    {
+      "r": "seqgranularity",
+      "py": "seqgranularity"
+    },
+    {
+      "r": "seqhasmiss",
+      "py": "seqhasmiss"
+    },
+    {
+      "r": "seqibad",
+      "py": "seqibad"
+    },
+    {
+      "r": "seqici",
+      "py": "seqici"
+    },
+    {
+      "r": "seqidegrad",
+      "py": "seqidegrad"
+    },
+    {
+      "r": "seqient",
+      "py": "seqient"
+    },
+    {
+      "r": "seqimplic",
+      "py": "seqimplic"
+    },
+    {
+      "r": "seqindic",
+      "py": "seqindic"
+    },
+    {
+      "r": "seqinsecurity",
+      "py": "seqinsecurity"
+    },
+    {
+      "r": "seqintegr",
+      "py": "seqintegr"
+    },
+    {
+      "r": "seqipos",
+      "py": "seqipos"
+    },
+    {
+      "r": "seqistatd",
+      "py": "seqistatd"
+    },
+    {
+      "r": "seqivardur",
+      "py": "seqivardur"
+    },
+    {
+      "r": "seqivolatility",
+      "py": "seqivolatility"
+    },
+    {
+      "r": "seqlength",
+      "py": "seqlength"
+    },
+    {
+      "r": "seqlogp",
+      "py": "seqlogp"
+    },
+    {
+      "r": "seqmaintokens",
+      "py": "seqmaintokens"
+    },
+    {
+      "r": "seqmeant",
+      "py": "seqmeant"
+    },
+    {
+      "r": "seqmodst",
+      "py": "seqmodst"
+    },
+    {
+      "r": "seqmpos",
+      "py": "seqmpos"
+    },
+    {
+      "r": "seqmsplot",
+      "py": "seqmsplot"
+    },
+    {
+      "r": "seqmtplot",
+      "py": "seqmtplot"
+    },
+    {
+      "r": "seqnum",
+      "py": "seqnum"
+    },
+    {
+      "r": "seqpcfilter",
+      "py": "seqpcfilter"
+    },
+    {
+      "r": "seqpcplot",
+      "py": "seqpcplot"
+    },
+    {
+      "r": "seqplot",
+      "py": "seqplot"
+    },
+    {
+      "r": "seqplotMD",
+      "py": "seqplotMD"
+    },
+    {
+      "r": "seqpm",
+      "py": "seqpm"
+    },
+    {
+      "r": "seqpolyads",
+      "py": "seqpolyads"
+    },
+    {
+      "r": "seqprecarity",
+      "py": "seqprecarity"
+    },
+    {
+      "r": "seqprecstart",
+      "py": "seqprecstart"
+    },
+    {
+      "r": "seqrecode",
+      "py": "seqrecode"
+    },
+    {
+      "r": "seqrep",
+      "py": "seqrep"
+    },
+    {
+      "r": "seqrf",
+      "py": "seqrf"
+    },
+    {
+      "r": "seqrfplot",
+      "py": "seqrfplot"
+    },
+    {
+      "r": "seqrplot",
+      "py": "seqrplot"
+    },
+    {
+      "r": "seqsamm",
+      "py": "seqsamm"
+    },
+    {
+      "r": "seqsammeha",
+      "py": "seqsammeha"
+    },
+    {
+      "r": "seqsammseq",
+      "py": "seqsammseq"
+    },
+    {
+      "r": "seqsep",
+      "py": "seqsep"
+    },
+    {
+      "r": "seqsha",
+      "py": "seqsha"
+    },
+    {
+      "r": "seqsplot",
+      "py": "seqsplot"
+    },
+    {
+      "r": "seqstart",
+      "py": "seqstart"
+    },
+    {
+      "r": "seqstatd",
+      "py": "seqstatd"
+    },
+    {
+      "r": "seqstatf",
+      "py": "seqstatf"
+    },
+    {
+      "r": "seqstatl",
+      "py": "seqstatl"
+    },
+    {
+      "r": "seqsubm",
+      "py": "seqsubm"
+    },
+    {
+      "r": "seqsubsn",
+      "py": "seqsubsn"
+    },
+    {
+      "r": "seqsurv",
+      "py": "seqsurv"
+    },
+    {
+      "r": "seqtab",
+      "py": "seqtab"
+    },
+    {
+      "r": "seqtabstocc",
+      "py": "seqtabstocc"
+    },
+    {
+      "r": "seqtransn",
+      "py": "seqtransn"
+    },
+    {
+      "r": "seqtrate",
+      "py": "seqtrate"
+    },
+    {
+      "r": "seqtree",
+      "py": "seqtree"
+    },
+    {
+      "r": "seqtree2dot",
+      "py": "seqtree2dot"
+    },
+    {
+      "r": "seqtreedisplay",
+      "py": "seqtreedisplay"
+    },
+    {
+      "r": "sorti",
+      "py": "sorti"
+    },
+    {
+      "r": "sortv",
+      "py": "sortv"
+    },
+    {
+      "r": "stlab",
+      "py": "stlab"
+    },
+    {
+      "r": "toPersonPeriod",
+      "py": "toPersonPeriod"
+    }
+  ],
+  "sanitized_name_matches": [
+    {
+      "r": "alphabet<-",
+      "py": "alphabet"
+    },
+    {
+      "r": "cpal<-",
+      "py": "cpal"
+    },
+    {
+      "r": "disstree.assign",
+      "py": "disstree_assign"
+    },
+    {
+      "r": "disstree.get.rules",
+      "py": "disstree_get_rules"
+    },
+    {
+      "r": "dissvar.grp",
+      "py": "dissvar_grp"
+    },
+    {
+      "r": "group.p",
+      "py": "group_p"
+    },
+    {
+      "r": "is.eseq",
+      "py": "is_eseq"
+    },
+    {
+      "r": "is.seqelist",
+      "py": "is_seqelist"
+    },
+    {
+      "r": "is.stslist",
+      "py": "is_stslist"
+    },
+    {
+      "r": "plot.SAMM",
+      "py": "plot_SAMM"
+    },
+    {
+      "r": "plot.eseq",
+      "py": "plot_eseq"
+    },
+    {
+      "r": "plot.seqelist",
+      "py": "plot_seqelist"
+    },
+    {
+      "r": "plot.seqimplic",
+      "py": "plot_seqimplic"
+    },
+    {
+      "r": "plot.subseqelist",
+      "py": "plot_subseqelist"
+    },
+    {
+      "r": "plot.subseqelistchisq",
+      "py": "plot_subseqelistchisq"
+    },
+    {
+      "r": "seqelength<-",
+      "py": "seqelength"
+    },
+    {
+      "r": "seqeweight<-",
+      "py": "seqeweight"
+    },
+    {
+      "r": "seqgen.missing",
+      "py": "seqgen_missing"
+    },
+    {
+      "r": "seqindic.dyn",
+      "py": "seqindic_dyn"
+    },
+    {
+      "r": "seqplot.rf",
+      "py": "seqplot_rf"
+    },
+    {
+      "r": "seqplot.tentrop",
+      "py": "seqplot_tentrop"
+    },
+    {
+      "r": "seqplot.tentrop.m",
+      "py": "seqplot_tentrop_m"
+    },
+    {
+      "r": "seqrep.grp",
+      "py": "seqrep_grp"
+    },
+    {
+      "r": "stlab<-",
+      "py": "stlab"
+    }
+  ],
+  "suggested_mappings": [
+    {
+      "r": "[.seqelist",
+      "suggestions": [
+        {
+          "py": "is_seqelist",
+          "score": 0.8571
+        },
+        {
+          "py": "plot_seqelist",
+          "score": 0.7826
+        },
+        {
+          "py": "seqedist",
+          "score": 0.7778
+        },
+        {
+          "py": "is_subseqelist",
+          "score": 0.75
+        },
+        {
+          "py": "seqdist",
+          "score": 0.7059
+        }
+      ]
+    },
+    {
+      "r": "[.stslist",
+      "suggestions": [
+        {
+          "py": "STSList",
+          "score": 0.875
+        },
+        {
+          "py": "is_stslist",
+          "score": 0.8421
+        },
+        {
+          "py": "is_subseqelist",
+          "score": 0.6087
+        },
+        {
+          "py": "is_seqelist",
+          "score": 0.6
+        }
+      ]
+    },
+    {
+      "r": "[.stslist.freq",
+      "suggestions": [
+        {
+          "py": "STSList",
+          "score": 0.6667
+        },
+        {
+          "py": "is_stslist",
+          "score": 0.6667
+        }
+      ]
+    },
+    {
+      "r": "[.stslist.modst",
+      "suggestions": [
+        {
+          "py": "is_stslist",
+          "score": 0.64
+        },
+        {
+          "py": "STSList",
+          "score": 0.6364
+        }
+      ]
+    },
+    {
+      "r": "[.stslist.statd",
+      "suggestions": [
+        {
+          "py": "is_stslist",
+          "score": 0.64
+        },
+        {
+          "py": "STSList",
+          "score": 0.6364
+        }
+      ]
+    },
+    {
+      "r": "[.subseqelist",
+      "suggestions": [
+        {
+          "py": "is_subseqelist",
+          "score": 0.8889
+        },
+        {
+          "py": "plot_subseqelist",
+          "score": 0.8276
+        },
+        {
+          "py": "is_seqelist",
+          "score": 0.75
+        },
+        {
+          "py": "plot_subseqelistchisq",
+          "score": 0.7059
+        },
+        {
+          "py": "plot_seqelist",
+          "score": 0.6923
+        }
+      ]
+    },
+    {
+      "r": "as.character.seqelist",
+      "suggestions": [
+        {
+          "py": "is_seqelist",
+          "score": 0.625
+        }
+      ]
+    },
+    {
+      "r": "hist.dissassoc",
+      "suggestions": [
+        {
+          "py": "dissassoc",
+          "score": 0.7826
+        },
+        {
+          "py": "dissdomassoc",
+          "score": 0.6923
+        },
+        {
+          "py": "dissassoc_test",
+          "score": 0.6429
+        },
+        {
+          "py": "dissassoc_effect",
+          "score": 0.6
+        }
+      ]
+    },
+    {
+      "r": "levels.eseq",
+      "suggestions": [
+        {
+          "py": "is_eseq",
+          "score": 0.6667
+        },
+        {
+          "py": "plot_eseq",
+          "score": 0.6
+        }
+      ]
+    },
+    {
+      "r": "levels.seqelist",
+      "suggestions": [
+        {
+          "py": "is_seqelist",
+          "score": 0.7692
+        },
+        {
+          "py": "plot_seqelist",
+          "score": 0.7143
+        },
+        {
+          "py": "is_subseqelist",
+          "score": 0.6897
+        },
+        {
+          "py": "plot_subseqelist",
+          "score": 0.6452
+        },
+        {
+          "py": "seqedist",
+          "score": 0.6087
+        }
+      ]
+    },
+    {
+      "r": "plot.emlt",
+      "suggestions": [
+        {
+          "py": "plot_seqelist",
+          "score": 0.7273
+        },
+        {
+          "py": "plot_seqimplic",
+          "score": 0.6957
+        },
+        {
+          "py": "plot_SAMM",
+          "score": 0.6667
+        },
+        {
+          "py": "plot_eseq",
+          "score": 0.6667
+        },
+        {
+          "py": "plot_subseqelist",
+          "score": 0.64
+        }
+      ]
+    },
+    {
+      "r": "plot.seqalign",
+      "suggestions": [
+        {
+          "py": "plot_seqelist",
+          "score": 0.7692
+        },
+        {
+          "py": "SeqAlign",
+          "score": 0.7619
+        },
+        {
+          "py": "seqalign",
+          "score": 0.7619
+        },
+        {
+          "py": "plot_seqimplic",
+          "score": 0.7407
+        },
+        {
+          "py": "plot_eseq",
+          "score": 0.7273
+        }
+      ]
+    },
+    {
+      "r": "plot.seqdiff",
+      "suggestions": [
+        {
+          "py": "plot_eseq",
+          "score": 0.7619
+        },
+        {
+          "py": "seqdiff",
+          "score": 0.7368
+        },
+        {
+          "py": "plot_seqelist",
+          "score": 0.72
+        },
+        {
+          "py": "plot_seqimplic",
+          "score": 0.6923
+        },
+        {
+          "py": "plot_subseqelist",
+          "score": 0.6429
+        }
+      ]
+    },
+    {
+      "r": "plot.seqpcplot",
+      "suggestions": [
+        {
+          "py": "seqpcplot",
+          "score": 0.7826
+        },
+        {
+          "py": "plot_seqelist",
+          "score": 0.7407
+        },
+        {
+          "py": "plot_seqimplic",
+          "score": 0.7143
+        },
+        {
+          "py": "plot_eseq",
+          "score": 0.6957
+        },
+        {
+          "py": "plot_subseqelist",
+          "score": 0.6667
+        }
+      ]
+    },
+    {
+      "r": "plot.seqrf",
+      "suggestions": [
+        {
+          "py": "seqrfplot",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "r": "plot.stslist",
+      "suggestions": [
+        {
+          "py": "seqplot",
+          "score": 1.0
+        },
+        {
+          "py": "sequence_index_plot",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "r": "plot.stslist.freq",
+      "suggestions": [
+        {
+          "py": "seqfplot",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "r": "plot.stslist.meant",
+      "suggestions": [
+        {
+          "py": "seqmtplot",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "r": "plot.stslist.modst",
+      "suggestions": [
+        {
+          "py": "seqmsplot",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "r": "plot.stslist.rep",
+      "suggestions": [
+        {
+          "py": "seqrplot",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "r": "plot.stslist.statd",
+      "suggestions": [
+        {
+          "py": "seqHtplot",
+          "score": 1.0
+        },
+        {
+          "py": "seqdHplot",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "r": "plot.stslist.surv",
+      "suggestions": [
+        {
+          "py": "plot_seqelist",
+          "score": 0.6667
+        },
+        {
+          "py": "plot_subseqelist",
+          "score": 0.6667
+        },
+        {
+          "py": "plot_subseqelistchisq",
+          "score": 0.6316
+        }
+      ]
+    },
+    {
+      "r": "print.diss.rep",
+      "suggestions": [
+        {
+          "py": "dissrep",
+          "score": 0.6667
+        }
+      ]
+    },
+    {
+      "r": "print.dissassoc",
+      "suggestions": [
+        {
+          "py": "dissassoc",
+          "score": 0.75
+        },
+        {
+          "py": "dissdomassoc",
+          "score": 0.6667
+        },
+        {
+          "py": "dissassoc_test",
+          "score": 0.6207
+        }
+      ]
+    },
+    {
+      "r": "print.dissrf",
+      "suggestions": [
+        {
+          "py": "dissrf",
+          "score": 0.6667
+        }
+      ]
+    },
+    {
+      "r": "print.disstree",
+      "suggestions": [
+        {
+          "py": "disstree",
+          "score": 0.7273
+        },
+        {
+          "py": "disstree2dot",
+          "score": 0.6154
+        },
+        {
+          "py": "disstree_fit",
+          "score": 0.6154
+        },
+        {
+          "py": "disstreeleaf",
+          "score": 0.6154
+        }
+      ]
+    },
+    {
+      "r": "print.eseq",
+      "suggestions": [
+        {
+          "py": "plot_eseq",
+          "score": 0.7368
+        },
+        {
+          "py": "is_eseq",
+          "score": 0.7059
+        }
+      ]
+    },
+    {
+      "r": "print.eseqsum",
+      "suggestions": [
+        {
+          "py": "plot_eseq",
+          "score": 0.6364
+        },
+        {
+          "py": "is_eseq",
+          "score": 0.6
+        },
+        {
+          "py": "seqsubm",
+          "score": 0.6
+        }
+      ]
+    },
+    {
+      "r": "print.sdomassoc",
+      "suggestions": [
+        {
+          "py": "dissdomassoc",
+          "score": 0.7407
+        },
+        {
+          "py": "seqdomassoc",
+          "score": 0.6923
+        }
+      ]
+    },
+    {
+      "r": "print.seqalign",
+      "suggestions": [
+        {
+          "py": "SeqAlign",
+          "score": 0.7273
+        },
+        {
+          "py": "seqalign",
+          "score": 0.7273
+        },
+        {
+          "py": "seqalignplot",
+          "score": 0.6154
+        }
+      ]
+    },
+    {
+      "r": "print.seqdiff",
+      "suggestions": [
+        {
+          "py": "seqdiff",
+          "score": 0.7
+        }
+      ]
+    },
+    {
+      "r": "print.seqeconstraint",
+      "suggestions": [
+        {
+          "py": "seqeconstraint",
+          "score": 0.8235
+        },
+        {
+          "py": "seqecontain",
+          "score": 0.7097
+        },
+        {
+          "py": "seqentrans",
+          "score": 0.6
+        }
+      ]
+    },
+    {
+      "r": "print.seqelist",
+      "suggestions": [
+        {
+          "py": "plot_seqelist",
+          "score": 0.8148
+        },
+        {
+          "py": "is_seqelist",
+          "score": 0.8
+        },
+        {
+          "py": "plot_subseqelist",
+          "score": 0.7333
+        },
+        {
+          "py": "is_subseqelist",
+          "score": 0.7143
+        },
+        {
+          "py": "seqedist",
+          "score": 0.6364
+        }
+      ]
+    },
+    {
+      "r": "print.seqidegrad",
+      "suggestions": [
+        {
+          "py": "seqidegrad",
+          "score": 0.7692
+        }
+      ]
+    },
+    {
+      "r": "print.seqimplic",
+      "suggestions": [
+        {
+          "py": "plot_seqimplic",
+          "score": 0.8276
+        },
+        {
+          "py": "seqimplic",
+          "score": 0.75
+        }
+      ]
+    },
+    {
+      "r": "print.seqipos",
+      "suggestions": [
+        {
+          "py": "seqipos",
+          "score": 0.7
+        },
+        {
+          "py": "plot_seqelist",
+          "score": 0.6154
+        },
+        {
+          "py": "seqfpos",
+          "score": 0.6
+        },
+        {
+          "py": "seqmpos",
+          "score": 0.6
+        }
+      ]
+    },
+    {
+      "r": "print.seqivardur",
+      "suggestions": [
+        {
+          "py": "seqivardur",
+          "score": 0.7692
+        }
+      ]
+    },
+    {
+      "r": "print.seqrf",
+      "suggestions": [
+        {
+          "py": "seqrf",
+          "score": 0.625
+        },
+        {
+          "py": "plot_eseq",
+          "score": 0.6
+        }
+      ]
+    },
+    {
+      "r": "print.seqtree",
+      "suggestions": [
+        {
+          "py": "seqtree",
+          "score": 0.7
+        }
+      ]
+    },
+    {
+      "r": "print.stslist",
+      "suggestions": [
+        {
+          "py": "is_stslist",
+          "score": 0.7826
+        },
+        {
+          "py": "STSList",
+          "score": 0.7
+        },
+        {
+          "py": "plot_subseqelist",
+          "score": 0.6207
+        },
+        {
+          "py": "plot_seqelist",
+          "score": 0.6154
+        }
+      ]
+    },
+    {
+      "r": "print.stslist.freq",
+      "suggestions": [
+        {
+          "py": "is_stslist",
+          "score": 0.6429
+        }
+      ]
+    },
+    {
+      "r": "print.stslist.meant",
+      "suggestions": [
+        {
+          "py": "is_stslist",
+          "score": 0.6207
+        }
+      ]
+    },
+    {
+      "r": "print.stslist.modst",
+      "suggestions": [
+        {
+          "py": "is_stslist",
+          "score": 0.6207
+        }
+      ]
+    },
+    {
+      "r": "print.stslist.rep",
+      "suggestions": [
+        {
+          "py": "is_stslist",
+          "score": 0.6667
+        }
+      ]
+    },
+    {
+      "r": "print.stslist.statd",
+      "suggestions": [
+        {
+          "py": "is_stslist",
+          "score": 0.6207
+        }
+      ]
+    },
+    {
+      "r": "print.subseqelist",
+      "suggestions": [
+        {
+          "py": "plot_subseqelist",
+          "score": 0.8485
+        },
+        {
+          "py": "is_subseqelist",
+          "score": 0.8387
+        },
+        {
+          "py": "plot_subseqelistchisq",
+          "score": 0.7368
+        },
+        {
+          "py": "plot_seqelist",
+          "score": 0.7333
+        },
+        {
+          "py": "is_seqelist",
+          "score": 0.7143
+        }
+      ]
+    },
+    {
+      "r": "rbind.stslist",
+      "suggestions": [
+        {
+          "py": "is_stslist",
+          "score": 0.7826
+        },
+        {
+          "py": "STSList",
+          "score": 0.7
+        }
+      ]
+    },
+    {
+      "r": "read.tda.mdist",
+      "suggestions": [
+        {
+          "py": "createdatadiscrete",
+          "score": 0.625
+        }
+      ]
+    },
+    {
+      "r": "recodef",
+      "suggestions": [
+        {
+          "py": "seqrecode",
+          "score": 0.75
+        },
+        {
+          "py": "seqdef",
+          "score": 0.6154
+        }
+      ]
+    },
+    {
+      "r": "seqIplot",
+      "suggestions": [
+        {
+          "py": "seqplot",
+          "score": 0.9333
+        },
+        {
+          "py": "seqfplot",
+          "score": 0.875
+        },
+        {
+          "py": "seqrplot",
+          "score": 0.875
+        },
+        {
+          "py": "seqsplot",
+          "score": 0.875
+        },
+        {
+          "py": "seqdiffplot",
+          "score": 0.8421
+        }
+      ]
+    },
+    {
+      "r": "seqdplot",
+      "suggestions": [
+        {
+          "py": "seqdHplot",
+          "score": 0.9412
+        },
+        {
+          "py": "seqedplot",
+          "score": 0.9412
+        },
+        {
+          "py": "seqplot",
+          "score": 0.9333
+        },
+        {
+          "py": "seqfplot",
+          "score": 0.875
+        },
+        {
+          "py": "seqrplot",
+          "score": 0.875
+        }
+      ]
+    },
+    {
+      "r": "seqfcheck",
+      "suggestions": [
+        {
+          "py": "seqconc",
+          "score": 0.625
+        }
+      ]
+    },
+    {
+      "r": "seqintegration",
+      "suggestions": [
+        {
+          "py": "seqintegr",
+          "score": 0.7826
+        },
+        {
+          "py": "seqentrans",
+          "score": 0.6667
+        },
+        {
+          "py": "seqidegrad",
+          "score": 0.6667
+        },
+        {
+          "py": "seqtrate",
+          "score": 0.6364
+        },
+        {
+          "py": "seqistatd",
+          "score": 0.6087
+        }
+      ]
+    },
+    {
+      "r": "seqiplot",
+      "suggestions": [
+        {
+          "py": "seqplot",
+          "score": 0.9333
+        },
+        {
+          "py": "seqfplot",
+          "score": 0.875
+        },
+        {
+          "py": "seqrplot",
+          "score": 0.875
+        },
+        {
+          "py": "seqsplot",
+          "score": 0.875
+        },
+        {
+          "py": "seqdiffplot",
+          "score": 0.8421
+        }
+      ]
+    },
+    {
+      "r": "seqlegend",
+      "suggestions": [
+        {
+          "py": "seqgen",
+          "score": 0.8
+        },
+        {
+          "py": "state_legend",
+          "score": 0.7619
+        },
+        {
+          "py": "SeqAlign",
+          "score": 0.7059
+        },
+        {
+          "py": "seqalign",
+          "score": 0.7059
+        },
+        {
+          "py": "seqeid",
+          "score": 0.6667
+        }
+      ]
+    },
+    {
+      "r": "seqlength.align",
+      "suggestions": [
+        {
+          "py": "seqlength",
+          "score": 0.75
+        },
+        {
+          "py": "seqelength",
+          "score": 0.72
+        },
+        {
+          "py": "SeqAlign",
+          "score": 0.6957
+        },
+        {
+          "py": "seqalign",
+          "score": 0.6957
+        },
+        {
+          "py": "seqecontain",
+          "score": 0.6923
+        }
+      ]
+    },
+    {
+      "r": "seqprecorr",
+      "suggestions": [
+        {
+          "py": "seqrecode",
+          "score": 0.7368
+        },
+        {
+          "py": "seqprecarity",
+          "score": 0.7273
+        },
+        {
+          "py": "seqprecstart",
+          "score": 0.7273
+        },
+        {
+          "py": "seqdecomp",
+          "score": 0.6316
+        },
+        {
+          "py": "seqpcplot",
+          "score": 0.6316
+        }
+      ]
+    },
+    {
+      "r": "str.eseq",
+      "suggestions": [
+        {
+          "py": "is_eseq",
+          "score": 0.8
+        },
+        {
+          "py": "plot_eseq",
+          "score": 0.7059
+        },
+        {
+          "py": "disstree",
+          "score": 0.625
+        }
+      ]
+    },
+    {
+      "r": "str.seqelist",
+      "suggestions": [
+        {
+          "py": "is_seqelist",
+          "score": 0.8696
+        },
+        {
+          "py": "plot_seqelist",
+          "score": 0.8
+        },
+        {
+          "py": "is_subseqelist",
+          "score": 0.7692
+        },
+        {
+          "py": "STSList",
+          "score": 0.7368
+        },
+        {
+          "py": "seqedist",
+          "score": 0.7
+        }
+      ]
+    },
+    {
+      "r": "summary.ddomassoc",
+      "suggestions": [
+        {
+          "py": "seqdomassoc",
+          "score": 0.6429
+        },
+        {
+          "py": "dissdomassoc",
+          "score": 0.6207
+        }
+      ]
+    },
+    {
+      "r": "summary.diss.rep",
+      "suggestions": [
+        {
+          "py": "dissrep",
+          "score": 0.6087
+        }
+      ]
+    },
+    {
+      "r": "summary.dissrf",
+      "suggestions": [
+        {
+          "py": "dissrf",
+          "score": 0.6
+        }
+      ]
+    },
+    {
+      "r": "summary.eseq",
+      "suggestions": [
+        {
+          "py": "is_eseq",
+          "score": 0.6316
+        }
+      ]
+    },
+    {
+      "r": "summary.seqelist",
+      "suggestions": [
+        {
+          "py": "is_seqelist",
+          "score": 0.7407
+        },
+        {
+          "py": "is_subseqelist",
+          "score": 0.6667
+        },
+        {
+          "py": "plot_subseqelist",
+          "score": 0.625
+        },
+        {
+          "py": "plot_seqelist",
+          "score": 0.6207
+        }
+      ]
+    },
+    {
+      "r": "summary.seqpcplot",
+      "suggestions": [
+        {
+          "py": "seqpcplot",
+          "score": 0.6923
+        }
+      ]
+    },
+    {
+      "r": "summary.stslist",
+      "suggestions": [
+        {
+          "py": "is_stslist",
+          "score": 0.72
+        },
+        {
+          "py": "STSList",
+          "score": 0.6364
+        }
+      ]
+    },
+    {
+      "r": "summary.stslist.rep",
+      "suggestions": [
+        {
+          "py": "is_stslist",
+          "score": 0.6207
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "TraMineR.check.depr.args",
+    "TraMineRInternalLayout",
+    "TraMineRInternalLegend",
+    "TraMineRInternalNodeInit",
+    "TraMineRInternalSeqeage",
+    "TraMineRInternalSeqgbar",
+    "TraMineRInternalSplitInit",
+    "TraMineRInternalWeightedInertiaDist",
+    "as.character.eseq",
+    "convert.g",
+    "hist.TraMineRPermut",
+    "pamward",
+    "plot.dynin",
+    "print.TraMineRPermut",
+    "print.dissmultifactor",
+    "print.dynin",
+    "print.emlt",
+    "print.seqprec",
+    "summary.TraMineRPermut",
+    "summary.seqrf"
+  ],
+  "python_public_api": [
+    "DHDConfig",
+    "DURConfig",
+    "EventSequence",
+    "FCE_to_TSE",
+    "HSPELL_to_STS",
+    "LCSLCPConfig",
+    "OMConfig",
+    "STSList",
+    "STS_to_SPELL",
+    "STS_to_SRS",
+    "STS_to_TSE",
+    "SeqAlign",
+    "SeqMD",
+    "TRATEConfig",
+    "TSE_to_STS",
+    "alphabet",
+    "chronogram",
+    "cluster_agglomerative",
+    "cluster_chronograms",
+    "cluster_chronograms_with_representatives",
+    "cluster_representatives",
+    "cluster_summary",
+    "cpal",
+    "createdatadiscrete",
+    "default_configs",
+    "dissCompare",
+    "dissassoc",
+    "dissassoc_effect",
+    "dissassoc_test",
+    "disscenter",
+    "disscenter_double_center",
+    "dissdomassoc",
+    "dissindic",
+    "dissmergegroups",
+    "dissmfacw",
+    "dissrep",
+    "dissrf",
+    "disstree",
+    "disstree2dot",
+    "disstree2dot_explore",
+    "disstree2dotp",
+    "disstree_assign",
+    "disstree_feature_importance",
+    "disstree_fit",
+    "disstree_get_rules",
+    "disstree_leaf_summary",
+    "disstree_plot",
+    "disstree_predict",
+    "disstreedisplay",
+    "disstreeleaf",
+    "dissvar",
+    "dissvar_grp",
+    "dissvar_summary",
+    "double_center_matrix",
+    "duration_boxplot",
+    "entropy",
+    "events_to_state_sequences",
+    "events_transition_degrees",
+    "events_transition_matrix",
+    "frequent_event_pairs",
+    "frequent_event_pairs_timegap",
+    "frequent_events",
+    "frequent_ngrams",
+    "frequent_subsequences",
+    "from_condensed",
+    "get_lcp_length",
+    "get_rlcp_length",
+    "gower_matrix",
+    "group_p",
+    "is_eseq",
+    "is_seqelist",
+    "is_stslist",
+    "is_subseqelist",
+    "medoid_index",
+    "om_trate_pairwise",
+    "omloc",
+    "overlay_representatives_on_index_plot",
+    "plot_SAMM",
+    "plot_eseq",
+    "plot_seqelist",
+    "plot_seqimplic",
+    "plot_subseqelist",
+    "plot_subseqelistchisq",
+    "rowmode",
+    "sanitize_distance_matrix",
+    "seqBIC",
+    "seqCompare",
+    "seqHtplot",
+    "seqLLCP",
+    "seqLLCS",
+    "seqLRT",
+    "seqMD",
+    "seqMD_distances",
+    "seqMD_gridsearch_weights",
+    "seqMD_optimize_weights",
+    "seqRLCP",
+    "seqST",
+    "seqalign",
+    "seqalignplot",
+    "seqasnum",
+    "seqauto",
+    "seqcomp",
+    "seqconc",
+    "seqcost",
+    "seqcta",
+    "seqdHplot",
+    "seqdecomp",
+    "seqdef",
+    "seqdef_from_long",
+    "seqdiff",
+    "seqdiffplot",
+    "seqdim",
+    "seqdist",
+    "seqdistmc",
+    "seqdomassoc",
+    "seqdss",
+    "seqdur",
+    "seqe2stm",
+    "seqeapplysub",
+    "seqecmpgroup",
+    "seqeconstraint",
+    "seqecontain",
+    "seqecreate",
+    "seqedist",
+    "seqedplot",
+    "seqefsub",
+    "seqeid",
+    "seqelength",
+    "seqemlt",
+    "seqentrans",
+    "seqeordplot",
+    "seqerules",
+    "seqerulesdisc",
+    "seqetm",
+    "seqeweight",
+    "seqfind",
+    "seqformat",
+    "seqfplot",
+    "seqfpos",
+    "seqfposend",
+    "seqfrequency_plot",
+    "seqgen",
+    "seqgen_missing",
+    "seqgranularity",
+    "seqhasmiss",
+    "seqibad",
+    "seqici",
+    "seqidegrad",
+    "seqient",
+    "seqimplic",
+    "seqindic",
+    "seqindic_dyn",
+    "seqinsecurity",
+    "seqintegr",
+    "seqipos",
+    "seqistatd",
+    "seqivardur",
+    "seqivolatility",
+    "seqlength",
+    "seqlogp",
+    "seqmaintokens",
+    "seqmeant",
+    "seqmodst",
+    "seqmpos",
+    "seqmsplot",
+    "seqmtplot",
+    "seqnum",
+    "seqpcfilter",
+    "seqpcplot",
+    "seqplot",
+    "seqplotMD",
+    "seqplot_rf",
+    "seqplot_tentrop",
+    "seqplot_tentrop_m",
+    "seqpm",
+    "seqpolyads",
+    "seqprecarity",
+    "seqprecstart",
+    "seqrecode",
+    "seqrep",
+    "seqrep_grp",
+    "seqrf",
+    "seqrfplot",
+    "seqrplot",
+    "seqsamm",
+    "seqsammeha",
+    "seqsammseq",
+    "seqsep",
+    "seqsha",
+    "seqsplot",
+    "seqstart",
+    "seqstatd",
+    "seqstatf",
+    "seqstatl",
+    "seqsubm",
+    "seqsubsn",
+    "seqsurv",
+    "seqsurvplot",
+    "seqtab",
+    "seqtabstocc",
+    "seqtransn",
+    "seqtransn_count",
+    "seqtrate",
+    "seqtree",
+    "seqtree2dot",
+    "seqtree_cv_fit",
+    "seqtree_fit",
+    "seqtree_leaf_summary",
+    "seqtree_plot",
+    "seqtree_predict",
+    "seqtreedisplay",
+    "sequence_index_plot",
+    "sequence_index_plot_grouped",
+    "sorti",
+    "sortv",
+    "state_distribution_plot",
+    "state_legend",
+    "state_legend_figure",
+    "stlab",
+    "toPersonPeriod",
+    "to_condensed",
+    "transition_heatmap",
+    "turbulence_exact",
+    "turbulence_proxy",
+    "weighted_inertia",
+    "weighted_pairwise_sum"
+  ]
+}

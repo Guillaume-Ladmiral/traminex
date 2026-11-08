@@ -147,7 +147,7 @@ def inspect_wheel(path: Path, *, expect_compiled: bool) -> dict[str, Any]:
     compiled = expect_compiled
     if "traminex/py.typed" not in names:
         raise ValueError("wheel is missing traminex/py.typed")
-    if version != "0.2.2" or requires_python != ">=3.11":
+    if version != "0.2.3" or requires_python != ">=3.11":
         raise ValueError(
             f"wheel metadata drift: version={version!r}, requires_python={requires_python!r}"
         )
@@ -182,7 +182,7 @@ def inspect_sdist(path: Path) -> dict[str, Any]:
     names = [member.name for member in members]
     if not any(name.endswith("/traminex/py.typed") for name in names):
         raise ValueError("sdist is missing traminex/py.typed")
-    if version != "0.2.2" or requires_python != ">=3.11":
+    if version != "0.2.3" or requires_python != ">=3.11":
         raise ValueError(
             f"sdist metadata drift: version={version!r}, requires_python={requires_python!r}"
         )
@@ -291,7 +291,7 @@ def _common_smoke(profile: ProfileDefinition) -> str:
         checkout = Path({str(ROOT)!r}).resolve()
         origin = Path(traminex.__file__).resolve()
         assert not origin.is_relative_to(checkout), (origin, checkout)
-        assert importlib.metadata.version("traminex") == "0.2.2"
+        assert importlib.metadata.version("traminex") == "0.2.3"
         assert traminex.__all__ == PUBLIC_API
         assert len(PUBLIC_API) == len(set(PUBLIC_API)) == 226
 

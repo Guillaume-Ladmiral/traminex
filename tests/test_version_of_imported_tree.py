@@ -87,12 +87,12 @@ def test_without_a_distribution_the_tree_pyproject_decides(monkeypatch) -> None:
 
     monkeypatch.setattr(traminex._metadata, "distribution", missing)
 
-    assert traminex._resolve_version() == "0.2.2"
+    assert traminex._resolve_version() == "0.2.3"
 
 
 def test_the_checkout_reports_its_own_version() -> None:
     assert Path(traminex.__file__).resolve() == REPO / "traminex" / "__init__.py"
-    assert traminex.__version__ == "0.2.2"
+    assert traminex.__version__ == "0.2.3"
 
 
 def test_a_copied_tree_reports_its_own_pyproject_version(tmp_path: Path) -> None:
@@ -103,9 +103,9 @@ def test_a_copied_tree_reports_its_own_pyproject_version(tmp_path: Path) -> None
         ignore=shutil.ignore_patterns("__pycache__", "*.so"),
     )
     pyproject = (REPO / "pyproject.toml").read_text(encoding="utf-8")
-    assert pyproject.count('version = "0.2.2"') == 1
+    assert pyproject.count('version = "0.2.3"') == 1
     (copy / "pyproject.toml").write_text(
-        pyproject.replace('version = "0.2.2"', 'version = "9.9.9"'), encoding="utf-8"
+        pyproject.replace('version = "0.2.3"', 'version = "9.9.9"'), encoding="utf-8"
     )
     code = (
         "import sys\n"
@@ -124,5 +124,5 @@ def test_a_copied_tree_reports_its_own_pyproject_version(tmp_path: Path) -> None
 
     imported, version, installed = result.stdout.split()
     assert imported == str(copy / "traminex" / "__init__.py")
-    assert installed == "0.2.2"
+    assert installed == "0.2.3"
     assert version == "9.9.9"

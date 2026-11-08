@@ -410,7 +410,7 @@ def test_the_sweep_denominator_is_what_the_report_claims():
     # + make_goldens_ledger_items.R (batch 18).
     # + make_goldens_disstree_weighted_gate.R and make_goldens_consumed_items.R (2026-11-02).
     # + make_goldens_study_findings.R (2026-11-07).
-    assert SWEEP["generators"] == 209
+    assert SWEEP["generators"] == 210
     assert SWEEP["functions"] == 127
     # make_goldens_check_costs.R exercises check.costs = FALSE of seqcost and seqMD:
     # total 699 -> 701, both 375 -> 377.

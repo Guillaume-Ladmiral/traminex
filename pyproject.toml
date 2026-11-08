@@ -4,7 +4,7 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "traminex"
-version = "0.2.2"
+version = "0.2.3"
 description = "R-faithful social-science sequence analysis porting TraMineR and TraMineRextras"
 readme = "README.md"
 authors = [{name = "PROJECT_PY_TRAMINEX"}]
@@ -48,6 +48,7 @@ sdist.include = [
   ".github/workflows/render-docs.yml",
   ".github/workflows/wheels.yml",
   "/.gitattributes",
+  "/.gitignore",
   "/.pre-commit-config.yaml",
   "/CHANGELOG.md",
   "/CMakeLists.txt",
@@ -58,6 +59,7 @@ sdist.include = [
   "/MIGRATION_PLAN.md",
   "/Makefile",
   "/NOTICE",
+  "/PYWEIGHTEDCLUSTER_CONSUMER_NOTICE_20260921.md",
   "/README.md",
   "/ROADMAP.md",
   "/TraMineR_examples.md",
@@ -582,6 +584,7 @@ sdist.include = [
   "docs/USAGE_new_apis.qmd",
   "docs/VISUALIZATION_SERIES_CONTRACT.md",
   "docs/_quarto.yml",
+  "docs/superpowers/specs/2026-07-12-traminex-full-parity-closeout-design.md",
   "examples/disstree_example.ipynb",
   "examples/distance_profiles.py",
   "examples/events_analytics.py",
@@ -589,6 +592,10 @@ sdist.include = [
   "examples/p0_features_demo.py",
   "examples/plot_chronograms.py",
   "examples/plot_index.py",
+  "reports/audit/traminex_api_audit.csv",
+  "reports/audit/traminex_api_audit.json",
+  "reports/audit/traminex_api_audit.md",
+  "reports/audit/traminex_semantic_parity.json",
   "reports/parity/README.md",
   "reports/parity/mapping_traminex_vs_TraMineR.csv",
   "reports/parity/mapping_traminex_vs_TraMineRextras.csv",
@@ -680,6 +687,7 @@ sdist.include = [
   "scripts/r_goldens/make_goldens_events_obj.R",
   "scripts/r_goldens/make_goldens_events_wide_corpus.R",
   "scripts/r_goldens/make_goldens_factor_level_order.R",
+  "scripts/r_goldens/make_goldens_gap_part4.R",
   "scripts/r_goldens/make_goldens_generated_cost_messages.R",
   "scripts/r_goldens/make_goldens_gower.R",
   "scripts/r_goldens/make_goldens_group_compare.R",
@@ -1101,6 +1109,7 @@ sdist.include = [
   "tests/r_goldens/factor_level_order_diss.csv",
   "tests/r_goldens/fce_to_tse_cases.csv",
   "tests/r_goldens/fce_to_tse_errors.txt",
+  "tests/r_goldens/gap_part4.csv",
   "tests/r_goldens/generated_cost_messages.csv",
   "tests/r_goldens/gower_raw_uw.csv",
   "tests/r_goldens/gower_raw_w.csv",
@@ -1747,6 +1756,9 @@ sdist.include = [
   "tests/test_config_dataclasses.py",
   "tests/test_config_dataclasses_agree_with_seqdist.py",
   "tests/test_construction_items.py",
+  "tests/test_consumed_gaps_part4_analysis.py",
+  "tests/test_consumed_gaps_part4_construction.py",
+  "tests/test_consumed_gaps_part4_distances.py",
   "tests/test_consumed_surface.py",
   "tests/test_cost_methods_parity.py",
   "tests/test_costs_and_dhd.py",

@@ -170,7 +170,7 @@ def test_cli_writes_machine_readable_report(tmp_path):
     report = json.loads(output.read_text())
     assert report["schema_version"] == 1
     assert report["config"]["method"] == "HAM"
-    assert report["metadata"]["package"]["version"] == "0.2.2"
+    assert report["metadata"]["package"]["version"] == "0.2.3"
     assert report["metadata"]["python"]["executable"]
     assert report["metadata"]["platform"]["system"] == "Linux"
     assert report["metadata"]["cpu"]["logical_count"]

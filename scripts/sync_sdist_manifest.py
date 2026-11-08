@@ -20,6 +20,7 @@ REPO = Path(__file__).resolve().parents[1]
 ROOT_FILES = frozenset(
     {
         ".gitattributes",
+        ".gitignore",
         ".pre-commit-config.yaml",
         "CHANGELOG.md",
         "CMakeLists.txt",
@@ -30,6 +31,7 @@ ROOT_FILES = frozenset(
         "MIGRATION_PLAN.md",
         "Makefile",
         "NOTICE",
+        "PYWEIGHTEDCLUSTER_CONSUMER_NOTICE_20260921.md",
         "README.md",
         "ROADMAP.md",
         "TraMineR_examples.md",
@@ -49,6 +51,7 @@ SOURCE_PREFIXES = (
     "benchmarks/",
     "cpp/",
     "examples/",
+    "reports/audit/",
     "reports/parity/",
     "scripts/",
     "stubs/",
@@ -56,8 +59,17 @@ SOURCE_PREFIXES = (
     "traminex/",
 )
 #: Of docs/, only these files and the direct children with these suffixes; the
-#: subdirectories (plans, prompts, research notes) stay out.
-DOCS_FILES = frozenset({"docs/.gitignore", "docs/_quarto.yml"})
+#: subdirectories (plans, prompts, research notes) stay out, except a spec that
+#: docs/API_PARITY_DECISIONS.csv cites as evidence. With .gitignore, the dated
+#: PYWEIGHTEDCLUSTER_CONSUMER_NOTICE and reports/audit/ (2026-11-08), the tests of a
+#: published tree find every file they read.
+DOCS_FILES = frozenset(
+    {
+        "docs/.gitignore",
+        "docs/_quarto.yml",
+        "docs/superpowers/specs/2026-07-12-traminex-full-parity-closeout-design.md",
+    }
+)
 DOCS_SUFFIXES = frozenset({".csv", ".md", ".qmd"})
 
 #: Tracked files left out although the rules above take them in: the supervision repository's

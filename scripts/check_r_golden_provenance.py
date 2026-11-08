@@ -97,7 +97,7 @@ from typing import Any
 # + make_goldens_disstree_weighted_gate.R and make_goldens_consumed_items.R (2026-11-02: what the
 #   other libraries use and no test here ran).
 # + make_goldens_study_findings.R (2026-11-07: the 2026-10-25 study's findings).
-EXPECTED_SCRIPT_COUNT = 209
+EXPECTED_SCRIPT_COUNT = 210
 # 612 + 5 cycle-6 F-001 seqmaintokens default-k fixtures (make_goldens_precarity.R)
 # + 4 cycle-6 F-003 case-weight edge-case fixtures (make_goldens_dissvar.R,
 # make_goldens_disscenter.R) + 5 cycle-6 section-9 seqalign DP-matrix fixtures
@@ -217,7 +217,7 @@ EXPECTED_SCRIPT_COUNT = 209
 # + 1 weighted-gate fixture (make_goldens_disstree_weighted_gate.R) and 1 consumed-items fixture
 #   (make_goldens_consumed_items.R; 2026-11-02).
 # + 1 study-findings fixture (make_goldens_study_findings.R; 2026-11-07).
-EXPECTED_FIXTURE_COUNT = 819
+EXPECTED_FIXTURE_COUNT = 820
 HELPER_SCRIPTS = frozenset({"make_goldens_corestats.R"})
 DIAGNOSTIC_SCRIPTS = frozenset(
     {

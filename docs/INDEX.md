@@ -41,7 +41,7 @@ supervision repository's `docs/history/run-reports/`.
   ruff)
 - CHANGELOG.md (release history — single source of truth)
 - ROADMAP.md, CONTRIBUTING.md (contributor and roadmap notes)
-- pyproject.toml (package metadata, version 0.2.2; mypy/ruff/pytest config)
+- pyproject.toml (package metadata, version 0.2.3; mypy/ruff/pytest config)
 - CMakeLists.txt (compiler-free default plus opt-in pybind11; see docs/DEV_BUILD.md)
 - Makefile (Ubuntu-native lint, typing, workflow, docs, stubs, generated,
   backend, release, and isolated install-profile gates)

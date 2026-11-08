@@ -6,6 +6,39 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 
 ## [Unreleased]
 
+## [0.2.3] - 2026-11-08
+
+A patch release of 0.2.2, by the maintainer's decision of 2026-11-08. The public API (226 names) is that of 0.2.2.
+
+### Added
+
+- README: an "Install a release" section, for visitors, with the address of the current release's
+  wheel on GitHub, how to add an optional profile, the compiled wheel, the two native libraries pip cannot
+  install and how to check the downloads against `SHA256SUMS`.
+- Tests for part 4 of the consumed-component gaps (supervision repository,
+  `docs/TRAMINEX_COMPONENT_GAPS.md`): of the 276 lines of the 289 definitions the sibling libraries use
+  that no suite ran (re-measured on 2026-11-08), 219 are now run by
+  `tests/test_consumed_gaps_part4_analysis.py`, `tests/test_consumed_gaps_part4_construction.py` and
+  `tests/test_consumed_gaps_part4_distances.py` (123 tests); each of the other 57 has a recorded reason.
+
+### Fixed
+
+- `seqdist` with `subm="TRATE"`, whose automatic indel is 0 (a cost matrix whose largest cost is 0),
+  computed the full matrix but refused refseq index sets ("OM indel cost must be strictly positive"):
+  the recursive call read the derived zero as an explicit indel. It now gives R's block (zeros for two
+  states that always alternate, read from R 4.6.2); an explicit zero indel is still refused.
+- `seqformat` wrote complex-valued states in Python's form (`(1+1j)`); it now writes them as R's
+  `as.character` does (`1+1i`, `-1-2.5i`, `Inf-Infi`), as R's `seqformat` output shows. `seqdef` keeps
+  such states distinct where R keeps only their real parts (`docs/API_PARITY_DECISIONS.csv`, seqdef).
+- `seqdef` accepted rows given as matrices (a list of 2-D arrays) and made states of their printed
+  form; it now refuses them as not a 2-D table of states.
+- The source package left out files that its own tests read, so 17 tests failed when run from the
+  published 0.2.2 tree (`test_audit_tooling_cwd`, `test_dated_documents`, `test_docs_consistency`,
+  `test_install_profile_verifier`, `test_semantic_parity_ledger`). `scripts/sync_sdist_manifest.py` now
+  takes in `.gitignore`, `PYWEIGHTEDCLUSTER_CONSUMER_NOTICE_20260921.md`, `reports/audit/` and the one
+  spec under `docs/superpowers/specs/` that `docs/API_PARITY_DECISIONS.csv` cites. The package list also
+  gains the five files of the gap tests above, which the commit that added them had left out.
+
 ## [0.2.2] - 2026-11-08
 
 A patch release of 0.2.1, by the maintainer's decision of 2026-11-08. The package code and the

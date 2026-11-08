@@ -109,6 +109,19 @@ _CLASSIC_NORM_DISPLAY = {
 }
 
 
+def _indel_refused(invalid: bool, kwargs: dict, indel_values: np.ndarray) -> bool:
+    """Whether seqdist refuses an explicit indel that failed its positivity check.
+
+    A zero indel seqdist derived itself from TRATE costs whose largest cost is 0 is kept: seqdist
+    marks it with the private ``_allow_zero_indel`` flag, the recursive call for refseq index sets
+    receives it with the resolved matrix, and R computes with it there as on the full matrix
+    (2026-11-08, gap part 4). An explicit zero indel stays refused. A helper keeps ``seqdist``
+    within its recorded size (tests/test_function_size_limit.py).
+    """
+    derived_zero = bool(kwargs.get("_allow_zero_indel", False)) and bool(np.all(indel_values == 0))
+    return invalid and not derived_zero
+
+
 def _map_norm(method: str, norm: Optional[str]) -> Optional[str]:
     """Validate and normalize the `norm` parameter.
 
@@ -1521,7 +1534,7 @@ def seqdist(x, method: str = "OM", **kwargs) -> np.ndarray:
                     if m == "TWED" and indel_values.size
                     else bool(np.any(indel_values <= 0))
                 )
-            if invalid:
+            if _indel_refused(invalid, kwargs, indel_values):
                 raise ValueError(f"{m} indel cost must be strictly positive")
 
     # R ``checkcost``'s non-fatal cost-quality diagnostics

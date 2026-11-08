@@ -93,7 +93,7 @@ def test_static_inventory_classifies_every_script_and_fixture():
     # + ledger_items generator (batch 18).
     # + disstree_weighted_gate and consumed_items generators (2026-11-02).
     # + study_findings generator (2026-11-07).
-    assert len(inventory.scripts) == 209
+    assert len(inventory.scripts) == 210
     # 612 + 5 cycle-6 F-001 seqmaintokens default-k fixtures
     # + 4 cycle-6 F-003 case-weight edge-case fixtures
     # + 5 cycle-6 section-9 seqalign DP-matrix fixtures
@@ -204,8 +204,10 @@ def test_static_inventory_classifies_every_script_and_fixture():
     # + 1 diss-trees-reps fixture (make_goldens_diss_trees_reps.R); +1 writer.
     # + disstree_weighted_gate.txt and consumed_items.csv (2026-11-02).
     # + study_findings.csv (2026-11-07).
-    assert len(inventory.fixtures) == 819
-    assert len(inventory.writers) == 205  # + their two generators, + make_goldens_study_findings.R
+    assert len(inventory.fixtures) == 820
+    assert (
+        len(inventory.writers) == 206
+    )  # + their two generators, + make_goldens_study_findings.R, + make_goldens_gap_part4.R
     assert [path.name for path in inventory.helpers] == ["make_goldens_corestats.R"]
     assert [path.name for path in inventory.diagnostics] == [
         "make_goldens_distances.R",
