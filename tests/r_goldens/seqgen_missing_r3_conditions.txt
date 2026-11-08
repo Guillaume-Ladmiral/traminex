@@ -1,0 +1,5 @@
+invalid_missing_type|simpleError|replacement has length zero
+p_cases_above_one|simpleError|cannot take a sample larger than the population when 'replace = FALSE'
+p_left_below_zero|warning|NAs produced
+p_left_below_zero|simpleError|missing value where TRUE/FALSE needed
+p_cases_nan|simpleError|vector size cannot be NA/NaN

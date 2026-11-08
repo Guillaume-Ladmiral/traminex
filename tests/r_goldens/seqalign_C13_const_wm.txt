@@ -1,0 +1,4 @@
+E I E E D D D
+A - A B C C C
+A * A B - - -
+               0                1                0                0                1                1                1

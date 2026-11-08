@@ -1,0 +1,22 @@
+# dissrep of all-zero matrices; statistics column-major (na, na(%), nb, nb(%), SD, MD, DC, V, Q)
+unweighted	n	5
+unweighted	weights	none
+unweighted	nrep	none
+unweighted	dmax	none
+unweighted	representatives	1
+unweighted	statistics	5 5 100 100 5 5 100 100 0 0 0 0 0 0 0 0 NaN NaN
+unweighted	quality	NaN
+weighted_nrep	n	4
+weighted_nrep	weights	1 2 0.5 1.5
+weighted_nrep	nrep	2
+weighted_nrep	dmax	none
+weighted_nrep	representatives	1
+weighted_nrep	statistics	5 5 100 100 5 5 100 100 0 0 0 0 0 0 0 0 NaN NaN
+weighted_nrep	quality	NaN
+explicit_dmax	n	4
+explicit_dmax	weights	none
+explicit_dmax	nrep	none
+explicit_dmax	dmax	1
+explicit_dmax	representatives	1
+explicit_dmax	statistics	4 4 100 100 4 4 100 100 0 0 0 0 0 0 0 0 NaN NaN
+explicit_dmax	quality	NaN

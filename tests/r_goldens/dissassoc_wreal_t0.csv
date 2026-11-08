@@ -1,0 +1,6 @@
+# R: dissassoc(D, grp, weights=wreal, R=1, weight.permutation='diss') -> stat t0 rows [Pseudo F, Pseudo Fbf, Pseudo R2, Bartlett, Levene]
+37.7231225693583
+45.581377327679
+0.820547321153714
+0.0135263380228231
+0.217011406187185

@@ -1,0 +1,5 @@
+"nplot","rows","cols","bottom_panels_one","left_panels_one","legend_position","right_0_2_plot_fraction","right_0_4_plot_fraction"
+1,1,1,"1","1","bottom",0.8,0.6
+2,1,2,"12","1","bottom",0.8,0.6
+3,2,2,"32","13","center",0.8,0.6
+4,2,2,"34","13","bottom",0.8,0.6

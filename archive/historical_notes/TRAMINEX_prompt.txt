@@ -1,0 +1,68 @@
+
+The task is to port the R package TraMineR and TraMineRextras to python.
+
+It is crucial:
+1 to preserve all functionalities of the original packages
+2 to improve efficiency and computation, if possible
+3 to preserve, as much as possible, the original commands, functions,
+options syntax and naming to allow maximum compatibility and sharing of the packages documentation.
+
+The project directory in named PROJECT_PY_TRAMINEX
+It contains a DOCUMENTATION folder that contains three .pdf files describing the methods and original packages.
+R and the 2 packages,TraMineR and TraMineRextras, are installed on this system. You can and must access the original code.
+
+Read and learn all documents thoroughly.
+Inspect, study and audit the codebase. If the windows binaries for the packages are useful, I can easily add them to the folder
+
+Be meticulous. Do not guess nor assume but study in depth.
+
+
+
+
+Given your priority (“faster and simpler is better”), I will:
+•  Implement and benchmark both bindings for the hot kernels (OM/HAM first) as part of M2, but default to nanobind for the C++ builds if benchmarks confirm its edge on our workloads. We’ll keep a pybind11 path available (easy to switch) in case of packaging or compatibility issues on some platforms.
+•  For M1, we stick to a Python/NumPy baseline with clean interfaces so swapping in the C++ engine is seamless later.
+
+What I’ve set up and done
+•  Project venv: .venv created, Python 3.12 detected, and necessary libraries installed:
+•  Runtime: numpy, pandas, scipy; optional plot/perf/extras: matplotlib, seaborn, numba, lifelines, scikit-learn
+•  Build/Binds: pybind11, nanobind, scikit-build-core, cmake, ninja, cython
+•  Tooling: pytest, build, wheel, setuptools, pyreadr
+•  Demo data downloaded and staged:
+•  DATA/TraMineR: actcal.RData, actcal.tse.RData, biofam.RData, bfspell.RData, mvad.RData, and small examples
+•  DEMOS/TraMineR: R demo scripts copied for reference
+•  Source audits:
+•  CRAN sources extracted to SOURCES/TraMineR and SOURCES/TraMineRextras
+•  Verified R/ and src/ contents for both packages (C/C++ event and distance engines present)
+
+Scaffolded single-package layout (M1 skeleton)
+•  Created package “traminex” (GPL-3.0-or-later), with minimal M1 modules:
+•  traminex/sequences.py: STSList structure with TraMineR-like attributes
+•  traminex/format.py: seqdef (M1 subset)
+•  traminex/stats.py: seqistatd, seqstatd, seqlength
+•  traminex/distances/python_kernels.py: OM, HAM, LCS, LCP pairwise kernels (Python/NumPy)
+•  init.py: exports STSList, seqdef, seqistatd
+•  tests/test_sanity.py: basic tests (pytest)
+•  pyproject.toml, README.md, LICENSE (GPL‑3.0‑or‑later)
+
+What’s next (M1 execution)
+•  Implement remaining M1 stats (seqtab, seqtransn, entropy/turbulence if feasible) and docstrings.
+•  Build parity tests:
+•  Load actcal/biofam/mvad via pyreadr
+•  Validate seqdef → seqistatd/seqstatd results vs R
+•  Validate OM/HAM/LCS/LCP distances on small subsets vs R outputs
+•  Provide initial benchmarks for Python kernels and document the baseline.
+
+About deprecated features
+•  I will omit any function/argument marked Deprecated in the R help or code (e.g., legacy aliases like minSize/maxdepth, etc.). We will keep the modern interface only.
+
+One more note on licensing
+•  We’ve set GPL‑3.0‑or‑later (“GPL‑3~” as you noted). This ensures we stay compliant with the original GPL terms and clearly communicates that derivative distributions must remain under GPL-compatible terms.
+
+Shall I proceed to fill out M1 (stats, tests, and a quick performance baseline), then deliver a short comparison plan + harness for nanobind vs pybind11 vs Cython for OM/HAM in M2?
+
+
+Full SPS-specific helpers and some advanced spell tools (low priority; can add if needed).
+
+traminex has the foundations and some analytics; full frequent-subsequence mining beyond small k is supported combinationally,
+adequate for small/moderate L; specialized event mining beyond this can be added if needed.

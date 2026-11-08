@@ -1,0 +1,77 @@
+from collections.abc import Callable
+from pathlib import Path
+from typing import Any
+
+def disstree2dot(
+    tree: Any,
+    filename: str,
+    *,
+    digits: int = 3,
+    image_fun: Callable[[object, Path], None] | None = None,
+    image_data: object | None = None,
+    only_leaf: bool = False,
+    image_format: str = "png",
+    use_title: bool = True,
+    show_depth: bool = False,
+    legend_text: str | None = None,
+    image_legend: str | Path | None = None,
+    image_quality: str | Path | None = None,
+    imagefunc: Callable[[object, Path], None] | None = ...,
+    imagedata: object | None = ...,
+    imgLeafOnly: bool = ...,
+    imageext: str = ...,
+    legendtext: str | None = ...,
+    legendimage: str | Path | None = ...,
+    qualityimage: str | Path | None = ...,
+    showdepth: bool = ...,
+) -> None: ...
+def disstree2dotp(
+    tree: Any,
+    filename: str,
+    *,
+    digits: int = 3,
+    with_quality: bool = True,
+    use_title: bool = True,
+    show_depth: bool = False,
+    withquality: bool = ...,
+) -> None: ...
+def seqtree2dot(
+    tree: Any,
+    filename: str,
+    *,
+    seqdata: Any = None,
+    digits: int = 3,
+    with_quality: bool = False,
+    with_legend: bool = True,
+    use_title: bool = True,
+    show_depth: bool = False,
+    withlegend: bool = ...,
+    withquality: bool = ...,
+) -> None: ...
+def disstreedisplay(
+    tree: Any,
+    filename: str | None = None,
+    *,
+    image_format: str = "png",
+    with_quality: bool = True,
+    show_depth: bool = False,
+    digits: int = 3,
+    imageformat: str = ...,
+    withquality: bool = ...,
+    showdepth: bool = ...,
+) -> str: ...
+def seqtreedisplay(
+    tree: Any,
+    filename: str | None = None,
+    *,
+    seqdata: Any = None,
+    image_format: str = "png",
+    with_quality: bool = True,
+    with_legend: bool = True,
+    show_depth: bool = False,
+    digits: int = 3,
+    imageformat: str = ...,
+    withquality: bool = ...,
+    withlegend: bool = ...,
+    showdepth: bool = ...,
+) -> str: ...

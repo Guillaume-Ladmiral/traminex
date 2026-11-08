@@ -1,0 +1,7 @@
+ungrouped_ids|simpleError| [!] Events not grouped by id! See seqecreate help page.
+missing_value|simpleError| [!] Missing values not supported
+length_mismatch|simpleError|Time ,idpers and event vector should have the same size
+absent_columns|simpleError| [!] Could not find an id argument
+invalid_event_characters|warning| [!] some of your events contain '(', ')' or ',' characters. The search of specific subsequences may not work properly.
+invalid_event_characters|success|(A(B)-1-(C,D)
+unknown_end_event|success|(A)-1-(B)

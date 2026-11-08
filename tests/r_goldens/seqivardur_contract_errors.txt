@@ -1,0 +1,8 @@
+class=subscriptOutOfBoundsError,error,condition
+message=subscript out of bounds
+mixed_type1_variance=NaN
+mixed_type1_vmax=NaN
+mixed_type1_meand=NaN
+mixed_type2_variance=0
+mixed_type2_vmax=NaN
+mixed_type2_meand=0

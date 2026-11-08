@@ -1,0 +1,4 @@
+case=message
+a2_missing_void=[!!] Found voids in input sequences: dropping all right missings in the resampled sequences!
+show_time=timing_header:user  system elapsed
+show_time=timing_values:<elapsed>

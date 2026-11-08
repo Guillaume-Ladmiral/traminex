@@ -1,0 +1,8 @@
+"case","sequence","seqconc","seqlength"
+"nr_equals_void",1,"A-B",2
+"nr_equals_void",2,"A-B",2
+"left_neutral",1,"A-B",2
+"left_neutral",2,"NA-A-B",3
+"right_neutral",1,"A-B-NA",3
+"right_neutral",2,"*-A-B",3
+"gaps_neutral",1,"A-NA-B",3

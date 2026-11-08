@@ -1,0 +1,6 @@
+# R: seqe2stm(c('X','Y'), firstState='start')
+X	Y
+start	X	Y
+X	X	X.Y
+X.Y	X.Y	X.Y
+Y	X.Y	Y

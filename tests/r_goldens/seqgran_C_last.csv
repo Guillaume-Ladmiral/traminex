@@ -1,0 +1,5 @@
+# R: seqgranularity(sdC ragged, tspan=2, 'last'); void handling
+               1,               3,               3
+               2,              NA,              NA
+              NA,               2,              NA
+               3,              NA,              NA

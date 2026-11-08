@@ -1,0 +1,5 @@
+# R: seqdecomp(seqconc(C, sep='-'), sep='-'); NA verbatim
+A,A,B,C,C,C
+A,B,B,NA,NA,NA
+A,*,A,B,NA,NA
+C,C,NA,NA,NA,NA

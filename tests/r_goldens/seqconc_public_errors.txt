@@ -1,0 +1,4 @@
+case|class|message
+explicit_null_void|simpleError,error,condition|argument is of length zero
+unknown_column|simpleError,error,condition|undefined columns selected
+vname_length|simpleError,error,condition|length of 'dimnames' [2] not equal to array extent

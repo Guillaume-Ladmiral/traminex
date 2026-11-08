@@ -1,0 +1,6 @@
+case|class|message
+idxs_null|simpleError,error,condition|idxs should be a non negative integer or a strictly positive vector.
+idxs_negative|simpleError,error,condition|idxs should be a non negative integer or a strictly positive vector.
+idxs_mixed_zero|simpleError,error,condition|idxs should be a non negative integer or a strictly positive vector.
+idxs_tlim_conflict|simpleError,error,condition|In capture_error() : idxs and tlim cannot be specified together. tlim is deprecated, use idxs instead.
+invalid_format|simpleError,error,condition|Format must be one of: STS or SPS

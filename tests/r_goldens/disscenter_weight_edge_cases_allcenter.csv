@@ -1,0 +1,15 @@
+# R: TraMineR::disscenter(D, group=c('a','a','b'), weights=w, allcenter=TRUE); rows = ones,varied,negative_middle,all_negative,zeros,one_zero,sum_zero,inf_first,nan_first,nan_two,nan_all,neg_inf_middle,neg_inf_all,mixed_inf; cols = column-major 3x2 (group a then group b)
+0.25,0.25,2.25,2,3,0
+0.111111111111111,0.444444444444444,2.11111111111111,2,3,0
+Inf,Inf,NaN,2,3,0
+-0.5,-0.5,3,2,3,0
+NaN,NaN,NaN,NaN,NaN,NaN
+1,0,3,NaN,3,0
+Inf,Inf,NaN,NaN,NaN,NaN
+NaN,NaN,NaN,NaN,3,0
+NA,NaN,NaN,NaN,3,0
+NaN,NaN,NaN,NaN,NaN,0
+NaN,NaN,NaN,NaN,NaN,NA
+NaN,NaN,NaN,2,NaN,0
+NaN,NaN,NaN,NaN,NaN,NaN
+NaN,NaN,NaN,NaN,NaN,0

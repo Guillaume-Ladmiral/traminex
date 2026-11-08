@@ -1,0 +1,12 @@
+# case	kind	R result (column-major) or error	R warnings
+om	value	0 4 2 4 4 0 4 4 2 4 0 4 4 4 4 0	no warning
+omopt	value	0 4 2 4 4 0 4 4 2 4 0 4 4 4 4 0	no warning
+lcs	value	0 4 2 4 4 0 4 4 2 4 0 4 4 4 4 0	no warning
+lcsopt	value	0 4 2 4 4 0 4 4 2 4 0 4 4 4 4 0	no warning
+norm_auto	value	0 1 0.5 1 1 0 1 1 0.5 1 0 1 1 1 1 0	no warning
+norm_true	value	0 1 0.5 1 1 0 1 1 0.5 1 0 1 1 1 1 0	no warning
+norm_false	value	0 4 2 4 4 0 4 4 2 4 0 4 4 4 4 0	no warning
+refseq_two_sets	value	2 4	no warning
+refseq_three_sets	value	2 4	no warning
+refseq_true	error	'refseq' invalid type or unknown value
+refseq_set_with_zero	value	2	no warning

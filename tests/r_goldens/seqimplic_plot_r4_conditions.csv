@@ -1,0 +1,5 @@
+"case","value"
+"default_levels","12"
+"duplicate_levels","membership selection plots each declared level at most once"
+"unknown_levels","unknown levels select no panel"
+"confidence_bounds","confidence values are probabilities passed to qnorm for indice objects"

@@ -1,0 +1,7 @@
+case=message
+bad_a=Bad 'a' value
+bad_core=core must be numeric or "auto"
+bad_role_weights=length of role.weights not equal to length of seqlist!
+not_list=seqlist must be a list of at least two stslist objects
+not_sts=At least one element of seqlist is not a stslist object
+mismatched_width=All stslist objects must have same size and alphabet

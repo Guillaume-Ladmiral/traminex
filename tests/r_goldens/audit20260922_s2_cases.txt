@@ -1,0 +1,21 @@
+# case	field	value
+seqdef_na_defaults	alphabet	A|B
+seqdef_na_defaults	cells	A|*|B;*|A|B;A|A|%;%|%|%
+tse_na_transition	alphabet	None|S1|S2
+tse_na_transition	cells	None|S1|%|%;None|S2|S2|S2
+fce_tied_events	id	1|1|1|1|2|2|2|2
+fce_tied_events	time	3|3|3|5|1|1|1|2
+fce_tied_events	event	_ev|bev|Cev|aev|_ev|aev|Cev|bev
+fce_character_times	time	a|b|B
+fce_character_times	event	e3|e1|e2
+tse_tied_events	cells	None|None|S_b_then_C|S_b_then_C
+toPersonPeriod_id_order	id	_z|_z|a|a|b|b|C|C
+seqMD_case_order	alphabet	a+x|B+x|B+Y|c+x|c+Y
+seqMD_case_order	cells	a+x|B+Y;B+x|c+x;c+Y|a+x
+seqMD_case_cost	alphabet	a+x|B+x|B+Y|c+x|c+Y
+seqMD_case_cost	sm	0|2|8|2|8|2|0|6|2|8|8|6|0|8|2|2|2|8|0|6|8|8|2|6|0
+seqstart_literal_star	cells	*|*|A|A|NA;NA|A|A|A|*
+seqMD_width_fill	alphabet	*+y|%+x|%+y|A+x|A+y|B+x|B+y
+seqMD_width_fill	cells	A+x|*+y|B+x|%+y|%+x;B+y|A+y|B+y|%+x|%
+seqMD_width_fill_reversed	alphabet	x+%|x+A|x+B|y+*|y+%|y+A|y+B
+seqMD_width_fill_reversed	cells	x+A|y+*|x+B|y+%|x+%;y+B|y+A|y+B|x+%|%

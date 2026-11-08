@@ -1,0 +1,14 @@
+# tag,nrow,ncol,columns,rownames
+sample|BFopt=NULL,1,5,LRT|p-value|Delta BIC|Bayes Factor (Avg)|Bayes Factor (From Avg BIC),1
+sample|BFopt=NULL|inc.df,1,6,LRT|p-value|Delta BIC|Bayes Factor (Avg)|Bayes Factor (From Avg BIC)|df,1
+sample|BFopt=1,1,4,LRT|p-value|Delta BIC|Bayes Factor (Avg),1
+sample|BFopt=1|inc.df,1,5,LRT|p-value|Delta BIC|Bayes Factor (Avg)|df,1
+sample|BFopt=2,1,4,LRT|p-value|Delta BIC|Bayes Factor (From Avg BIC),1
+sample|BFopt=2|inc.df,1,5,LRT|p-value|Delta BIC|Bayes Factor (From Avg BIC)|df,1
+sample|stat=all,1,5,LRT|p-value|Delta BIC|Bayes Factor (Avg)|Bayes Factor (From Avg BIC),1
+s0|stat=all,1,4,LRT|p-value|Delta BIC|Bayes Factor,1
+sample|stat=LRT,1,2,LRT|p-value,1
+s0|stat=LRT,1,2,LRT|p-value,1
+sample|stat=BIC,1,3,Delta BIC|Bayes Factor (Avg)|Bayes Factor (From Avg BIC),1
+s0|stat=BIC,1,2,Delta BIC|Bayes Factor,1
+sample|sets,2,6,LRT|p-value|Delta BIC|Bayes Factor (Avg)|Bayes Factor (From Avg BIC)|df,early|late

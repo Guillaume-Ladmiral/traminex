@@ -1,0 +1,10 @@
+"case","outcome","message"
+"partial_invalid_state","OK","[!!] Unvalid or unobserved state(s): U"
+"all_invalid_state","ERROR: Only unvalid or unobserved selected states!",""
+"ignored_state","OK","'state' argument will be ignored"
+"group_length","ERROR: group must contain one value for each row in the sequence object",""
+"ylab_length","ERROR: if a vector, ylab must have one value per group (or state) level!",""
+"xtstep_override","OK","14"
+"tick_last_override","OK","156"
+"use_layout_true","OK",""
+"use_layout_false","OK",""

@@ -1,0 +1,5 @@
+# R: seqLLCS(C[i,], C[j,]) pairwise length-of-LCS matrix
+               6,               2,               3,               2
+               2,               3,               2,               0
+               3,               2,               4,               0
+               2,               0,               0,               2

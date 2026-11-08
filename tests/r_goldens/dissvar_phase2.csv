@@ -1,0 +1,6 @@
+# R: TraMineR::dissvar on phase2_input_D; rows = [dissvar(D), dissvar(D,w=wreal), dissvar(D,w=wreal,squared=TRUE), dissvar(D,squared=TRUE), dissvar(D,w=wint)]
+5.3852086260256
+5.19545085131883
+80.0589330019724
+84.0941395555556
+5.33418321957922

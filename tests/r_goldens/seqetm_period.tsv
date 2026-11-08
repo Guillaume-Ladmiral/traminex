@@ -1,0 +1,5 @@
+# R: seqetm(sd, method='period', use.labels=TRUE)
+A	B	C
+A	Apple	endApple,Banana	endApple,Cherry
+B	endBanana,Apple	Banana	endBanana,Cherry
+C	endCherry,Apple	endCherry,Banana	Cherry

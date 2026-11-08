@@ -1,0 +1,2 @@
+case|call|condition|message
+invalid_lowercase_format|TraMineR::seqstatl(format_data,format='sts')|simpleError|Input format must be one of: STSSPSSPELLDSS

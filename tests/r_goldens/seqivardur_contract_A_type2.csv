@@ -1,0 +1,5 @@
+# R: seqivardur(sdA, type=2, with.missing=FALSE)
+# rows: variance,vmax,meand
+            1.25,            0.96,            6.75,          0.1875
+            2.16,               1,            6.75,          0.1875
+             1.5,             1.2,             1.5,            0.75

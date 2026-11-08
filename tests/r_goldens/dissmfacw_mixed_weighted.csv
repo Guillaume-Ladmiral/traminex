@@ -1,0 +1,6 @@
+# R 4.6.2; TraMineR 2.2-14
+# TraMineR::dissmfacw(D ~ g + x, mixed_data, weights=wreal, R=1, squared=FALSE); rows g,x,Total
+# columns: PseudoF, PseudoR2, explained SS (SS = PseudoR2 * SCtot)
+14.6112496595462,0.323032251906914,32.7268146693776
+0.733845860400501,0.00811210150949893,0.821847481523463
+24.9877004247378,0.828659422663212,83.9525564071146

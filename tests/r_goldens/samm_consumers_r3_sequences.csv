@@ -1,0 +1,83 @@
+"case","record_type","row","column","value"
+"alpha","metadata","","nrow","3"
+"alpha","metadata","","ncol","3"
+"alpha","attribute","","start","5"
+"alpha","attribute","","void","%"
+"alpha","attribute","","nr","*"
+"alpha","attribute","","alphabet","AlphaBetaGamma"
+"alpha","attribute","","labels","AlphaBetaGamma"
+"alpha","attribute","","cpal","#111111#222222#333333"
+"alpha","attribute","","missing.color","#999999"
+"alpha","attribute","","xtstep","2"
+"alpha","attribute","","tick.last","TRUE"
+"alpha","attribute","","class","stslistdata.frame"
+"alpha","text","1","1","Alpha"
+"alpha","code","1","1","0"
+"alpha","text","1","2","Beta"
+"alpha","code","1","2","1"
+"alpha","text","1","3","Beta"
+"alpha","code","1","3","1"
+"alpha","text","2","1","Alpha"
+"alpha","code","2","1","0"
+"alpha","text","2","2","Beta"
+"alpha","code","2","2","1"
+"alpha","text","2","3","Beta"
+"alpha","code","2","3","1"
+"alpha","text","3","1","Alpha"
+"alpha","code","3","1","0"
+"alpha","text","3","2","*"
+"alpha","code","3","2","3"
+"alpha","text","3","3","Beta"
+"alpha","code","3","3","1"
+"gamma_empty","metadata","","nrow","0"
+"gamma_empty","metadata","","ncol","3"
+"gamma_empty","attribute","","start","5"
+"gamma_empty","attribute","","void","%"
+"gamma_empty","attribute","","nr","*"
+"gamma_empty","attribute","","alphabet","AlphaBetaGamma"
+"gamma_empty","attribute","","labels","AlphaBetaGamma"
+"gamma_empty","attribute","","cpal","#111111#222222#333333"
+"gamma_empty","attribute","","missing.color","#999999"
+"gamma_empty","attribute","","xtstep","2"
+"gamma_empty","attribute","","tick.last","TRUE"
+"gamma_empty","attribute","","class","stslistdata.frame"
+"unknown_empty","metadata","","nrow","0"
+"unknown_empty","metadata","","ncol","3"
+"unknown_empty","attribute","","start","5"
+"unknown_empty","attribute","","void","%"
+"unknown_empty","attribute","","nr","*"
+"unknown_empty","attribute","","alphabet","AlphaBetaGamma"
+"unknown_empty","attribute","","labels","AlphaBetaGamma"
+"unknown_empty","attribute","","cpal","#111111#222222#333333"
+"unknown_empty","attribute","","missing.color","#999999"
+"unknown_empty","attribute","","xtstep","2"
+"unknown_empty","attribute","","tick.last","TRUE"
+"unknown_empty","attribute","","class","stslistdata.frame"
+"repeated_a","metadata","","nrow","4"
+"repeated_a","metadata","","ncol","2"
+"repeated_a","attribute","","start","4"
+"repeated_a","attribute","","void","%"
+"repeated_a","attribute","","nr","*"
+"repeated_a","attribute","","alphabet","State AState BState C"
+"repeated_a","attribute","","labels","State AState BState C"
+"repeated_a","attribute","","cpal","#AA0000#00AA00#0000AA"
+"repeated_a","attribute","","missing.color","darkgrey"
+"repeated_a","attribute","","xtstep","1"
+"repeated_a","attribute","","tick.last","FALSE"
+"repeated_a","attribute","","class","stslistdata.frame"
+"repeated_a","text","1","1","State A"
+"repeated_a","code","1","1","0"
+"repeated_a","text","1","2","State B"
+"repeated_a","code","1","2","1"
+"repeated_a","text","2","1","State A"
+"repeated_a","code","2","1","0"
+"repeated_a","text","2","2","State C"
+"repeated_a","code","2","2","2"
+"repeated_a","text","3","1","State A"
+"repeated_a","code","3","1","0"
+"repeated_a","text","3","2","State B"
+"repeated_a","code","3","2","1"
+"repeated_a","text","4","1","State A"
+"repeated_a","code","4","1","0"
+"repeated_a","text","4","2","State C"
+"repeated_a","code","4","2","2"

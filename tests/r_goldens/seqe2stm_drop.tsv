@@ -1,0 +1,6 @@
+# R: seqe2stm(c('A','B'), dropList=list(B='A'))
+A	B
+None	A	B
+A	A	B
+A.B	A.B	B
+B	A.B	B

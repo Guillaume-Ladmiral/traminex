@@ -1,0 +1,699 @@
+case,method,weights_kind,R,squared,group_kind,contract,section,row,col,value,text
+uw_none_r31,none,none,31,FALSE,three,EXACT,attribute,0,0,NaN,effective_method=none
+uw_none_r31,none,none,31,FALSE,three,EXACT,groups,1,1,5,1|n
+uw_none_r31,none,none,31,FALSE,three,EXACT,groups,1,2,0.844630455464187,1|discrepancy
+uw_none_r31,none,none,31,FALSE,three,EXACT,groups,2,1,5,2|n
+uw_none_r31,none,none,31,FALSE,three,EXACT,groups,2,2,0.922819782907327,2|discrepancy
+uw_none_r31,none,none,31,FALSE,three,EXACT,groups,3,1,5,3|n
+uw_none_r31,none,none,31,FALSE,three,EXACT,groups,3,2,0.964210355750814,3|discrepancy
+uw_none_r31,none,none,31,FALSE,three,EXACT,groups,4,1,15,Total|n
+uw_none_r31,none,none,31,FALSE,three,EXACT,groups,4,2,5.3852086260256,Total|discrepancy
+uw_none_r31,none,none,31,FALSE,three,EXACT,anova,1,1,67.1198264197724,Exp|SS
+uw_none_r31,none,none,31,FALSE,three,EXACT,anova,1,2,2,Exp|df
+uw_none_r31,none,none,31,FALSE,three,EXACT,anova,1,3,33.5599132098862,Exp|MSE
+uw_none_r31,none,none,31,FALSE,three,EXACT,anova,2,1,13.6583029706116,Res|SS
+uw_none_r31,none,none,31,FALSE,three,EXACT,anova,2,2,12,Res|df
+uw_none_r31,none,none,31,FALSE,three,EXACT,anova,2,3,1.13819191421764,Res|MSE
+uw_none_r31,none,none,31,FALSE,three,EXACT,anova,3,1,80.778129390384,Total|SS
+uw_none_r31,none,none,31,FALSE,three,EXACT,anova,3,2,14,Total|df
+uw_none_r31,none,none,31,FALSE,three,EXACT,anova,3,3,5.76986638502743,Total|MSE
+uw_none_r31,none,none,31,FALSE,three,EXACT,t0,1,1,29.4852852060141,Pseudo F
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,pvalue,1,1,0.032258064516129,Pseudo F
+uw_none_r31,none,none,31,FALSE,three,EXACT,t0,2,1,36.8566065075177,Pseudo Fbf
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,pvalue,2,1,0.032258064516129,Pseudo Fbf
+uw_none_r31,none,none,31,FALSE,three,EXACT,t0,3,1,0.830915829894947,Pseudo R2
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,pvalue,3,1,0.032258064516129,Pseudo R2
+uw_none_r31,none,none,31,FALSE,three,EXACT,t0,4,1,0.0162555315306677,Bartlett
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,pvalue,4,1,0.838709677419355,Bartlett
+uw_none_r31,none,none,31,FALSE,three,EXACT,t0,5,1,0.198457612776644,Levene
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,pvalue,5,1,0.903225806451613,Levene
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,1,0.366937970052454,min
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,2,29.4852852060141,max
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,3,2.2204381102341,mean
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,4,68.8335814172572,sum
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,5,31,finite
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,1,0.458672462565568,min
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,2,36.8566065075177,max
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,3,2.77554763779263,mean
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,4,86.0419767715715,sum
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,5,31,finite
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,1,0.0576317802652366,min
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,2,0.830915829894947,max
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,3,0.188736583728787,mean
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,4,5.85083409559241,sum
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,5,31,finite
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,1,0.000158792593026647,min
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,2,0.84687423485483,max
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,3,0.158464442781472,mean
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,4,4.91239772622564,sum
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,5,31,finite
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,1,0.0420050490143068,min
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,2,10.1735558576421,max
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,3,1.8718882836154,mean
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,4,58.0285367920773,sum
+uw_none_r31,none,none,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,5,31,finite
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,attribute,0,0,NaN,effective_method=none
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,groups,1,1,5,1|n
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,groups,1,2,0.844630455464187,1|discrepancy
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,groups,2,1,5,2|n
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,groups,2,2,0.922819782907327,2|discrepancy
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,groups,3,1,5,3|n
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,groups,3,2,0.964210355750814,3|discrepancy
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,groups,4,1,15,Total|n
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,groups,4,2,5.3852086260256,Total|discrepancy
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,anova,1,1,67.1198264197724,Exp|SS
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,anova,1,2,2,Exp|df
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,anova,1,3,33.5599132098862,Exp|MSE
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,anova,2,1,13.6583029706116,Res|SS
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,anova,2,2,12,Res|df
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,anova,2,3,1.13819191421764,Res|MSE
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,anova,3,1,80.778129390384,Total|SS
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,anova,3,2,14,Total|df
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,anova,3,3,5.76986638502743,Total|MSE
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,t0,1,1,29.4852852060141,Pseudo F
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,pvalue,1,1,NaN,Pseudo F
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,t0,2,1,36.8566065075177,Pseudo Fbf
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,pvalue,2,1,NaN,Pseudo Fbf
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,t0,3,1,0.830915829894947,Pseudo R2
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,pvalue,3,1,NaN,Pseudo R2
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,t0,4,1,0.0162555315306677,Bartlett
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,pvalue,4,1,NaN,Bartlett
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,t0,5,1,0.198457612776644,Levene
+uw_requested_permute_r0,permute,none,0,FALSE,three,EXACT,pvalue,5,1,NaN,Levene
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,attribute,0,0,NaN,effective_method=none
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,groups,1,1,8,1|n
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,groups,1,2,5.4490708422152,1|discrepancy
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,groups,2,1,7,2|n
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,groups,2,2,5.097557888905,2|discrepancy
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,groups,3,1,15,Total|n
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,groups,3,2,5.3852086260256,Total|discrepancy
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,anova,1,1,1.50265743032739,Exp|SS
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,anova,1,2,1,Exp|df
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,anova,1,3,1.50265743032739,Exp|MSE
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,anova,2,1,79.2754719600566,Res|SS
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,anova,2,2,13,Res|df
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,anova,2,3,6.09811322769667,Res|MSE
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,anova,3,1,80.778129390384,Total|SS
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,anova,3,2,14,Total|df
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,anova,3,3,5.76986638502743,Total|MSE
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,t0,1,1,0.246413501064978,Pseudo F
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,pvalue,1,1,NaN,Pseudo F
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,t0,2,1,0.285589594573989,Pseudo Fbf
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,pvalue,2,1,NaN,Pseudo Fbf
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,t0,3,1,0.0186022806131763,Pseudo R2
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,pvalue,3,1,NaN,Pseudo R2
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,t0,4,1,0.00665365402949546,Bartlett
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,pvalue,4,1,NaN,Bartlett
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,t0,5,1,0.179359500166409,Levene
+uw_requested_random_sampling_r1,random-sampling,none,1,FALSE,two,EXACT,pvalue,5,1,NaN,Levene
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,attribute,0,0,NaN,effective_method=diss
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,groups,1,1,9,1|n
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,groups,1,2,0.791924893997052,1|discrepancy
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,groups,2,1,10,2|n
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,groups,2,2,0.915624966672792,2|discrepancy
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,groups,3,1,11,3|n
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,groups,3,2,1.00802671230979,3|discrepancy
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,groups,4,1,30,Total|n
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,groups,4,2,5.33418321957922,Total|discrepancy
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,anova,1,1,132.653629039267,Exp|SS
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,anova,1,2,2,Exp|df
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,anova,1,3,66.3268145196337,Exp|MSE
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,anova,2,1,27.3718675481091,Res|SS
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,anova,2,2,27,Res|df
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,anova,2,3,1.01377287215219,Res|MSE
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,anova,3,1,160.025496587376,Total|SS
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,anova,3,2,29,Total|df
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,anova,3,3,5.5181205719785,Total|MSE
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,t0,1,1,65.4257145181101,Pseudo F
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,pvalue,1,1,NaN,Pseudo F
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,t0,2,1,73.566452795879,Pseudo Fbf
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,pvalue,2,1,NaN,Pseudo Fbf
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,t0,3,1,0.828953084778189,Pseudo R2
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,pvalue,3,1,NaN,Pseudo R2
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,t0,4,1,0.121893788854033,Bartlett
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,pvalue,4,1,NaN,Bartlett
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,t0,5,1,1.74891874126906,Levene
+wint_diss_r0,diss,integer,0,FALSE,three,EXACT,pvalue,5,1,NaN,Levene
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,attribute,0,0,NaN,effective_method=diss
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,groups,1,1,4,1|n
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,groups,1,2,2.0903684375,1|discrepancy
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,groups,2,1,6.5,2|n
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,groups,2,2,2.58855857988166,2|discrepancy
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,groups,3,1,9,3|n
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,groups,3,2,2.60929630864198,3|discrepancy
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,groups,4,1,19.5,Total|n
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,groups,4,2,80.0589330019724,Total|discrepancy
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,anova,1,1,1512.47842224145,Exp|SS
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,anova,1,2,2,Exp|df
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,anova,1,3,756.239211120727,Exp|MSE
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,anova,2,1,48.6707712970086,Res|SS
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,anova,2,2,16.5,Res|df
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,anova,2,3,2.94974371497022,Res|MSE
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,anova,3,1,1561.14919353846,Total|SS
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,anova,3,2,18.5,Total|df
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,anova,3,3,84.3864428939709,Total|MSE
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,t0,1,1,256.374547823509,Pseudo F
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,pvalue,1,1,0.032258064516129,Pseudo F
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,t0,2,1,315.606855696999,Pseudo Fbf
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,pvalue,2,1,0.032258064516129,Pseudo Fbf
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,t0,3,1,0.968823754002209,Pseudo R2
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,pvalue,3,1,0.032258064516129,Pseudo R2
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,t0,4,1,0.051075701053788,Bartlett
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,pvalue,4,1,1,Bartlett
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,EXACT,t0,5,1,0.232589571947119,Levene
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,pvalue,5,1,0.870967741935484,Levene
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,1,1,0.105283707569594,min
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,1,2,256.374547823509,max
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,1,3,9.7564279345573,mean
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,1,4,302.449265971276,sum
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,1,5,31,finite
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,2,1,0.106136357682764,min
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,2,2,315.606855696999,max
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,2,3,11.6424943625263,mean
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,2,4,360.917325238317,sum
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,2,5,31,finite
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,3,1,0.0126008536938382,min
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,3,2,0.968823754002209,max
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,3,3,0.16804425083778,mean
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,3,4,5.20937177597119,sum
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,3,5,31,finite
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,4,1,0.051075701053788,min
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,4,2,6.56946196347108,max
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,4,3,1.49026103072856,mean
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,4,4,46.1980919525855,sum
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,4,5,31,finite
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,5,1,0.0160037048953584,min
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,5,2,7.77106915871435,max
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,5,3,1.73156808410277,mean
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,5,4,53.6786106071859,sum
+wreal_diss_r31_sq,diss,fractional,31,TRUE,three,R_RNG_ONLY,permutation_summary,5,5,31,finite
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,attribute,0,0,NaN,effective_method=replicate
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,groups,1,1,9,1|n
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,groups,1,2,0.791924893997052,1|discrepancy
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,groups,2,1,10,2|n
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,groups,2,2,0.915624966672792,2|discrepancy
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,groups,3,1,11,3|n
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,groups,3,2,1.00802671230979,3|discrepancy
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,groups,4,1,30,Total|n
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,groups,4,2,5.33418321957922,Total|discrepancy
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,anova,1,1,132.653629039267,Exp|SS
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,anova,1,2,2,Exp|df
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,anova,1,3,66.3268145196337,Exp|MSE
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,anova,2,1,27.3718675481091,Res|SS
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,anova,2,2,27,Res|df
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,anova,2,3,1.01377287215219,Res|MSE
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,anova,3,1,160.025496587376,Total|SS
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,anova,3,2,29,Total|df
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,anova,3,3,5.5181205719785,Total|MSE
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,t0,1,1,65.4257145181101,Pseudo F
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,pvalue,1,1,NaN,Pseudo F
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,t0,2,1,73.566452795879,Pseudo Fbf
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,pvalue,2,1,NaN,Pseudo Fbf
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,t0,3,1,0.828953084778189,Pseudo R2
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,pvalue,3,1,NaN,Pseudo R2
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,t0,4,1,0.121893788854033,Bartlett
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,pvalue,4,1,NaN,Bartlett
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,t0,5,1,1.74891874126906,Levene
+wint_replicate_r1,replicate,integer,1,FALSE,three,EXACT,pvalue,5,1,NaN,Levene
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,attribute,0,0,NaN,effective_method=replicate
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,groups,1,1,9,1|n
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,groups,1,2,0.791924893997052,1|discrepancy
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,groups,2,1,10,2|n
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,groups,2,2,0.915624966672792,2|discrepancy
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,groups,3,1,11,3|n
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,groups,3,2,1.00802671230979,3|discrepancy
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,groups,4,1,30,Total|n
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,groups,4,2,5.33418321957922,Total|discrepancy
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,anova,1,1,132.653629039267,Exp|SS
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,anova,1,2,2,Exp|df
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,anova,1,3,66.3268145196337,Exp|MSE
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,anova,2,1,27.3718675481091,Res|SS
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,anova,2,2,27,Res|df
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,anova,2,3,1.01377287215219,Res|MSE
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,anova,3,1,160.025496587376,Total|SS
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,anova,3,2,29,Total|df
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,anova,3,3,5.5181205719785,Total|MSE
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,t0,1,1,65.4257145181101,Pseudo F
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,pvalue,1,1,0.032258064516129,Pseudo F
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,t0,2,1,73.566452795879,Pseudo Fbf
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,pvalue,2,1,0.032258064516129,Pseudo Fbf
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,t0,3,1,0.828953084778189,Pseudo R2
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,pvalue,3,1,0.032258064516129,Pseudo R2
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,t0,4,1,0.121893788854033,Bartlett
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,pvalue,4,1,0.32258064516129,Bartlett
+wint_replicate_r31,replicate,integer,31,FALSE,three,EXACT,t0,5,1,1.74891874126906,Levene
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,pvalue,5,1,0.258064516129032,Levene
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,1,0.240677072460756,min
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,2,65.4257145181101,max
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,3,3.22246227870748,mean
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,4,99.8963306399318,sum
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,5,31,finite
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,1,0.266486070719305,min
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,2,73.566452795879,max
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,3,3.60608410072033,mean
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,4,111.78860712233,sum
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,5,31,finite
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,1,0.017515663252368,min
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,2,0.828953084778189,max
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,3,0.0998167894955037,mean
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,4,3.09432047436061,sum
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,5,31,finite
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,1,0.0027025296009507,min
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,2,1.13496387728969,max
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,3,0.143451976133107,mean
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,4,4.44701126012631,sum
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,5,31,finite
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,1,0.00772907636400963,min
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,2,4.54343687998523,max
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,3,1.20879083060142,mean
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,4,37.4725157486441,sum
+wint_replicate_r31,replicate,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,5,31,finite
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,attribute,0,0,NaN,effective_method=rounded-replicate
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,groups,1,1,5,1|n
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,groups,1,2,0.844630455464187,1|discrepancy
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,groups,2,1,6,2|n
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,groups,2,2,0.8794952112379,2|discrepancy
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,groups,3,1,10,3|n
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,groups,3,2,0.964210355750814,3|discrepancy
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,groups,4,1,21,Total|n
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,groups,4,2,5.34861758739429,Total|discrepancy
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,anova,1,1,93.1787422330237,Exp|SS
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,anova,1,2,2,Exp|df
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,anova,1,3,46.5893711165118,Exp|MSE
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,anova,2,1,19.1422271022565,Res|SS
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,anova,2,2,18,Res|df
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,anova,2,3,1.06345706123647,Res|MSE
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,anova,3,1,112.32096933528,Total|SS
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,anova,3,2,20,Total|df
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,anova,3,3,5.61604846676401,Total|MSE
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,t0,1,1,43.8093580029859,Pseudo F
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,pvalue,1,1,NaN,Pseudo F
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,t0,2,1,52.4418442656576,Pseudo Fbf
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,pvalue,2,1,NaN,Pseudo Fbf
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,t0,3,1,0.829575659687226,Pseudo R2
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,pvalue,3,1,NaN,Pseudo R2
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,t0,4,1,0.0266508610485668,Bartlett
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,pvalue,4,1,NaN,Bartlett
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,t0,5,1,0.252029473807503,Levene
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,pvalue,5,1,NaN,Levene
+wreal_rounded_replicate_r1,rounded-replicate,fractional,1,FALSE,three,EXACT,condition,1,0,NaN,MESSAGE:Weigths loss : 3.5 (0.179487179487179)
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,attribute,0,0,NaN,effective_method=rounded-replicate
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,groups,1,1,11,1|n
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,groups,1,2,5.19755879386904,1|discrepancy
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,groups,2,1,10,2|n
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,groups,2,2,5.21826239506858,2|discrepancy
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,groups,3,1,21,Total|n
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,groups,3,2,5.34861758739429,Total|discrepancy
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,anova,1,1,2.96519865203484,Exp|SS
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,anova,1,2,1,Exp|df
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,anova,1,3,2.96519865203484,Exp|MSE
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,anova,2,1,109.355770683245,Res|SS
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,anova,2,2,19,Res|df
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,anova,2,3,5.75556687806554,Res|MSE
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,anova,3,1,112.32096933528,Total|SS
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,anova,3,2,20,Total|df
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,anova,3,3,5.61604846676401,Total|MSE
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,t0,1,1,0.51518794149282,Pseudo F
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,pvalue,1,1,0.548387096774194,Pseudo F
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,t0,2,1,0.569310467356941,Pseudo Fbf
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,pvalue,2,1,0.548387096774194,Pseudo Fbf
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,t0,3,1,0.0263993328190008,Pseudo R2
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,pvalue,3,1,0.548387096774194,Pseudo R2
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,t0,4,1,3.5554780064091e-05,Bartlett
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,pvalue,4,1,1,Bartlett
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,t0,5,1,0.000581130501153333,Levene
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,pvalue,5,1,1,Levene
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,1,1,0.156179203936129,min
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,1,2,4.21479768903456,max
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,1,3,0.961429158415342,mean
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,1,4,29.8043039108756,sum
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,1,5,31,finite
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,2,1,0.1730989196461,min
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,2,2,4.73176077052336,max
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,2,3,1.06510828461991,mean
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,2,4,33.0183568232172,sum
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,2,5,31,finite
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,3,1,0.00815294126628539,min
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,3,2,0.181556511734126,max
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,3,3,0.0458858225594911,mean
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,3,4,1.42246049934422,sum
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,3,5,31,finite
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,4,1,3.5554780064091e-05,min
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,4,2,0.316344102050853,max
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,4,3,0.0496737820319461,mean
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,4,4,1.53988724299033,sum
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,4,5,31,finite
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,5,1,0.000581130501153333,min
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,5,2,5.59518000217284,max
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,5,3,1.08592553580172,mean
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,5,4,33.6636916098533,sum
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,R_RNG_ONLY,permutation_summary,5,5,31,finite
+wreal_rounded_replicate_r31_two,rounded-replicate,fractional,31,FALSE,two,EXACT,condition,1,0,NaN,MESSAGE:Weigths loss : 3.5 (0.179487179487179)
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,attribute,0,0,NaN,effective_method=group
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,groups,1,1,4,1|n
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,groups,1,2,0.861681157589326,1|discrepancy
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,groups,2,1,6.5,2|n
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,groups,2,2,0.926451933715102,2|discrepancy
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,groups,3,1,9,3|n
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,groups,3,2,0.96799116395783,3|discrepancy
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,groups,4,1,19.5,Total|n
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,groups,4,2,5.19545085131883,Total|discrepancy
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,anova,1,1,83.1307089255912,Exp|SS
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,anova,1,2,2,Exp|df
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,anova,1,3,41.5653544627956,Exp|MSE
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,anova,2,1,18.1805826751259,Res|SS
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,anova,2,2,16.5,Res|df
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,anova,2,3,1.10185349546218,Res|MSE
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,anova,3,1,101.311291600717,Total|SS
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,anova,3,2,18.5,Total|df
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,anova,3,3,5.4762860324712,Total|MSE
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,t0,1,1,37.7231225693583,Pseudo F
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,pvalue,1,1,NaN,Pseudo F
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,t0,2,1,45.581377327679,Pseudo Fbf
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,pvalue,2,1,NaN,Pseudo Fbf
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,t0,3,1,0.820547321153714,Pseudo R2
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,pvalue,3,1,NaN,Pseudo R2
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,t0,4,1,0.0135263380228231,Bartlett
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,pvalue,4,1,NaN,Bartlett
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,t0,5,1,0.217011406187185,Levene
+wreal_group_r1,group,fractional,1,FALSE,three,EXACT,pvalue,5,1,NaN,Levene
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,attribute,0,0,NaN,effective_method=group
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,groups,1,1,4,1|n
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,groups,1,2,0.861681157589326,1|discrepancy
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,groups,2,1,6.5,2|n
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,groups,2,2,0.926451933715102,2|discrepancy
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,groups,3,1,9,3|n
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,groups,3,2,0.96799116395783,3|discrepancy
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,groups,4,1,19.5,Total|n
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,groups,4,2,5.19545085131883,Total|discrepancy
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,anova,1,1,83.1307089255912,Exp|SS
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,anova,1,2,2,Exp|df
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,anova,1,3,41.5653544627956,Exp|MSE
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,anova,2,1,18.1805826751259,Res|SS
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,anova,2,2,16.5,Res|df
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,anova,2,3,1.10185349546218,Res|MSE
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,anova,3,1,101.311291600717,Total|SS
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,anova,3,2,18.5,Total|df
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,anova,3,3,5.4762860324712,Total|MSE
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,t0,1,1,37.7231225693583,Pseudo F
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,pvalue,1,1,0.032258064516129,Pseudo F
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,t0,2,1,45.581377327679,Pseudo Fbf
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,pvalue,2,1,0.032258064516129,Pseudo Fbf
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,t0,3,1,0.820547321153714,Pseudo R2
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,pvalue,3,1,0.032258064516129,Pseudo R2
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,t0,4,1,0.0135263380228231,Bartlett
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,pvalue,4,1,0.967741935483871,Bartlett
+wreal_group_r31,group,fractional,31,FALSE,three,EXACT,t0,5,1,0.217011406187185,Levene
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,pvalue,5,1,0.967741935483871,Levene
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,1,0.43219479200435,min
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,2,37.7231225693583,max
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,3,3.17123154754583,mean
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,4,98.3081779739206,sum
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,5,31,finite
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,1,0.508764637263638,min
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,2,45.581377327679,max
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,3,3.71784825538452,mean
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,4,115.25329591692,sum
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,5,31,finite
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,1,0.049779439687574,min
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,2,0.820547321153714,max
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,3,0.207016586341643,mean
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,4,6.41751417659093,sum
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,5,31,finite
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,1,0.00483138926296243,min
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,2,2.81460470017083,max
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,3,0.505375301412125,mean
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,4,15.6666343437759,sum
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,5,31,finite
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,1,0.00610035477962466,min
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,2,22.1619775597705,max
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,3,6.88299242822751,mean
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,4,213.372765275053,sum
+wreal_group_r31,group,fractional,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,5,31,finite
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,attribute,0,0,NaN,effective_method=permute
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,groups,1,1,9,1|n
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,groups,1,2,0.791924893997052,1|discrepancy
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,groups,2,1,10,2|n
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,groups,2,2,0.915624966672792,2|discrepancy
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,groups,3,1,11,3|n
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,groups,3,2,1.00802671230979,3|discrepancy
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,groups,4,1,30,Total|n
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,groups,4,2,5.33418321957922,Total|discrepancy
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,anova,1,1,132.653629039267,Exp|SS
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,anova,1,2,2,Exp|df
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,anova,1,3,66.3268145196337,Exp|MSE
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,anova,2,1,27.3718675481091,Res|SS
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,anova,2,2,27,Res|df
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,anova,2,3,1.01377287215219,Res|MSE
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,anova,3,1,160.025496587376,Total|SS
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,anova,3,2,29,Total|df
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,anova,3,3,5.5181205719785,Total|MSE
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,t0,1,1,65.4257145181101,Pseudo F
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,pvalue,1,1,NaN,Pseudo F
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,t0,2,1,73.566452795879,Pseudo Fbf
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,pvalue,2,1,NaN,Pseudo Fbf
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,t0,3,1,0.828953084778189,Pseudo R2
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,pvalue,3,1,NaN,Pseudo R2
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,t0,4,1,0.121893788854033,Bartlett
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,pvalue,4,1,NaN,Bartlett
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,t0,5,1,1.74891874126906,Levene
+wint_permute_r1,permute,integer,1,FALSE,three,EXACT,pvalue,5,1,NaN,Levene
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,attribute,0,0,NaN,effective_method=permute
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,groups,1,1,9,1|n
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,groups,1,2,0.791924893997052,1|discrepancy
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,groups,2,1,10,2|n
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,groups,2,2,0.915624966672792,2|discrepancy
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,groups,3,1,11,3|n
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,groups,3,2,1.00802671230979,3|discrepancy
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,groups,4,1,30,Total|n
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,groups,4,2,5.33418321957922,Total|discrepancy
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,anova,1,1,132.653629039267,Exp|SS
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,anova,1,2,2,Exp|df
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,anova,1,3,66.3268145196337,Exp|MSE
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,anova,2,1,27.3718675481091,Res|SS
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,anova,2,2,27,Res|df
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,anova,2,3,1.01377287215219,Res|MSE
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,anova,3,1,160.025496587376,Total|SS
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,anova,3,2,29,Total|df
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,anova,3,3,5.5181205719785,Total|MSE
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,t0,1,1,65.4257145181101,Pseudo F
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,pvalue,1,1,0.032258064516129,Pseudo F
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,t0,2,1,73.566452795879,Pseudo Fbf
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,pvalue,2,1,0.032258064516129,Pseudo Fbf
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,t0,3,1,0.828953084778189,Pseudo R2
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,pvalue,3,1,0.032258064516129,Pseudo R2
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,t0,4,1,0.121893788854033,Bartlett
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,pvalue,4,1,0.935483870967742,Bartlett
+wint_permute_r31,permute,integer,31,FALSE,three,EXACT,t0,5,1,1.74891874126906,Levene
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,pvalue,5,1,0.709677419354839,Levene
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,1,0.687409147253977,min
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,2,65.4257145181101,max
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,3,5.51608680586797,mean
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,4,170.998690981907,sum
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,5,31,finite
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,1,0.724078460758053,min
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,2,73.566452795879,max
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,3,6.03954385718905,mean
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,4,187.22585957286,sum
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,5,31,finite
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,1,0.048452056335249,min
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,2,0.828953084778189,max
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,3,0.214342356194675,mean
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,4,6.64461304203493,sum
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,5,31,finite
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,1,0.0439882772837762,min
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,2,4.12010733956753,max
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,3,1.1685240429474,mean
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,4,36.2242453313694,sum
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,5,31,finite
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,1,0.073486009445945,min
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,2,52.4942934927094,max
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,3,9.00585984198371,mean
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,4,279.181655101495,sum
+wint_permute_r31,permute,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,5,31,finite
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,attribute,0,0,NaN,effective_method=permute
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,groups,1,1,10.4,1|n
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,groups,1,2,80.8602347633136,1|discrepancy
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,groups,2,1,9.1,2|n
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,groups,2,2,79.0151610916556,2|discrepancy
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,groups,3,1,19.5,Total|n
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,groups,3,2,80.0589330019724,Total|discrepancy
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,anova,1,1,1.16478606593409,Exp|SS
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,anova,1,2,1,Exp|df
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,anova,1,3,1.16478606593409,Exp|MSE
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,anova,2,1,1559.98440747253,Res|SS
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,anova,2,2,17.5,Res|df
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,anova,2,3,89.1419661412873,Res|MSE
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,anova,3,1,1561.14919353846,Total|SS
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,anova,3,2,18.5,Total|df
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,anova,3,3,84.3864428939709,Total|MSE
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,t0,1,1,0.0130666409588492,Pseudo F
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,pvalue,1,1,1,Pseudo F
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,t0,2,1,0.0145823929025997,Pseudo Fbf
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,pvalue,2,1,1,Pseudo Fbf
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,t0,3,1,0.000746108104693069,Pseudo R2
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,pvalue,3,1,1,Pseudo R2
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,t0,4,1,0.00109532358203406,Bartlett
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,pvalue,4,1,0.903225806451613,Bartlett
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,EXACT,t0,5,1,0.00628278424186253,Levene
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,pvalue,5,1,0.903225806451613,Levene
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,1,1,0.0130666409588492,min
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,1,2,4.43905141742029,max
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,1,3,1.1459601327801,mean
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,1,4,35.5247641161832,sum
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,1,5,31,finite
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,2,1,0.0145823929025997,min
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,2,2,5.08724557362568,max
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,2,3,1.27411428916135,mean
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,2,4,39.4975429640019,sum
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,2,5,31,finite
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,3,1,0.000746108104693069,min
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,3,2,0.20233561301085,max
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,3,3,0.0579314875090641,mean
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,3,4,1.79587611278099,sum
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,3,5,31,finite
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,4,1,7.40850705674602e-05,min
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,4,2,1.84790409494677,max
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,4,3,0.289971941422823,mean
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,4,4,8.9891301841075,sum
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,4,5,31,finite
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,5,1,0.000541110582392729,min
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,5,2,2.24634135742745,max
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,5,3,0.665647250124605,mean
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,5,4,20.6350647538628,sum
+wreal_permute_r31_sq_two,permute,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,5,5,31,finite
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,attribute,0,0,NaN,effective_method=random-sampling
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,groups,1,1,4.5,1|n
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,groups,1,2,0.791924893997052,1|discrepancy
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,groups,2,1,5,2|n
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,groups,2,2,0.915624966672792,2|discrepancy
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,groups,3,1,5.5,3|n
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,groups,3,2,1.00802671230979,3|discrepancy
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,groups,4,1,15,Total|n
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,groups,4,2,5.33418321957922,Total|discrepancy
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,anova,1,1,66.3268145196337,Exp|SS
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,anova,1,2,2,Exp|df
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,anova,1,3,33.1634072598168,Exp|MSE
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,anova,2,1,13.6859337740546,Res|SS
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,anova,2,2,12,Res|df
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,anova,2,3,1.14049448117121,Res|MSE
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,anova,3,1,80.0127482936882,Total|SS
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,anova,3,2,14,Total|df
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,anova,3,3,5.71519630669202,Total|MSE
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,t0,1,1,29.0780953413823,Pseudo F
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,pvalue,1,1,NaN,Pseudo F
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,t0,2,1,36.7832263979395,Pseudo Fbf
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,pvalue,2,1,NaN,Pseudo Fbf
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,t0,3,1,0.828953084778189,Pseudo R2
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,pvalue,3,1,NaN,Pseudo R2
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,t0,4,1,0.0508888098752421,Bartlett
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,pvalue,4,1,NaN,Bartlett
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,t0,5,1,0.777297218341805,Levene
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,pvalue,5,1,NaN,Levene
+wint_random_sampling_r1,random-sampling,integer,1,FALSE,three,EXACT,condition,1,0,NaN,MESSAGE: [>] weights corrected to match sample size. Mean correction 1
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,attribute,0,0,NaN,effective_method=random-sampling
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,groups,1,1,4.5,1|n
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,groups,1,2,0.791924893997052,1|discrepancy
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,groups,2,1,5,2|n
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,groups,2,2,0.915624966672792,2|discrepancy
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,groups,3,1,5.5,3|n
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,groups,3,2,1.00802671230979,3|discrepancy
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,groups,4,1,15,Total|n
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,groups,4,2,5.33418321957922,Total|discrepancy
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,anova,1,1,66.3268145196337,Exp|SS
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,anova,1,2,2,Exp|df
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,anova,1,3,33.1634072598168,Exp|MSE
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,anova,2,1,13.6859337740546,Res|SS
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,anova,2,2,12,Res|df
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,anova,2,3,1.14049448117121,Res|MSE
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,anova,3,1,80.0127482936882,Total|SS
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,anova,3,2,14,Total|df
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,anova,3,3,5.71519630669202,Total|MSE
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,t0,1,1,29.0780953413823,Pseudo F
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,pvalue,1,1,0.032258064516129,Pseudo F
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,t0,2,1,36.7832263979395,Pseudo Fbf
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,pvalue,2,1,NaN,Pseudo Fbf
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,t0,3,1,0.828953084778189,Pseudo R2
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,pvalue,3,1,0.032258064516129,Pseudo R2
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,t0,4,1,0.0508888098752421,Bartlett
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,pvalue,4,1,NaN,Bartlett
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,t0,5,1,0.777297218341805,Levene
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,pvalue,5,1,0.419354838709677,Levene
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,1,0.172209884966532,min
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,2,29.0780953413823,max
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,3,1.80257666628538,mean
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,4,55.8798766548466,sum
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,1,5,31,finite
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,1,NaN,min
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,2,NaN,max
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,3,NaN,mean
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,4,NaN,sum
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,2,5,30,finite
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,1,0.027900847212921,min
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,2,0.828953084778189,max
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,3,0.149024026237603,mean
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,4,4.61974481336569,sum
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,3,5,31,finite
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,1,NaN,min
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,2,NaN,max
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,3,NaN,mean
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,4,NaN,sum
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,4,5,26,finite
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,1,0.00685854273201668,min
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,2,10.6758576544853,max
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,3,1.18536838609311,mean
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,4,36.7464199688866,sum
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,R_RNG_ONLY,permutation_summary,5,5,31,finite
+wint_random_sampling_r31,random-sampling,integer,31,FALSE,three,EXACT,condition,1,0,NaN,MESSAGE: [>] weights corrected to match sample size. Mean correction 1
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,attribute,0,0,NaN,effective_method=random-sampling
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,groups,1,1,8,1|n
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,groups,1,2,80.8602347633136,1|discrepancy
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,groups,2,1,7,2|n
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,groups,2,2,79.0151610916556,2|discrepancy
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,groups,3,1,15,Total|n
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,groups,3,2,80.0589330019725,Total|discrepancy
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,anova,1,1,0.895989281488937,Exp|SS
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,anova,1,2,1,Exp|df
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,anova,1,3,0.895989281488937,Exp|MSE
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,anova,2,1,1199.9880057481,Res|SS
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,anova,2,2,13,Res|df
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,anova,2,3,92.3067696729306,Res|MSE
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,anova,3,1,1200.88399502959,Total|SS
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,anova,3,2,14,Total|df
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,anova,3,3,85.7774282163991,Total|MSE
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,t0,1,1,0.00970664756944355,Pseudo F
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,pvalue,1,1,0.967741935483871,Pseudo F
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,t0,2,1,0.0112172253097067,Pseudo Fbf
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,pvalue,2,1,0.967741935483871,Pseudo Fbf
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,t0,3,1,0.000746108104694044,Pseudo R2
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,pvalue,3,1,0.967741935483871,Pseudo R2
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,t0,4,1,0.000798254297003203,Bartlett
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,pvalue,4,1,0.967741935483871,Bartlett
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,t0,5,1,0.00466721115109726,Levene
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,pvalue,5,1,0.870967741935484,Levene
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,1,1,0.00424352470493704,min
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,1,2,3.47152497209836,max
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,1,3,0.764081341973509,mean
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,1,4,23.6865216011788,sum
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,1,5,31,finite
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,2,1,0.00499950397223556,min
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,2,2,3.92709183166203,max
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,2,3,0.910050480486796,mean
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,2,4,28.2115648950907,sum
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,2,5,31,finite
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,3,1,0.000326318458807339,min
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,3,2,0.210759172449356,max
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,3,3,0.0527903244312947,mean
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,3,4,1.63650005737014,sum
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,3,5,31,finite
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,4,1,0.000594332960083835,min
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,4,2,1.16482476463154,max
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,4,3,0.157789512179781,mean
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,4,4,4.89147487757322,sum
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,4,5,31,finite
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,5,1,0.000812703521644087,min
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,5,2,11.7217918633249,max
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,5,3,1.2183706815088,mean
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,5,4,37.7694911267727,sum
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,R_RNG_ONLY,permutation_summary,5,5,31,finite
+wreal_random_sampling_r31_sq_two,random-sampling,fractional,31,TRUE,two,EXACT,condition,1,0,NaN,MESSAGE: [>] weights corrected to match sample size. Mean correction 0.3

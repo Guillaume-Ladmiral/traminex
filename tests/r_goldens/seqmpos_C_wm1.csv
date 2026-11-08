@@ -1,0 +1,5 @@
+# R: seqmpos(C_wm1[i,],C_wm1[j,],with.missing=TRUE)
+               6,               2,               1,               0
+               2,               3,               1,               0
+               1,               1,               4,               0
+               0,               0,               0,               2

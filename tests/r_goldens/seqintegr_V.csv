@@ -1,0 +1,5 @@
+# R: seqintegr(sdV, wm=F); row3 all-void -> NaN
+             0.3,             0.7
+             0.6,             0.4
+             NaN,             NaN
+0.333333333333333,0.666666666666667

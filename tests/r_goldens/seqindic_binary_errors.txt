@@ -1,0 +1,8 @@
+kind|case|message
+warning|overwritten_binary_args|[!!] seqdata argument in ipos.args will be overwritten!
+warning|overwritten_binary_args|[!!] with.missing argument in ipos.args will be overwritten!
+warning|overwritten_binary_args|[!!] index argument in ipos.args will be overwritten!
+error|empty_ipos_args|At least one of the selected indicators requires an non empty ipos.args
+error|invalid_indicator|invalid values in indic:  not-an-indicator
+error|invalid_pos_state|invalid values in pos.states:  Z
+error|duplicate_pos_state|Multiple occurrences of same state in pos.states

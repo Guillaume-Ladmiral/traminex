@@ -1,0 +1,20 @@
+# case	field	value
+unequal_constant	alphabet	*+y|%+x|%+y|A+x|A+y|B+x|B+y
+unequal_constant	dim	7|7
+unequal_constant	sm	0|NA|NA|4|2|4|2|NA|0|NA|NA|NA|NA|NA|NA|NA|0|NA|NA|NA|NA|4|NA|NA|0|2|2|4|2|NA|NA|2|0|4|2|4|NA|NA|2|4|0|2|2|NA|NA|4|2|2|0
+unequal_constant	indel	2
+unequal_diss_om	error	NA indel and/or substitution CAT costs, cannot compute MD distances!
+void_constant	alphabet	%+y|A+x|A+y|B+x|B+y
+void_constant	dim	5|5
+void_constant	sm	0|NA|NA|NA|NA|NA|0|2|2|4|NA|2|0|4|2|NA|2|4|0|2|NA|4|2|2|0
+void_constant	indel	2
+void_mean_cweight	alphabet	%+y|A+x|A+y|B+x|B+y
+void_mean_cweight	dim	5|5
+void_mean_cweight	sm	0|NA|NA|NA|NA|NA|0|0.40000000000000002|1.6000000000000001|2|NA|0.40000000000000002|0|2|1.6000000000000001|NA|1.6000000000000001|2|0|0.40000000000000002|NA|2|1.6000000000000001|0.40000000000000002|0
+void_mean_cweight	indel	1
+void_trate_time_varying	alphabet	%+y|A+x|A+y|B+x|B+y
+void_trate_time_varying	dim	5|5|3
+void_trate_time_varying	sm	0|NA|NA|NA|NA|NA|0|2|4|6|NA|2|0|6|4|NA|4|6|0|2|NA|6|4|2|0|0|NA|NA|NA|NA|NA|0|2.5|3|5.5|NA|2.5|0|5.5|3|NA|3|5.5|0|2.5|NA|5.5|3|2.5|0|0|NA|NA|NA|NA|NA|0|3|2|5|NA|3|0|5|2|NA|2|5|0|3|NA|5|2|3|0
+void_trate_time_varying	indel	3.5
+void_diss_ham	error	NA indel and/or substitution CAT costs, cannot compute MD distances!
+void_diss_dhd	error	NA indel and/or substitution CAT costs, cannot compute MD distances!

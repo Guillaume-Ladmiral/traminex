@@ -1,0 +1,2 @@
+# R: seqmaintokens(sdB, wm=T); DEFAULT k=8; 1-based into c(A,B,C,nr)
+1,2,3,4

@@ -1,0 +1,5 @@
+# R: dissassoc(D, grp, weights=wint, R=1, weight.permutation='replicate') -> groups [n, discrepancy] rows g1,g2,g3,Total
+9,0.791924893997052
+10,0.915624966672792
+11,1.00802671230979
+30,5.33418321957922

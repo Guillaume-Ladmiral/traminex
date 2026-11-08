@@ -1,0 +1,49 @@
+# shape	method	defect	R outcome
+regular	OM	diagonal	error: [!] Non-zero diagonal elements in substitution cost matrix (sm)!
+regular	OM	negative	error: [!] Negative substitution costs are not allowed
+regular	OM	oversized	error: [!] size of substitution cost matrix must be 3x3
+regular	OM	undersized	error: [!] size of substitution cost matrix must be 3x3
+regular	OMloc	diagonal	error: [!] Non-zero diagonal elements in substitution cost matrix (sm)!
+regular	OMloc	negative	error: [!] Negative substitution costs are not allowed
+regular	OMloc	oversized	error: [!] size of substitution cost matrix must be 3x3
+regular	OMloc	undersized	error: [!] size of substitution cost matrix must be 3x3
+regular	OMslen	diagonal	error: [!] Non-zero diagonal elements in substitution cost matrix (sm)!
+regular	OMslen	negative	error: [!] Negative substitution costs are not allowed
+regular	OMslen	oversized	error: [!] size of substitution cost matrix must be 3x3
+regular	OMslen	undersized	error: [!] size of substitution cost matrix must be 3x3
+regular	OMspell	diagonal	error: [!] Non-zero diagonal elements in substitution cost matrix (sm)!
+regular	OMspell	negative	error: [!] Negative substitution costs are not allowed
+regular	OMspell	oversized	error: [!] size of substitution cost matrix must be 3x3
+regular	OMspell	undersized	error: [!] size of substitution cost matrix must be 3x3
+regular	OMstran	diagonal	error: [!] Non-zero diagonal elements in substitution cost matrix (sm)!
+regular	OMstran	negative	error: [!] Negative substitution costs are not allowed
+regular	OMstran	oversized	error: [!] size of substitution cost matrix must be 3x3
+regular	OMstran	undersized	error: [!] size of substitution cost matrix must be 3x3
+regular	TWED	diagonal	error: [!] Non-zero diagonal elements in substitution cost matrix (sm)!
+regular	TWED	negative	error: [!] Negative substitution costs are not allowed
+regular	TWED	oversized	error: [!] size of substitution cost matrix must be 3x3
+regular	TWED	undersized	error: [!] size of substitution cost matrix must be 3x3
+ragged	OM	diagonal	error: [!] Non-zero diagonal elements in substitution cost matrix (sm)!
+ragged	OM	negative	error: [!] Negative substitution costs are not allowed
+ragged	OM	oversized	error: [!] size of substitution cost matrix must be 3x3
+ragged	OM	undersized	error: [!] size of substitution cost matrix must be 3x3
+ragged	OMloc	diagonal	error: [!] Non-zero diagonal elements in substitution cost matrix (sm)!
+ragged	OMloc	negative	error: [!] Negative substitution costs are not allowed
+ragged	OMloc	oversized	error: [!] size of substitution cost matrix must be 3x3
+ragged	OMloc	undersized	error: [!] size of substitution cost matrix must be 3x3
+ragged	OMslen	diagonal	error: [!] Non-zero diagonal elements in substitution cost matrix (sm)!
+ragged	OMslen	negative	error: [!] Negative substitution costs are not allowed
+ragged	OMslen	oversized	error: [!] size of substitution cost matrix must be 3x3
+ragged	OMslen	undersized	error: [!] size of substitution cost matrix must be 3x3
+ragged	OMspell	diagonal	error: [!] Non-zero diagonal elements in substitution cost matrix (sm)!
+ragged	OMspell	negative	error: [!] Negative substitution costs are not allowed
+ragged	OMspell	oversized	error: [!] size of substitution cost matrix must be 3x3
+ragged	OMspell	undersized	error: [!] size of substitution cost matrix must be 3x3
+ragged	OMstran	diagonal	error: [!] Non-zero diagonal elements in substitution cost matrix (sm)!
+ragged	OMstran	negative	error: [!] Negative substitution costs are not allowed
+ragged	OMstran	oversized	error: [!] size of substitution cost matrix must be 3x3
+ragged	OMstran	undersized	error: [!] size of substitution cost matrix must be 3x3
+ragged	TWED	diagonal	error: [!] Non-zero diagonal elements in substitution cost matrix (sm)!
+ragged	TWED	negative	error: [!] Negative substitution costs are not allowed
+ragged	TWED	oversized	error: [!] size of substitution cost matrix must be 3x3
+ragged	TWED	undersized	error: [!] size of substitution cost matrix must be 3x3

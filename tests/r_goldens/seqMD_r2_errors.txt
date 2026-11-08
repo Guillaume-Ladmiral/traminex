@@ -1,0 +1,5 @@
+case=message
+dhd_state_width= [!] size of substitution cost matrix must be 4x4
+dhd_time_width= [!] size of substitution cost matrix must be 3x3x4
+stationary_state_width= [!] size of substitution cost matrix must be 3x3
+indel_state_width= [!] indel length does not match size of alphabet for at least one channel

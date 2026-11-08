@@ -1,0 +1,13 @@
+# TraMineRextras 0.6.9 FCE_to_TSE errors and selected Python divergences
+DIVERGENCE|single_row_null_id_uses_index|R reinterprets generated id=1 as column 1; selected Python keeps generated id=1
+DIVERGENCE|all_missing_without_first_event|R returns id=a,time=<NA>,event=<NA> via its 1:0 boundary; selected Python returns zero rows
+DIVERGENCE|eventless_person_does_not_corrupt_ids|R returns ids=a,m after 1:0 overwrites the preceding id; selected Python returns ids=z,m
+ERROR|unknown_character_cols|undefined columns selected
+ERROR|numeric_col_out_of_bounds|undefined columns selected
+ERROR|unknown_id_selector|undefined columns selected
+ERROR|empty_cols|argument is of length zero
+ERROR|zero_row_input|argument is of length zero
+DIVERGENCE|eventlist_too_short|R emits 2 <NA> event labels; selected Python raises ValueError
+SELECTED_ERROR|eventlist_too_short|eventlist must have same length as cols
+DIVERGENCE|eventlist_too_long|R ignores the extra label and emits events=kept; selected Python raises ValueError
+SELECTED_ERROR|eventlist_too_long|eventlist must have same length as cols

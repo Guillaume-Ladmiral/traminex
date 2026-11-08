@@ -1,0 +1,4 @@
+seqfpos_non_stslist=ERROR:data is not a sequence object, use 'seqdef' function to create one
+seqfposend_non_stslist=ERROR:data is not a sequence object, use 'seqdef' function to create one
+seqfpos_invalid_state=NA,NA,NA,NA,NA,NA
+seqfposend_invalid_state=0,0,0,0,0,0

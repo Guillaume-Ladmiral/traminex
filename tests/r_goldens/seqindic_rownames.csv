@@ -1,0 +1,12 @@
+case,row,rowname
+"character_ids",1,"p1"
+"character_ids",2,"p2"
+"character_ids",3,"p3"
+"default_ids",1,"1"
+"default_ids",2,"2"
+"default_ids",3,"3"
+"numeric_ids",1,"10"
+"numeric_ids",2,"20"
+"numeric_ids",3,"30"
+"reordered_subset",1,"p3"
+"reordered_subset",2,"p1"

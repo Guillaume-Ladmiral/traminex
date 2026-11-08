@@ -1,0 +1,52 @@
+# TraMineR 2.2-14 seqformat input errors and deprecated-alias warnings
+ERROR|missing_from_non_stslist|'from' must be specified
+ERROR|missing_to|'to' must be specified
+ERROR|unknown_from|'from' must be one of: STS, SPS, SPELL
+ERROR|unknown_to|'to' must be one of: STS, DSS, SPS, SRS, TSE, SPELL
+ERROR|compressed_separator_required|'stsep' must be specified as it is neither '-' nor ':'
+ERROR|compressed_numeric_noncharacter|non-character argument
+ERROR|compressed_numeric_negative_separator|'stsep' must be specified as it is neither '-' nor ':'
+ERROR|compressed_all_missing|missing value where TRUE/FALSE needed
+ERROR|compressed_partial_missing|missing value where TRUE/FALSE needed
+ERROR|compressed_partial_missing_numeric|missing value where TRUE/FALSE needed
+ERROR|compressed_empty_only|length of 'dimnames' [2] not equal to array extent
+ERROR|sts_bad_data|'data' must be a state sequence object, a data frame, or a matrix
+ERROR|sps_rejects_stslist|'data' must be a data frame or a matrix
+ERROR|spell_requires_dataframe|'data' must be a data frame with at least three columns
+ERROR|bad_missing|'missing' invalid type or unknown value
+ERROR|bad_stsep|'stsep' must be a character
+ERROR|multichar_stsep|'stsep' must be a character
+ERROR|spell_bad_selector|'id' must be a positive integer or a string
+ERROR|spell_missing_id|missing values in 'row.names' are not allowed
+ERROR|spell_bad_limit|'limit' must be a number
+ERROR|spell_bad_fillblanks|'fillblanks' must be a character
+ERROR|spell_empty_fillblanks|'fillblanks' must be a character
+ERROR|spell_multichar_fillblanks|'fillblanks' must be a character
+ERROR|spell_character_time| [!] 'begin' and 'end' columns of seqdata should contain integer values
+ERROR|spell_noninteger_time| [!] Found non-integer values in colunms referred to by begin and/or end argument!
+ERROR|spell_start_before_one| [!] Found one or more spell with starting time < 1
+ERROR|spell_end_before_start| [!] Found one or more spell with ending time < starting time\n2
+ERROR|pdata_requires_pvar|'pvar' required when 'pdata' is a data frame
+ERROR|pdata_birth_must_be_integer| [!] Column 'birth' of pdata should contain integer (birth year) values
+ERROR|pdata_missing_id| [>] pdata must either contain a birth year per individual or be set as "auto"
+ERROR|pdata_invalid_string|incorrect number of dimensions
+ERROR|spell_before_birth_missing_end|missing value where TRUE/FALSE needed
+ERROR|spell_fill_after_missing_end|missing value where TRUE/FALSE needed
+ERROR|pdata_duplicate_id|the condition has length > 1
+ERROR|pdata_missing_id_age2year|argument is of length zero
+ERROR|sps_bad_duration|missing value where TRUE/FALSE needed
+ERROR|sps_in_missing_sdsep|missing value where TRUE/FALSE needed
+ERROR|sps_in_empty|invalid regular expression '[]', reason 'Missing ']''
+ERROR|sps_all_missing|length of 'dimnames' [2] not equal to array extent
+WARN|deprecated_compressed| [!!] In seqformat() : compressed is deprecated, use compress instead.
+WARN|deprecated_nr| [!!] In seqformat() : nr is deprecated, use missing instead.
+WARN|pvar_ignored_without_dataframe| [!!] 'pvar' ignored because 'pdata' is not a data frame
+WARN|stslist_custom_missing_codes| [!!] 'missing' set as "c('M','V')", the 'nr' and 'void' code from the 'data' state sequence object
+WARN|spell_truncated| [!!] 1 sequences truncated at limit 6 . Indexes in attribute 'issues'
+WARN|spell_missing_birth| [!!] 1 empty sequences because of missing start time. Indexes in attribute 'issues'
+WARN|spell_birth_edges_1| [!!] 2 cases with a spell starting before birth year. Indexes in attribute 'issues'
+WARN|spell_birth_edges_2| [!!] 1 empty sequences because of spell occurring before birth year. Indexes in attribute 'issues'
+WARN|spell_no_positive_end_1| [!!] No positive value in 'end' column!
+WARN|spell_no_positive_end_2| [!!] 1 empty sequences because of missing start time. Indexes in attribute 'issues'
+ERROR|deprecated_compressed_conflict|In seqformat() : compress and compressed cannot be specified together. compressed is deprecated, use compress instead.
+ERROR|deprecated_nr_conflict|In seqformat() : missing and nr cannot be specified together. nr is deprecated, use missing instead.

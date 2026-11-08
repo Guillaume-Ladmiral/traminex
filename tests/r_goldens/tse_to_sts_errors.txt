@@ -1,0 +1,9 @@
+# TraMineRextras 0.6.9 TSE_to_STS errors and selected Python divergences
+DIVERGENCE|auto_stm_custom_first_state_safe|R errors: subscript out of bounds because auto seqe2stm omits firstState; selected Python forwards first_state
+DIVERGENCE|one_event_auto_stm_transitions|R returns states=None,None,None,None because seqe2stm drops its one-event dimensions; selected Python keeps the matrix
+DIVERGENCE|noncontiguous_ids_group_stably|R errors: subscript out of bounds when IDs repeat non-contiguously; selected Python groups each ID once in stable first order
+ERROR|tmax_required| [!] tmax required to determine the length of the sequence
+ERROR|tmin_below_one| [!] tmin must be a valid numeric column index! (cannot be < 1)
+ERROR|unknown_named_id_selector|undefined columns selected
+ERROR|unknown_numeric_event_selector|undefined columns selected
+ERROR|empty_auto_stm|subscript out of bounds

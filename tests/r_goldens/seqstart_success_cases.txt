@@ -1,0 +1,8 @@
+# R 4.6.2; TraMineR 2.2.14; TraMineRextras 0.6.9
+# case	data.start	new.start	tmin	tmax	missing	shape	cells
+negative_correction	1998,2000	2000	NULL	NULL	*	2x5	C,*,*,*,*;D,E,F,*,*
+scalar_scalar	2000	2000	NULL	NULL	*	2x3	A,B,C;D,E,F
+scalar_vector_default_missing	2000	2000,1999	NULL	NULL	<DEFAULT_NA>	2x4	A,B,C,<NA>;<NA>,D,E,F
+clip_right	1998,2000	2000,2000	1	4	*	2x4	C,*,*,*;D,E,F,*
+clip_left	1998,2000	2000,2000	-1	2	*	2x4	A,B,C,*;*,*,D,E
+vector_vector	2000,2001	2000,1999	NULL	NULL	*	2x5	A,B,C,*,*;*,*,D,E,F

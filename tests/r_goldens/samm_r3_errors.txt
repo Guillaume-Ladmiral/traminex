@@ -1,0 +1,12 @@
+sublength_one|simpleError|'x' must be an array of at least two dimensions
+sublength_width|simpleError|'names' attribute [7] must be the same length as the vector [6]
+sublength_fractional|success
+covar_short|success
+not_stslist|simpleError|seqdata should be a state sequence object, an event sequence object, or a suffix tree. Use seqdef or seqecreate.
+seqsammeha_typology_short|warning|number of items to replace is not a multiple of replacement length
+seqsammeha_typology_short|success
+seqsammeha_typology_long|warning|number of items to replace is not a multiple of replacement length
+seqsammeha_typology_long|success
+seqsammeha_unknown_spell|simpleError|'ref' must be an existing level
+seqsammseq_not_samm|success
+seqsammeha_not_samm|simpleError|object 's.1' not found

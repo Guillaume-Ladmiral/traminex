@@ -1,0 +1,30 @@
+base|message|Creating data set for variable A
+base|message|Creating data set for variable B
+base|message|Creating data set for variable C
+base|message|Creating data set for variable A
+base|message|Creating data set for variable B
+base|message|Creating data set for variable C
+base|message|Creating data set for variable A
+base|message|Creating data set for variable B
+multiple_supvar|message|Creating data set for variable A
+multiple_supvar|simpleError|length of 'dimnames' [2] not equal to array extent
+single_variable|message|Creating data set for variable A
+single_variable|simpleError|missing value where TRUE/FALSE needed
+empty_variables|message|Creating data set for variable NA
+empty_variables|simpleError|missing value where TRUE/FALSE needed
+missing_window_id|message|Creating data set for variable A
+missing_window_id|simpleError|missing value where TRUE/FALSE needed
+na_window|message|Creating data set for variable A
+na_window|message|Creating data set for variable B
+na_window|success
+missing_status_column|message|Creating data set for variable A
+missing_status_column|simpleError|missing value where TRUE/FALSE needed
+progress|message|Creating data set for variable A
+progress|message|100% completed
+progress|message|Creating data set for variable B
+progress|message|100% completed
+progress|success
+event_before_agemin|message|Creating data set for variable A
+event_before_agemin|simpleError|invalid 'nrow' value (< 0)
+independent_event_before_agemin|message|Creating data set for variable B
+independent_event_before_agemin|simpleError|only 0's may be mixed with negative subscripts

@@ -1,0 +1,7 @@
+progress= [>] computing entropy for 4 sequences ...
+silent=
+invalid_zero=0,0;warnings=
+invalid_negative=NaN,NaN;warnings=NaNs produced | NaNs produced
+invalid_one=Inf,NaN;warnings=NaNs produced
+invalid_infinite=0,0;warnings=
+invalid_nan=NaN,NaN;warnings=

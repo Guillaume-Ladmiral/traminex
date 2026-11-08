@@ -1,0 +1,3 @@
+# dissassoc on the S4-01 data with weights and weight.permutation = none (R stops), and with diss
+none	error attempt to set 'rownames' on an object with no dimensions
+diss_t0	1.6013610572649677 1.9847954143997792 0.20793221423560537 0.024415123069353797 0.14948652399581655

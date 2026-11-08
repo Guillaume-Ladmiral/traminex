@@ -1,0 +1,15 @@
+7 7
+I I I I I I I
+D E I E I E I
+D D E I E I E
+D D E S E I E
+D D E S E S E
+D D D S D S D
+D E D E I E I
+               0                1                2                3                4                5                6
+               1                0                1                2                3                4                5
+               2                1                0                1                2                3                4
+               3                2                1                2                1                2                3
+               4                3                2                3                2                3                2
+               5                4                3                4                3                4                3
+               6                5                4                3                4                3                4

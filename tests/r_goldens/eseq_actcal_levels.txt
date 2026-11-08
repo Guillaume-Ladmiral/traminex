@@ -1,0 +1,8 @@
+PartTime
+NoActivity
+Start
+FullTime
+Stop
+LowPartTime
+Increase
+Decrease

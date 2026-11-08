@@ -1,0 +1,8 @@
+# R oracle: TraMineR 2.2-14 seqsep errors
+# TSV columns: case, sl, sep, failing_index, input, condition_class, message
+"empty_vector"	"1"	"-"	"0"	"[]"	"simpleError"	"missing value where TRUE/FALSE needed"
+"empty_only"	"1"	"-"	"1"	"1=\"\""	"simpleError"	"object 'subseq' not found"
+"empty_first"	"1"	"-"	"1"	"1=\"\" | 2=\"AB\""	"simpleError"	"object 'subseq' not found"
+"nondivisible_first"	"2"	"-"	"1"	"1=\"A\" | 2=\"BB\""	"simpleError"	"Number of characters does not match number of states*states length in sequence1"
+"nondivisible_second"	"2"	"-"	"2"	"1=\"AABB\" | 2=\"CCC\" | 3=\"DDEE\""	"simpleError"	"Number of characters does not match number of states*states length in sequence2"
+"nondivisible_third"	"2"	"|"	"3"	"1=\"AABB\" | 2=\"CC\" | 3=\"DDD\""	"simpleError"	"Number of characters does not match number of states*states length in sequence3"

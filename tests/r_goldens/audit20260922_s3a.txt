@@ -1,0 +1,115 @@
+# case	kind	R result (column-major) or error	R warnings
+s3_01_seqcomp_x_y	value	FALSE	none
+s3_01_seqcomp_x_z	value	TRUE	none
+s3_01_seqcomp_x_w	value	FALSE	none
+s3_01_seqcomp_x_xs	value	TRUE	none
+s3_01_seqcomp_m_n	value	FALSE	none
+s3_01_seqcomp_m_m	value	TRUE	none
+s3_01_seqcomp_v1r2_v2r2	value	TRUE	none
+s3_01_seqmpos_x_y	value	0	none
+s3_01_seqmpos_x_z	value	3	none
+s3_01_seqmpos_x_w	value	1	none
+s3_01_seqmpos_x_xs	value	3	none
+s3_01_seqmpos_m_n	value	2	none
+s3_01_seqmpos_m_n_wm	value	2	none
+s3_01_seqmpos_m_m_wm	value	3	none
+s3_01_seqmpos_a_b	value	4	none
+s3_01_seqmpos_v1_v2	value	4	none
+s3_01_seqmpos_st_m	value	2	none
+s3_01_seqmpos_m_st	value	2	none
+s3_01_seqmpos_st_m_wm	value	3	none
+s3_01_seqmpos_sv_vr	value	2	none
+s3_01_seqmpos_vr_sv	value	2	none
+s3_02_degrad_RANK+	value	0.06122448979591838 0.075585789871504147 0.011904761904761904 -0.014172335600907023 0 0.0075585789871504151	none
+s3_02_degrad_RANK+_nointegr	value	0.33333333333333331 0.33333333333333331 0.16666666666666666 -0.16666666666666666 0 0.083333333333333343	none
+s3_02_degrad_TRATE+	value	0.093640648866141721 0.10034049326514893 -0.03018807948510217 0.032412340487549797 0 -0.0018745275888133017	none
+s3_02_degrad_TRATE+_nointegr	value	0.43478260869565216 0.43478260869565216 0.0066425120772946782 -0.015217391304347813 0 -0.016666666666666684	none
+s3_02_degrad_TRATEDSS+	value	0.0018069476311234533 0.0020674278916037138 -0.030126796280642434 -0.011179138321995465 0 -0.004120571063831885	none
+s3_02_degrad_TRATEDSS+_nointegr	value	0.058974358974358952 0.058974358974358952 -0.0076923076923077023 -0.15714285714285714 0 -0.10439560439560444	none
+s3_02_degrad_FREQ+	value	0.099962207105064232 0.11810279667422524 -0.031783824640967497 0.01481481481481481 0 0.0014243722180230065	none
+s3_02_degrad_FREQ+_nointegr	value	0.43333333333333329 0.43333333333333329 0 -0.06666666666666668 0 0.011111111111111089	none
+s3_02_degrad_ONE	value	0.85714285714285721 0.95238095238095233 -0.14285714285714285 0.19047619047619052 0 0.19047619047619047	none
+s3_02_degrad_ONE_nointegr	value	1 1 0 0 0 0.20000000000000001	none
+s3_02_degrad_penalized_true	value	0.4285714285714286 0.47619047619047616 0.071428571428571425 -0.071428571428571397 0 0.095238095238095233	none
+s3_02_degrad_one_neg	value	0.85714285714285721 0.95238095238095233 0.2857142857142857 0.52380952380952384 0 0.5714285714285714	none
+s3_02_degrad_one_partial	value	0.8571428571428571 0.95238095238095233 -0.7142857142857143 0.52380952380952384 0 0	none
+s3_02_degrad_one_equiv	value	0.8571428571428571 0.95238095238095233 -0.14285714285714285 0.19047619047619052 0 0	none
+s3_02_degrad_rank_bogus_weight	value	0.4285714285714286 0.47619047619047616 0.071428571428571425 -0.071428571428571397 0 0.095238095238095233	none
+s3_02_degrad_rank_border_half	value	0.4285714285714286 0.47619047619047616 0.071428571428571425 -0.071428571428571397 0 0.095238095238095233	none
+s3_02_degrad_one_bogus_weight	value	0.85714285714285721 0.95238095238095233 -0.14285714285714285 0.19047619047619052 0 0.19047619047619047	none
+s3_02_degrad_bogus_method	error	'method' must be one of: FREQ, TRATE, TRATEDSS, RANK, FREQ+, TRATE+, TRATEDSS+, RANK+, ONE	none
+s3_02_degrad_lowercase_method	error	'method' must be one of: FREQ, TRATE, TRATEDSS, RANK, FREQ+, TRATE+, TRATEDSS+, RANK+, ONE	none
+s3_02_degrad_bogus_penalized	error	'penalized' must be one of: NEG, POS, BOTH, NO	none
+s3_02_degrad_trateplus_bogus_weight	error	'weight.type' must be one of: ADD, INV, LOGINV	none
+s3_02_degrad_freq_border_one	error	border.effect should be strictly greater than one!	none
+s3_02_prec_one	value	1.1624010068093726 1.1153114003651243 0.5854674839192241 0.70596442562694062 0 0.89085704279734901	none
+s3_02_prec_tratedssplus	value	0.54197907101772869 0.52002315304644497 0.58098969980808823 0.61212100346463283 0 0.65669837157429589	none
+s3_02_prec_penalized_true	value	1.1624010068093726 1.1153114003651243 0.57810266039666658 0.31829222371432703 0 0.32710014221818706	none
+s3_02_prec_penalized_false	value	0.50596442562694066 0.48546748391922406 0.5854674839192241 0.70596442562694062 0 0.73544869366907406	none
+s3_02_prec_no_bogus_method	value	0.50596442562694066 0.48546748391922406 0.5854674839192241 0.70596442562694062 0 0.73544869366907406	none
+s3_02_insec_one	value	1.489598389176533 1.5592153072799824 0.60683435489903004 0.96578886536700903 0 1.0085965813720568	none
+s3_02_insec_rankplus	value	0.69368002182959421 0.68242014477053414 0.76159625966093469 0.76114033928991165 0 0.82567896988301681	none
+s3_02_indic_one	value	0.85714285714285721 0.95238095238095233 -0.14285714285714285 0.19047619047619052 0 0.19047619047619047 1.1624010068093726 1.1153114003651243 0.5854674839192241 0.70596442562694062 0 0.89085704279734901 1.489598389176533 1.5592153072799824 0.71397721204188724 1.1562650558431995 0 1.0681203908958663	none
+s3_02_indic_trateplus_logical	value	0.093640648866141721 0.10034049326514893 -0.03018807948510217 0.032412340487549797 0 -0.0018745275888133017 0.78030305507784259 0.74869248045203618 0.58933971816163933 0.69673919257559302 0 0.72276099627207635 0.72609618089981753 0.70717484816417897 0.82664627541392788 0.99820120585455885 0 0.8757696728308626	none
+s3_02_degrad_missing_RANK+	value	0.057870370370370357 NaN -0.016666666666666663	none
+s3_02_degrad_missing_RANK+_wm	value	0.013333333333333331 0 -0.0074074074074074051	none
+s3_03_degrad_trate	value	0.30000000000000004 -0.67222222222222217 0.099999999999999992	none
+s3_03_degrad_trate_nointegr	value	1 -1 0.11111111111111109	none
+s3_03_degrad_trate_weighted	value	0.46233766233766238 -0.49292929292929288 0.21067821067821066	none
+s3_03_degrad_trateplus	value	0.030000000000000009 -0.15062757201646088 0.011388888888888888	none
+s3_03_degrad_trate_inv	value	1.2499999997725001e-10 -3.3999999987399993e-10 3.666666666983333e-11	none
+s3_03_degrad_trate_wm	value	0.41333333333333333 -0.69833333333333325 0.18000000000000005	none
+s3_03_prec_trate	value	1.2642912077052102 0.20000000000000001 0.87040160466317484	none
+s3_03_insec_trate	value	0.98789338939881743 0.087347654806743683 0.98196298659532655	none
+s3_04_statd_entropy_wm	value	0.5 0.5 0.5	none
+s3_04_statd_entropy_wm_raw	value	0.69314718055994529 0.69314718055994529 0.69314718055994529	none
+s3_04_statd_entropy_wm_weighted	value	0.64939747034769935 0.47721700146248253 0.64939747034769935	none
+s3_04_statd_entropy_k1_wm	value	-0 -0 -0	none
+s3_04_statd_freq_wm	value	0.5 0.5 0 0 0.5 0 0.5 0 0 0.5 0.5 0	none
+s3_04_statd_valid_wm	value	2 2 2	none
+s3_04_statd_cpal_wm	value	#7FC97F #BEAED4 #FDC086 darkgrey	none
+s3_04_statd_cpal_k1_wm	value	#7FC97F darkgrey	none
+s3_05_align_const_sm	value	0 2 2 2 2 0 2 2 2 2 0 2 2 2 2 0	none
+s3_05_align_const_12_operation	value	E S E	none
+s3_05_align_const_12_seq1	value	A B C	none
+s3_05_align_const_12_seq2	value	A C C	none
+s3_05_align_const_12_cost	value	0 2 0	none
+s3_05_align_const_12_costmatrix	value	0 1 2 3 1 0 1 2 2 1 2 1 3 2 3 2	none
+s3_05_align_var_13_operation	value	S S S	none
+s3_05_align_var_13_seq1	value	A B C	none
+s3_05_align_var_13_seq2	value	C A B	none
+s3_05_align_var_13_cost	value	3 1 2	none
+s3_05_align_var_13_costmatrix	value	0 4 8 12 4 3 6 8 8 4 4 8 12 8 4 6	none
+s3_05_align_k_by_k_sm	error	length of 'dimnames' [1] not equal to array extent	none
+s3_06_transn_pweight_wm	value	NA 0 NA 0.66666666666666674 NA	none
+s3_06_transn_pweight_wm_norm	value	NA 0 NA 0.22222222222222224 NA	none
+s3_06_transn_pweight	value	0 0 0.66666666666666674 0.66666666666666674 0	none
+s3_06_transn_wm	value	2 0 2 2 1	none
+s3_07_modst_missing_states	value	A NA B B	none
+s3_07_modst_missing_freq	value	0.5 NA 0.5 0.5	none
+s3_07_modst_missing_occurrences	value	0	none
+s3_07_modst_missing_wm_states	value	A * B B	none
+s3_07_modst_missing_wm_freq	value	0.33333333333333331 1 0.33333333333333331 0.33333333333333331	none
+s3_07_modst_missing_wm_occurrences	value	1	none
+s3_07_modst_zero_weights_states	value	NA NA NA NA	none
+s3_07_modst_zero_weights_freq	value	NA NA NA NA	none
+s3_07_modst_zero_weights_occurrences	value	0	none
+s3_07_modst_zero_weights_unweighted_states	value	A B A A	none
+s3_07_modst_zero_weights_unweighted_freq	value	0.5 1 1 0.5	none
+s3_07_modst_zero_weights_unweighted_occurrences	value	0	none
+s3_07_modst_ragged_states	value	A B NA	none
+s3_07_modst_ragged_freq	value	1 1 NA	none
+s3_07_modst_ragged_occurrences	value	0	none
+s3_08_meant_prop	value	NaN NaN NaN	none
+s3_08_meant_prop_serr	value	NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN	none
+s3_08_meant_prop_zero_weight	value	NaN NaN NaN	none
+s3_08_meant_prop_wm	value	0.083333333333333329 0.25 0.16666666666666666 0.5	none
+s3_08_meant_counts	value	0.33333333333333331 1 0.66666666666666663	none
+s3_09_statf_wm	value	2 2 2 0 33.333333333333329 33.333333333333329 33.333333333333329 0	none
+s3_09_statf_wm_rownames	value	A B C *	none
+s3_09_statf_zero_weight	value	0 0 NaN NaN	none
+s3_09_statf_zero_weight_rownames	value	A B	none
+s3_09_statf_zero_weight_wm	value	0 0 0 NaN NaN NaN	none
+s3_09_statf_zero_weight_wm_rownames	value	A B *	none
+s3_09_statf_zero_weight_unweighted	value	1 3 25 75	none
+s3_09_statf_zero_weight_unweighted_rownames	value	A B	none

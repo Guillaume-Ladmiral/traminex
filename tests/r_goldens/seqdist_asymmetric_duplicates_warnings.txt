@@ -1,0 +1,6 @@
+# method	R warnings
+OMloc	Non-symmetric substitution cost matrix!
+OMslen	Non-symmetric substitution cost matrix!
+OMspell	Non-symmetric substitution cost matrix!
+OMstran	Non-symmetric substitution cost matrix!
+TWED	Non-symmetric substitution cost matrix!

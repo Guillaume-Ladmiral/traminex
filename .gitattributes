@@ -1,0 +1,64 @@
+# Line-ending policy for traminex.
+#
+# This repository is developed on Linux and its committed history is already
+# LF-only. A cross-platform copy from Windows introduced CRLF endings into the
+# working-tree files on disk; the rules below tell Git to treat text files as
+# LF everywhere (in the index and on checkout) so those endings do not reappear
+# as spurious changes.
+
+# Default: let Git detect text vs binary, and store/check out text as LF.
+* text=auto eol=lf
+
+# Explicit text types (defensive; same LF policy).
+*.py    text eol=lf
+*.pyi   text eol=lf
+*.pyx   text eol=lf
+*.R     text eol=lf
+*.r     text eol=lf
+*.Rd    text eol=lf
+*.Rnw   text eol=lf
+*.c     text eol=lf
+*.h     text eol=lf
+*.cpp   text eol=lf
+*.hpp   text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.csv   text eol=lf
+*.tsv   text eol=lf
+*.json  text eol=lf
+*.toml  text eol=lf
+*.cfg   text eol=lf
+*.ini   text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.qmd   text eol=lf
+*.dot   text eol=lf
+*.ipynb text eol=lf
+*.ps1   text eol=lf
+*.sh    text eol=lf
+Makefile text eol=lf
+
+# Binary types: never alter their bytes.
+*.RData binary
+*.rda   binary
+*.rds   binary
+*.rdb   binary
+*.rdx   binary
+*.pdf   binary
+*.gz    binary
+*.zip   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.so    binary
+*.pyd   binary
+*.dll   binary
+*.dylib binary
+
+# CRAN reference trees are byte-exact extracted package sources. Their own MD5
+# manifests cover files with upstream line endings, so Git must not normalize
+# anything below these directories even when a filename matches a text rule.
+SOURCES/TraMineR/**       -text
+SOURCES/TraMineRextras/** -text

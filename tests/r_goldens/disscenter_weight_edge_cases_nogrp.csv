@@ -1,0 +1,15 @@
+# R: TraMineR::disscenter(D, weights=w) on D=matrix(c(0,1,2,1,0,3,2,3,0),3,byrow=TRUE); rows = ones,varied,negative_middle,all_negative,zeros,one_zero,sum_zero,inf_first,nan_first,nan_two,nan_all,neg_inf_middle,neg_inf_all,mixed_inf; cols = the 3 cases
+0.333333333333333,0.666666666666667,1
+0.527777777777778,1.19444444444444,0.527777777777778
+3,6,1
+-1,-2,-3
+NaN,NaN,NaN
+0.75,0.75,0.75
+Inf,Inf,Inf
+NaN,NaN,NaN
+NA,NaN,NaN
+NaN,NaN,NaN
+NaN,NaN,NaN
+NaN,NaN,NaN
+NaN,NaN,NaN
+NaN,NaN,NaN

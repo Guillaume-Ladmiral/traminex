@@ -1,0 +1,4 @@
+"case","value"
+"supported_dispatch_types","iIdHtdHfmtmsrrf"
+"rf_requires_diss","'diss' required for rf plots"
+"r_requires_diss","For type = 'r', you must provide a distance matrix or a method to compute it"

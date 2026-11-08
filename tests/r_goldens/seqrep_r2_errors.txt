@@ -1,0 +1,28 @@
+density_uw:messages=[>] number of objects (sum of weights): 10 | [>] max. distance: 8 | [>] neighborhood radius: 0.8 | [>] 3 representative(s) selected, coverage=30% (threshold=25%) | [>] 10 distinct sequence(s)
+density_uw:warnings=
+density_w:messages=[>] number of objects (sum of weights): 10.5 | [>] max. distance: 8 | [>] neighborhood radius: 0.8 | [>] 2 representative(s) selected, coverage=28% (threshold=25%) | [>] 10 distinct sequence(s)
+density_w:warnings=
+dist_uw:messages=[>] number of objects (sum of weights): 10 | [>] max. distance: 8 | [>] neighborhood radius: 0.8 | [>] 3 representative(s) selected, coverage=30% (threshold=25%) | [>] 10 distinct sequence(s)
+dist_uw:warnings=
+dist_w:messages=[>] number of objects (sum of weights): 10.5 | [>] max. distance: 8 | [>] neighborhood radius: 0.8 | [>] 3 representative(s) selected, coverage=28% (threshold=25%) | [>] 10 distinct sequence(s)
+dist_w:warnings=
+prob_uw:messages=[>] Using frequencies at first position as starting point | [>] Using time varying transition rates as probability model | [>] number of objects (sum of weights): 10 | [>] max. distance: 8 | [>] neighborhood radius: 0.8 | [>] 3 representative(s) selected, coverage=30% (threshold=25%) | [>] 10 distinct sequence(s)
+prob_uw:warnings=
+prob_w:messages=[>] Using frequencies at first position as starting point | [>] Using time varying transition rates as probability model | [>] number of objects (sum of weights): 10.5 | [>] max. distance: 8 | [>] neighborhood radius: 0.8 | [>] 2 representative(s) selected, coverage=26% (threshold=25%) | [>] 10 distinct sequence(s)
+prob_w:warnings=
+mscore_uw:messages=[!] criterion still under development | [>] number of objects (sum of weights): 10 | [>] max. distance: 8 | [>] neighborhood radius: 0.8 | [>] 3 representative(s) selected, coverage=30% (threshold=25%) | [>] 10 distinct sequence(s)
+mscore_uw:warnings=
+mscore_w:messages=[!] criterion still under development | [>] number of objects (sum of weights): 10.5 | [>] max. distance: 8 | [>] neighborhood radius: 0.8 | [>] 3 representative(s) selected, coverage=30% (threshold=25%) | [>] 10 distinct sequence(s)
+mscore_w:warnings=
+explicit_mscore_desc_ties:messages=[>] number of objects (sum of weights): 10.5 | [>] max. distance: 8 | [>] neighborhood radius: 0.8 | [>] 6 representative(s) selected, coverage=49% (threshold=40%) | [>] 10 distinct sequence(s)
+explicit_mscore_desc_ties:warnings=
+explicit_prob_asc_ties_nrep2:messages=[>] number of objects (sum of weights): 10 | [>] max. distance: 8 | [>] neighborhood radius: 0.8 | [>] 2 representative(s) selected | [>] 10 distinct sequence(s)
+explicit_prob_asc_ties_nrep2:warnings=
+density_nrep2_radius0_dmax12:messages=[>] number of objects (sum of weights): 10.5 | [>] max. distance: 12 | [>] neighborhood radius: 0 | [>] 2 representative(s) selected | [>] 10 distinct sequence(s)
+density_nrep2_radius0_dmax12:warnings=
+dist_nrep3_radius20_dmax12:messages=[>] number of objects (sum of weights): 10 | [>] max. distance: 12 | [>] neighborhood radius: 2.4 | [>] 3 representative(s) selected | [>] 10 distinct sequence(s)
+dist_nrep3_radius20_dmax12:warnings=
+invalid_criterion=ERROR:Unknown criterion / no score provided
+invalid_score_length=ERROR:Score must be a vector of length equal to10
+invalid_pradius=ERROR:pradius must be between 0 and 1
+invalid_coverage_zero_nrep_null=ERROR:missing value where TRUE/FALSE needed

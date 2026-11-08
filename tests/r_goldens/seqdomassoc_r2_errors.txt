@@ -1,0 +1,10 @@
+not_list=ERROR:invalid 'times' argument
+one_domain=ERROR:seqdata.dom should be a list of at least two state sequence objects
+rep_missing_diss=ERROR: Except for rep.method='overall', diss.dom must be a list of dissimilarity matrices
+eq_diss_wrong_length=ERROR:diss.dom should be a list of same length as seqdata.dom
+bad_assoc=ERROR:bad assoc values, allowed are LRT,V
+bad_rep_method=ERROR: Unknown rep.method: bogus
+reversed_wrange=ERROR:wrange[1] cannot be larger than wrange[2]
+incompatible_ncases=ERROR:variable lengths differ (found for 'repseq[[d2]]')
+incompatible_width=ERROR:variable lengths differ (found for 'repseq[[d2]]')
+seqrep_bad_args=ERROR:Unknown criterion / no score provided

@@ -1,0 +1,2 @@
+case|call|result
+proximities_null|TraMineR::seqsubm(fx$A,method=TRATE,proximities=TRUE)|NULL

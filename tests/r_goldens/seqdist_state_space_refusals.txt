@@ -1,0 +1,4 @@
+# case	R error message
+chi2_vec3_unobserved_last	When a vector, global.pdotj should conform the size of the alphabet including the missing state when applicable
+nms_prox3_unobserved_last	'prox' must be of size 4 x 4
+svrspell_prox3_unobserved_last	'prox' must be of size 4 x 4

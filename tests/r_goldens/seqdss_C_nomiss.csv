@@ -1,0 +1,5 @@
+# R: seqasnum(seqdss(sdC, with.missing=FALSE)); ragged/void; NA->-1; alphabet A,B,C
+0,1,2
+0,1,-1
+0,1,-1
+2,-1,-1

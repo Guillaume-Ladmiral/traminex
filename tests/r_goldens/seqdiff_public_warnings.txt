@@ -1,0 +1,2 @@
+case|message
+deprecated_alias|[!!] In capture_messages() : seqdist_arg is deprecated, use seqdist.args instead.

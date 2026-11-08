@@ -1,0 +1,4 @@
+D E E D D S
+A A B C C C
+- A B - - B
+               1                0                0                1                1                2

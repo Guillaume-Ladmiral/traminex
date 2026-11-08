@@ -1,0 +1,7 @@
+invalid_Ppearson=ERROR:bad what values, allowed are pearson,spearman,R2,cronbach,cron.subsets,all
+not_list=ERROR:domdiss should be a list of at least two distance matrices or objects
+one_domain=ERROR:domdiss should be a list of at least two distance matrices or objects
+bad_what=ERROR:bad what values, allowed are pearson,spearman,R2,cronbach,cron.subsets,all
+weights_short=ERROR:length of weights not equal to number of cases!
+joint_nonnumeric=ERROR:when not NULL, jointdiss must be a distance matrix or object
+nonnumeric_domain=ERROR:non numeric values in distance matrices

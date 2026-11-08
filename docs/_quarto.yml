@@ -1,0 +1,67 @@
+project:
+  type: website
+  output-dir: _site
+  # The top-level Markdown only: "*.md" also matched the historical plans of
+  # superpowers/ (TX-AUD-20261011-054). INDEX.qmd first, so the site opens on it.
+  resources:
+    - "/*.md"
+    - "!superpowers/"
+  render:
+    - INDEX.qmd
+    - "*.qmd"
+
+website:
+  title: "traminex docs"
+  navbar:
+    left:
+      - file: INDEX.qmd
+      - file: USAGE_new_apis.qmd
+      - file: API_CONSISTENCY.qmd
+      - text: Distances
+        menu:
+          - file: DISTANCES.qmd
+          - file: DISTANCES_NORMALIZATION.qmd
+      - text: Examples
+        menu:
+          - file: TraMineR_examples.qmd
+          - file: PLOTTING.qmd
+          - file: SEQTREE.qmd
+format:
+  html:
+    embed-resources: true
+    number-sections: true
+    toc: true
+    toc-expand: 4
+    toc-title: Contents
+    code-link: true
+    code-fold: false
+    code-tools: true
+    include-in-header:
+      text: |
+        <style>
+        main { overflow-wrap: anywhere; }
+        main :not(pre) > code { white-space: normal; }
+        main a code { color: #0b5ed7; }
+        main pre { max-width: 100%; overflow-x: auto; }
+        main pre code { white-space: pre; overflow-wrap: normal; }
+        main table { width: 100%; table-layout: fixed; }
+        main th, main td { overflow-wrap: anywhere; }
+        </style>
+    include-after-body:
+      text: |
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          // Retain the native button role on Quarto's navigation toggle.
+          document.querySelectorAll('button.navbar-toggler[role="menu"]')
+            .forEach(button => button.removeAttribute('role'));
+          // Preserve preformatted code while allowing keyboard scrolling.
+          document.querySelectorAll('main pre').forEach(pre => {
+            const region = pre.closest('div.sourceCode') || pre;
+            region.setAttribute('tabindex', '0');
+          });
+        });
+        </script>
+execute:
+  enabled: true
+  warning: false
+ipynb-shell-interactivity: all

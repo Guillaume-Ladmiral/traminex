@@ -1,0 +1,4 @@
+case|call|condition|message
+format_conflict|TraMineRextras::seqtabstocc(sd_combo,format='STS')|simpleError|formal argument "format" matched by multiple actual arguments
+unknown_forwarded|TraMineRextras::seqtabstocc(sd_combo,banana=1)|simpleError|unused argument (banana = 1)
+idxs_tlim_conflict|TraMineRextras::seqtabstocc(sd_combo,idxs=c(2,1),tlim=1)|simpleError|In capture_error() : idxs and tlim cannot be specified together. tlim is deprecated, use idxs instead.

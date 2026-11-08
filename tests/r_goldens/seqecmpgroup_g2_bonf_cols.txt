@@ -1,0 +1,8 @@
+Support
+p.value
+statistic
+index
+Freq.0
+Freq.1
+Resid.0
+Resid.1

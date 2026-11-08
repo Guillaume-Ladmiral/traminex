@@ -1,0 +1,5 @@
+# R 4.6.2; TraMineR 2.2-14
+# TraMineR::dissmfacw(D ~ x, numeric_data, R=1, squared=FALSE); rows x,Total
+# columns: PseudoF, PseudoR2, explained SS (SS = PseudoR2 * SCtot)
+13.9918713839498,0.518373520120943,41.8732432808783
+13.9918713839498,0.518373520120943,41.8732432808783

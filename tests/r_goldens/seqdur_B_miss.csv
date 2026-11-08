@@ -1,0 +1,5 @@
+# R: seqdur(sdB, with.missing=TRUE); NA->-1
+2,1,2,1
+1,3,2,-1
+1,1,1,3
+6,-1,-1,-1

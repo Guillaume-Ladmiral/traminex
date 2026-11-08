@@ -1,0 +1,32 @@
+# disstree of D on v with R = 1, min.size = 0 and max.depth = 3 for five predictor types; D is the distance between the pos values
+pos	0 0.10000000000000001 0.20000000000000001 0.5 0.59999999999999998 0.69999999999999996 5 5.0999999999999996 5.2000000000000002 5.5 5.5999999999999996 5.7000000000000002
+ordered_string	values	low low low high high high mid mid mid mid mid mid
+ordered_string	split	1	varindex=1	breaks=NA	labels=low|mid|high	index=1,2,2	nagroup=NA	lpop=3	rpop=9	R2=0.35362014690451193
+ordered_string	split	3	varindex=1	breaks=NA	labels=mid|high	index=1,2	nagroup=NA	lpop=6	rpop=3	R2=0.89967105263157898
+ordered_string	fitted	2 2 2 5 5 5 4 4 4 4 4 4
+ordered_string	rules	v %in% c('low') || v %in% c('mid', 'high') & v %in% c('mid') || v %in% c('mid', 'high') & v %in% c('high')
+ordered_string	assign	1 1 1 3 3 3 2 2 2 2 2 2
+ordered_integer	values	3 3 3 2 2 2 1 1 1 1 1 1
+ordered_integer	split	1	varindex=1	breaks=NA	labels=3|1|2	index=1,2,2	nagroup=NA	lpop=3	rpop=9	R2=0.35362014690451193
+ordered_integer	split	3	varindex=1	breaks=NA	labels=1|2	index=1,2	nagroup=NA	lpop=6	rpop=3	R2=0.89967105263157898
+ordered_integer	fitted	2 2 2 5 5 5 4 4 4 4 4 4
+ordered_integer	rules	v %in% c('3') || v %in% c('1', '2') & v %in% c('1') || v %in% c('1', '2') & v %in% c('2')
+ordered_integer	assign	1 1 1 3 3 3 2 2 2 2 2 2
+logical	values	TRUE TRUE TRUE TRUE TRUE TRUE FALSE FALSE FALSE FALSE FALSE FALSE
+logical	split	1	varindex=1	breaks=NA	labels=FALSE|TRUE	index=1,2	nagroup=NA	lpop=6	rpop=6	R2=0.88877229800629587
+logical	fitted	3 3 3 3 3 3 2 2 2 2 2 2
+logical	rules	v %in% c('FALSE') || v %in% c('TRUE')
+logical	assign	2 2 2 2 2 2 1 1 1 1 1 1
+factor_level_order	values	a a a b b b c c c d d d
+factor_level_order	split	1	varindex=1	breaks=NA	labels=d|c|b|a	index=1,1,2,2	nagroup=NA	lpop=6	rpop=6	R2=0.88877229800629587
+factor_level_order	split	2	varindex=1	breaks=NA	labels=d|c	index=1,2	nagroup=NA	lpop=3	rpop=3	R2=0.69811320754716955
+factor_level_order	split	5	varindex=1	breaks=NA	labels=b|a	index=1,2	nagroup=NA	lpop=3	rpop=3	R2=0.69811320754716988
+factor_level_order	fitted	7 7 7 6 6 6 4 4 4 3 3 3
+factor_level_order	rules	v %in% c('d', 'c') & v %in% c('d') || v %in% c('d', 'c') & v %in% c('c') || v %in% c('b', 'a') & v %in% c('b') || v %in% c('b', 'a') & v %in% c('a')
+factor_level_order	assign	4 4 4 3 3 3 2 2 2 1 1 1
+ordered_missing_unused	values	x x x NA y y z z z z z z
+ordered_missing_unused	split	1	varindex=1	breaks=NA	labels=z|y|x	index=1,2,2	nagroup=2	lpop=6	rpop=6	R2=0.88877229800629587
+ordered_missing_unused	split	3	varindex=1	breaks=NA	labels=y|x	index=1,2	nagroup=1	lpop=3	rpop=3	R2=0.69811320754716988
+ordered_missing_unused	fitted	5 5 5 4 4 4 2 2 2 2 2 2
+ordered_missing_unused	rules	v %in% c('z') || v %in% c('y', 'x') with NA & v %in% c('y') with NA || v %in% c('y', 'x') with NA & v %in% c('x')
+ordered_missing_unused	assign	error <text>:1:20: unexpected symbol 1: v %in% c('y', 'x') with ^

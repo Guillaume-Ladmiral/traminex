@@ -1,0 +1,105 @@
+﻿traminer_API,traminex_API,match_type,score
+actcal,,missing,
+actcal tse,,missing,
+alphabet,alphabet,exact,1.0
+bfspell,,missing,
+biofam,,missing,
+cpal,cpal,exact,1.0
+dissassoc,dissassoc,exact,1.0
+disscenter,disscenter,exact,1.0
+dissdomassoc,dissdomassoc,exact,1.0
+dissmergegroups,dissmergegroups,exact,1.0
+dissmfacw,dissmfacw,exact,1.0
+dissrep,dissrep,exact,1.0
+dissrf,dissrf,exact,1.0
+disstree,disstree,exact,1.0
+disstree assign,,missing,
+disstree get rules,,missing,
+disstree2dot,disstree2dot,exact,1.0
+disstreeleaf,disstreeleaf,exact,1.0
+dissvar,dissvar,exact,1.0
+famform,,missing,
+is stslist,,missing,
+mvad,,missing,
+plot seqdiff,,missing,
+plot seqrf,,missing,
+plot stslist,,missing,
+plot stslist freq,,missing,
+plot stslist meant,,missing,
+plot stslist modst,,missing,
+plot stslist rep,,missing,
+plot stslist statd,,missing,
+plot subseqelist,,missing,
+plot subseqelistchisq,,missing,
+print stslist,,missing,
+read tda mdist,,missing,
+seqalign,seqalign,exact,1.0
+seqcomp,seqcomp,exact,1.0
+seqconc,seqconc,exact,1.0
+seqcost,seqcost,exact,1.0
+seqdecomp,seqdecomp,exact,1.0
+Contents,,missing,
+seqdef,seqdef,exact,1.0
+seqdiff,seqdiff,exact,1.0
+seqdim,seqdim,exact,1.0
+seqdist,seqdist,exact,1.0
+seqdomassoc,seqdomassoc,exact,1.0
+seqdss,seqdss,exact,1.0
+seqdur,seqdur,exact,1.0
+seqeapplysub,seqeapplysub,exact,1.0
+seqecmpgroup,seqecmpgroup,exact,1.0
+seqeconstraint,seqeconstraint,exact,1.0
+seqecontain,seqecontain,exact,1.0
+seqecreate,seqecreate,exact,1.0
+seqefsub,seqefsub,exact,1.0
+seqeid,seqeid,exact,1.0
+seqelength,seqelength,exact,1.0
+seqetm,seqetm,exact,1.0
+seqeweight,seqeweight,exact,1.0
+seqfind,seqfind,exact,1.0
+seqformat,seqformat,exact,1.0
+seqfpos,seqfpos,exact,1.0
+seqfposend,seqfposend,exact,1.0
+seqgen,seqgen,exact,1.0
+seqhasmiss,seqhasmiss,exact,1.0
+seqibad,seqibad,exact,1.0
+seqici,seqici,exact,1.0
+seqient,seqient,exact,1.0
+seqindic,seqindic,exact,1.0
+seqintegr,seqintegr,exact,1.0
+seqipos,seqipos,exact,1.0
+seqistatd,seqistatd,exact,1.0
+seqivardur,seqivardur,exact,1.0
+seqivolatility,seqivolatility,exact,1.0
+seqlegend,seqgen,suggested,0.8000
+seqlength,seqlength,exact,1.0
+seqlength align,,missing,
+seqLLCP,seqLLCP,exact,1.0
+seqLLCS,seqLLCS,exact,1.0
+seqlogp,seqlogp,exact,1.0
+seqmaintokens,seqmaintokens,exact,1.0
+seqMD,seqMD,exact,1.0
+seqmeant,seqmeant,exact,1.0
+seqmodst,seqmodst,exact,1.0
+seqmpos,seqmpos,exact,1.0
+seqnum,seqnum,exact,1.0
+seqpcplot,seqpcplot,exact,1.0
+seqplot,seqplot,exact,1.0
+seqplotMD,seqplotMD,exact,1.0
+seqpm,seqpm,exact,1.0
+seqprecarity,seqprecarity,exact,1.0
+seqprecstart,seqprecstart,exact,1.0
+seqrecode,seqrecode,exact,1.0
+seqrep,seqrep,exact,1.0
+seqsep,seqsep,exact,1.0
+seqST,seqST,exact,1.0
+seqstatd,seqstatd,exact,1.0
+seqstatf,seqstatf,exact,1.0
+seqstatl,seqstatl,exact,1.0
+seqsubsn,seqsubsn,exact,1.0
+seqtab,seqtab,exact,1.0
+seqtransn,seqtransn,exact,1.0
+seqtrate,seqtrate,exact,1.0
+seqtree,seqtree,exact,1.0
+seqtreedisplay,seqtreedisplay,exact,1.0
+stlab,stlab,exact,1.0

@@ -1,0 +1,19 @@
+# method	case	kind	R messages
+NMS	scalar	warnings	none
+NMS	short	warnings	none
+NMS	full	warnings	none
+NMS	infinite	warnings	none
+NMS	negative	error	'kweights' must be a vector of positive numbers
+NMS	not_a_number	error	missing value where TRUE/FALSE needed
+NMSMST	scalar	warnings	none
+NMSMST	short	warnings	none
+NMSMST	full	warnings	none
+NMSMST	infinite	warnings	none
+NMSMST	negative	error	'kweights' must be a vector of positive numbers
+NMSMST	not_a_number	error	missing value where TRUE/FALSE needed
+SVRspell	scalar	warnings	none
+SVRspell	short	warnings	none
+SVRspell	full	warnings	none
+SVRspell	infinite	warnings	none
+SVRspell	negative	error	'kweights' must be a vector of positive numbers
+SVRspell	not_a_number	error	missing value where TRUE/FALSE needed

@@ -1,0 +1,3 @@
+progress= [>] computing state distribution for 4 sequences ...
+zero_width_count=ERROR:subscript out of bounds
+zero_width_prop=ERROR:subscript out of bounds

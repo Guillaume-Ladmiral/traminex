@@ -1,0 +1,9 @@
+# R 4.6.2; TraMineR 2.2.14; TraMineRextras 0.6.9
+# case	id	spell_order	overwrite	R_columns	cells
+right_tail	right	b1:e1:s1>b2:e2:s2	TRUE	a1,a2,a3,a4	A,B,B,B
+right_tail_no_overwrite	first	b1:e1:s1>b2:e2:s2	FALSE	a1,a2,a3,a4	A,A,A,B
+out_of_chronological_order	ordered	b1:e1:s1>b2:e2:s2	TRUE	a1,a2,a3,a4	A,A,A,B
+nested	nested	b1:e1:s1>b2:e2:s2	TRUE	a1,a2,a3,a4,a5,a6	A,B,B,B,A,A
+chained	chain	b1:e1:s1>b2:e2:s2>b3:e3:s3	TRUE	a1,a2,a3,a4,a5,a6	A,B,C,C,C,C
+same_bounds	tie	b1:e1:s1>b2:e2:s2	TRUE	a1,a2,a3,a4	B,B,B,B
+adjacent	adjacent	b1:e1:s1>b2:e2:s2	TRUE	a1,a2,a3,a4	A,A,B,B

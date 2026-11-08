@@ -1,0 +1,4 @@
+"case","condition"
+"group_length_mismatch","errorarguments must have same length"
+"multiple_fewer_than_two","errorseqplot.tentrop.m: seqdata.list must be a list of at least 2 seqlist objectsFALSE"
+"multiple_unequal_widths","warningsequence objects in seqdata.list are not all of same length"

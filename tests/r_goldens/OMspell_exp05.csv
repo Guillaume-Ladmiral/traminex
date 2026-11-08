@@ -1,0 +1,16 @@
+# R: TraMineR 2.2-14 (R 4.6.2, Ubuntu 24.04), values dumped with %.15g
+# sts <- seqdef(rbind(
+#   c("A","A","A","B","B","C","C","C"),
+#   c("A","B","A","B","C","B","C","A"),
+#   c("C","C","C","C","A","A","A","A"),
+#   c("A","A","B","B","B","B","C","C"),
+#   c("B","B","B","B","B","B","B","B"),
+#   c("C","A","C","A","B","C","B","A")), alphabet=c("A","B","C"))
+# cmat <- matrix(2, 3, 3); diag(cmat) <- 0
+# seqdist(sts, method="OMspell", sm=cmat, indel=1, expcost=0.5)
+0,7.5,6.5,2,7,7.5
+7.5,0,9,7.5,10.5,4
+6.5,9,0,7.5,9.5,9
+2,7.5,7.5,0,5,7.5
+7,10.5,9.5,5,0,10.5
+7.5,4,9,7.5,10.5,0

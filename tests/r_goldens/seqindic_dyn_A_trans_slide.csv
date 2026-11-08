@@ -1,0 +1,5 @@
+# R: seqindic.dyn(sdA, trans, ws=2); sliding step=2
+               0,               1,               1,               0,               0
+               1,               0,               0,               1,               1
+               0,               0,               0,               0,               0
+               1,               1,               1,               1,               1

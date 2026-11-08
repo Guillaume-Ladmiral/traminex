@@ -1,0 +1,3 @@
+# TraMineR 2.2-14 disstree.assign on its own rules for a non-syntactic covariate
+covar_attribute|covariates missing in profile: `my var`
+covar_bare|<text>:1:28: unexpected symbol 1: N.Eastern %in% c('a') & my var                                ^

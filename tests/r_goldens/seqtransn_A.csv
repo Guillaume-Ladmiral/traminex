@@ -1,0 +1,5 @@
+# R: seqtransn(A, with.missing=FALSE) cols=[norm=FALSE, norm=TRUE]
+               2,             0.4
+               3,             0.6
+               0,               0
+               5,               1

@@ -1,0 +1,7 @@
+(FullTime)
+(NoActivity)
+(PartTime)
+(LowPartTime)
+(Stop)
+(Start)
+(NoActivity)-(Start)

@@ -1,0 +1,9 @@
+case	builder	values	levels
+numeric	factor	2|10|2|10|1|1	1|2|10
+numeric	TraMineR:::group	2|10|2|10|1|1	 1| 10| 2
+numeric_na	factor	2|NA|1|2|NA|1	1|2
+numeric_na	TraMineR:::group	2|NA|1|2|NA|1	 1| 2
+character_na	factor	a|NA|b|a|b|NA	a|b
+character_na	TraMineR:::group	a|NA|b|a|b|NA	 a| b
+factor_declared	factor	b|a|b|NA|a|b	b|a
+factor_declared	TraMineR:::group	b|a|b|NA|a|b	b|a

@@ -1,0 +1,18 @@
+---
+format:
+  html:
+    embed-resources: true
+    number-sections: true
+    toc: true
+    toc-expand: 4
+    toc-title: Contents
+    code-link: true
+    code-fold: false
+    code-tools: true
+execute:
+  enabled: true
+  warning: false
+ipynb-shell-interactivity: all
+---
+
+{{< include DISTANCES.md >}}

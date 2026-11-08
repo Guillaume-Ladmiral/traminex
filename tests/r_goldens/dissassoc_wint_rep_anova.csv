@@ -1,0 +1,4 @@
+# R: dissassoc(D, grp, weights=wint, R=1, weight.permutation='replicate') -> anova.table [SS, df, MSE] rows Exp/Res/Total
+132.653629039267,2,66.3268145196337
+27.3718675481091,27,1.01377287215219
+160.025496587376,29,5.5181205719785

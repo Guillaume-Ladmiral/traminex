@@ -1,0 +1,352 @@
+---
+format:
+  html:
+    embed-resources: true
+    number-sections: true
+    toc: true
+    toc-expand: 4
+    toc-title: Contents
+    code-link: true
+    code-fold: false
+    code-tools: true
+execute:
+  enabled: true
+  warning: false
+ipynb-shell-interactivity: all
+---
+
+# TraMineR examples translated to traminex (Python)
+
+This document adapts a broad set of TraMineR manual examples to Python using
+the `traminex` library. The final section records concrete interface and data
+translation boundaries for the capabilities shown here.
+
+## Setup
+
+```python
+import numpy as np
+import pandas as pd
+import traminex as tx
+
+# A tiny toy STS dataset
+DF = pd.DataFrame({
+    "t1": ["A","A","B","C"],
+    "t2": ["B","A","B","C"],
+    "t3": ["B","B","A","C"],
+    "t4": ["C","B","A","C"],
+})
+X = tx.seqdef(DF)
+X
+```
+
+## Sequence definition and format conversions
+
+- Create sequences from a wide DataFrame
+
+```python
+X = tx.seqdef(DF, xtstep=1, start=1)
+# Inspect
+X.alphabet, X.nseq, X.seqlen
+```
+
+- Convert wide <-> long formats
+
+```python
+# wide -> long
+long = tx.seqformat(DF, from_="wide", to="long")
+# long -> wide
+wide = tx.seqformat(long, from_="long", to="wide", id_col="id", time_col="time", state_col="state")
+wide.head()
+```
+
+- Build STS from long-form data conveniently
+
+```python
+X2 = tx.seqdef_from_long(long, labels=["A","B","C"], xtstep=1, start=1)
+```
+
+- Convert STS to time-stamped events (TSE) and person-period tables
+
+```python
+# STS -> TSE (state change events only)
+TSE = tx.STS_to_TSE(X, state_changes_only=True)
+# Person-period
+pp = tx.toPersonPeriod(X, time_col="timestamp")
+TSE.head(), pp.head()
+```
+
+- Horizontal/vertical spells to STS (HSPELL_to_STS)
+
+```python
+# Vertical spells example
+df_spells = pd.DataFrame({
+    "id": [1,1,2],
+    "start": [1,3,2],
+    "end":   [2,4,3],
+    "state": ["A","B","A"],
+})
+Xv = tx.HSPELL_to_STS(df_spells, id_col="id", start_col="start", end_col="end", state_col="state")
+
+# Horizontal spells example (two spells per id)
+df_h = pd.DataFrame({
+    "id": ["p1","p2"],
+    "begin1": [1, 1], "end1": [3, 2], "status1": ["A","A"],
+    "begin2": [2, 3], "end2": [4, 4], "status2": ["B","B"],
+})
+Xh = tx.HSPELL_to_STS(df_h, id_col="id",
+    begin=["begin1","begin2"], end=["end1","end2"], status=["status1","status2"],
+    overwrite=True, fill="_",
+)
+Xv.alphabet, Xh.alphabet
+```
+
+- Realign sequence starts (seqstart)
+
+```python
+# Align sequences to a new origin (e.g., age, baseline)
+X_aligned = tx.seqstart(X, data_start=2000, new_start=2002)
+X_aligned.start, X_aligned.seqlen
+```
+
+## Basic statistics and summaries
+
+- Cross-sectional distributions and entropy (seqstatd)
+
+```python
+st = tx.seqstatd(X, include_missing=False)
+list(st.keys()), st["Frequencies"].shape, st["Entropy"].shape
+```
+
+- State durations, numeric alphabet recoding, visited-state counts, and lengths
+
+```python
+D = tx.seqistatd(X, include_missing=False)
+X_numeric = tx.seqnum(X)
+visited = tx.seqindic(X, indic="visited")
+L = tx.seqlength(X)
+D.shape, X_numeric.alphabet, visited.head(), L[:5]
+```
+
+- Per-sequence transition counts and dataset transition matrices
+
+```python
+n_transitions = tx.seqtransn(X, norm=False)
+M_counts = tx.seqtrate(X, count=True)
+M_rates = tx.seqtrate(X, count=False)
+n_transitions[:5], M_counts.head(), M_rates.head()
+```
+
+- Global entropy and turbulence
+
+```python
+H = tx.entropy(X)
+Tb_seq = tx.seqtransn_count(X)    # per-sequence transition-count proxy
+Tb = tx.turbulence_proxy(X)       # mean transition-count proxy
+H, Tb_seq[:5], Tb
+```
+
+- Per-sequence indicators (default and basic groups)
+
+```python
+ind_default = tx.seqindic(X)
+ind_basic = tx.seqindic(X, indic="basic")
+ind_default.head(), ind_basic.head()
+```
+
+## Distances
+
+- Pairwise distances (seqdist) and direct dispatcher (distances.pairwise)
+
+```python
+D_ham = tx.seqdist(X, method="HAM")
+D_om  = tx.seqdist(X, method="OM", indel=1.0, subm=2.0, norm="length")
+D_lcs = tx.seqdist(X, method="LCS", norm="length")
+D_lcp = tx.seqdist(X, method="LCP", norm="length")
+D_ham.shape, D_om.shape
+```
+
+- TRATE substitution matrix and convenience OM helper
+
+```python
+from traminex.distances import seqsubm, om_trate_pairwise
+subm = seqsubm(X.data, method="TRATE")
+D_tr = tx.seqdist(X, method="OM", subm=subm, norm="length")
+D_tr2 = om_trate_pairwise(X.data, norm="length")
+np.allclose(D_tr, D_tr2)
+```
+
+- Pairwise LCS/LCP helpers and prefix lengths
+
+```python
+from traminex.distances import seqLLCS, seqLLCP, get_lcp_length, get_rlcp_length
+lcs_length = seqLLCS(X.data[0], X.data[1])
+lcp_length = seqLLCP(X.data[0], X.data[1])
+get_lcp_length(np.array([0,1,1]), np.array([0,1,2]))
+get_rlcp_length(np.array([0,1,1]), np.array([0,1,2]))
+```
+
+- Dissimilarity helpers (center, association, variance)
+
+```python
+from traminex.diss import disscenter, dissassoc, dissvar, gower_matrix
+C = disscenter(D_ham)
+assoc = dissassoc(D_ham, np.array([0,0,1,1]), R=1)
+var = dissvar(D_ham)
+B = gower_matrix(D_ham)
+assoc, var, B.shape
+```
+
+## Event sequences
+
+- Create event sequences and mine frequent subsequences
+
+```python
+# Build a small TSE table
+TSE = pd.DataFrame({
+    "id": ["p1","p1","p2","p2","p2"],
+    "timestamp": [1,2,1,2,3],
+    "event": ["A","B","A","B","C"],
+})
+events = tx.seqecreate(TSE)
+# Frequent subsequences up to length 3
+from traminex import seqefsub, seqeconstraint
+fs = seqefsub(events, min_support=1, max_k=3)
+fs.data.head()
+```
+
+- Convert events to state sequences on a grid
+
+```python
+from traminex import events_to_state_sequences
+X_from_events = events_to_state_sequences(events, fill="_", align_missing=True)
+X_from_events.alphabet
+```
+
+- Event transitions, degrees, and pairs
+
+```python
+from traminex import events_transition_matrix, events_transition_degrees, frequent_event_pairs
+labs, M = events_transition_matrix(events, normalize=True)
+_, indeg, outdeg = events_transition_degrees(events)
+pairs = frequent_event_pairs(events, min_support=1)
+(labs, M.shape), indeg, pairs[:3]
+```
+
+## Plotting
+
+- Index plot, grouped index plot, and legend
+
+```python
+fig, ax = tx.sequence_index_plot(X)
+fig2, ax2, order = tx.sequence_index_plot_grouped(X, labels=np.array([0,0,1,1]))
+_ = tx.state_legend(X)
+```
+
+- State distribution, chronogram, transitions
+
+```python
+fig, ax = tx.state_distribution_plot(X)
+fig, ax = tx.chronogram(X)
+fig, ax = tx.transition_heatmap(X)
+```
+
+- Frequency and duration plots
+
+```python
+fig, ax = tx.seqfrequency_plot(X, top=5)
+# Duration plot requires seqistatd; here we display per-sequence totals
+from traminex.visualization.plots import duration_boxplot
+fig, ax = duration_boxplot(X)
+```
+
+## Clustering and representatives
+
+```python
+from traminex import cluster_agglomerative, cluster_summary
+D = tx.seqdist(X, method="LCS", norm="length")
+res = cluster_agglomerative(D, n_clusters=2)
+summary = cluster_summary(X, res.labels_, D)
+rep_idx = tx.medoid_index(D)
+summary, rep_idx
+```
+
+- Overlay cluster representatives on grouped index plot
+
+```python
+from traminex.plotting import overlay_representatives_on_index_plot
+fig, ax = overlay_representatives_on_index_plot(X, res.labels_, D)
+```
+
+## R-faithful discrepancy trees and exploratory sklearn trees
+
+The R-faithful `disstree` and `seqtree` APIs use weighted dissimilarity
+inertia, predictor level partitions, and a permutation gate. Python takes an
+explicit predictor DataFrame rather than an R formula:
+
+```python
+import pandas as pd
+
+predictors = pd.DataFrame(
+    {
+        "cohort": ["early", "early", "late", "late"],
+        "region": ["north", "south", "north", "south"],
+    }
+)
+dtree = tx.disstree(D, predictors, R=1, min_size=2, max_depth=3)
+stree = tx.seqtree(X, predictors, diss=D, R=1, min_size=2, max_depth=3)
+dtree, stree
+```
+
+The separately named `disstree_fit` and `seqtree_fit` helpers are exploratory
+sklearn workflows. `disstree_fit` embeds distances with MDS before fitting a
+decision tree; `seqtree_fit` constructs sequence features before fitting:
+
+```python
+from traminex import disstree_fit, disstree_leaf_summary, disstree_feature_importance
+y = np.array([0,0,1,1])
+D = tx.seqdist(X, method="HAM")
+model = disstree_fit(D, y, n_components=2)
+leaves = disstree_leaf_summary(model)
+fi = disstree_feature_importance(model)
+leaves, fi.sort_values("importance", ascending=False).head()
+```
+
+```python
+from traminex import seqtree_fit, seqtree_leaf_summary
+res = seqtree_fit(X, y, features="durations+transitions+summary")
+leaf = seqtree_leaf_summary(res)
+leaf.head()
+```
+
+## Frequent patterns in state sequences
+
+```python
+from traminex import frequent_subsequences, frequent_ngrams
+subs = frequent_subsequences(X, max_len=3, contiguous=True, min_support=1)
+ngrams = frequent_ngrams(X, n=2, min_support=1)
+subs[:5], ngrams[:5]
+```
+
+## Translation boundaries
+
+The following capabilities are implemented and public:
+
+- `seqMD` provides R-golden-tested multidomain sequence construction,
+  multidomain costs, and combined distances.
+- `seqdist` includes the specialized TraMineR methods `OMspell`, `OMstran`,
+  `SVRspell`, and the R-faithful `OMloc` dispatcher method. The separate
+  `omloc()` convenience function uses a different localized-cost construction;
+  see `OMLOC.md`.
+- `seqdiff`, `dissvar`, `dissassoc`, `disscenter`, `disstree`, and `seqtree`
+  provide the R-faithful discrepancy-analysis paths. `seqdomassoc` matches the
+  R routes except for its documented corrected weighted boundary, recorded in
+  the semantic parity ledger.
+- `seqmodst` and `seqrep` reproduce modal-state and representative-set
+  calculations against R goldens. Python returns `STSList`/dictionary results
+  rather than R's object classes.
+
+The remaining translation boundaries are interface and data packaging rather
+than absence of those algorithms: Python uses DataFrames/arrays and explicit
+predictors instead of R formula syntax, and TraMineR's packaged example
+datasets are not all bundled. Convert an R dataset to a DataFrame/CSV before
+running an otherwise equivalent Python workflow.

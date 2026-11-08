@@ -1,0 +1,5 @@
+# R: seqasnum(seqdss(sdC, with.missing=TRUE), with.missing=TRUE); ragged/void; NA->-1; missing code=3
+0,1,2,-1
+0,1,-1,-1
+0,3,0,1
+2,-1,-1,-1

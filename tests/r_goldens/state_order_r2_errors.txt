@@ -1,0 +1,11 @@
+case=message
+duplicate_order=Multiple occurrences of same state in state.order:  A A
+unknown_order=Bad state.order, states not in the alphabet:  Z
+equiv_not_list=Bad state.equiv. A list is expected!
+duplicate_equiv=Multiple occurrence of same state in state.equiv
+overlap_equiv=Multiple occurrence of same state in state.equiv
+unknown_equiv=Bad state.equiv, states not in the alphabet:  Z
+short_stprec=seqidegrad: length of stprec does not match the size of the alphabet!
+nan_stprec=NA/NaN argument
+empty_order=wrong sign in 'by' argument
+null_order=state.order and stprec cannot both be null!

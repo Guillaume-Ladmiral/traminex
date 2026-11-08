@@ -1,0 +1,38 @@
+# case	kind (text, value or error)	payload	R warnings
+s321_idxs_scalar_0	text	A/2-B/1-C/1|A/1-B/1-A/1-B/1|B/2-C/2	none
+s321_idxs_vector_0	text	A/2-B/1-C/1|A/1-B/1-A/1-B/1|B/2-C/2	none
+s321_idxs_vector_2	text	A/1-B/1-A/1-B/1	none
+s321_idxs_vector_7	text	A/2-B/1-C/1|A/1-B/1-A/1-B/1|B/2-C/2	none
+s321_idxs_vector_2_1	text	A/1-B/1-A/1-B/1|A/2-B/1-C/1	none
+s321_idxs_vector_2_9	text	A/2-B/1-C/1|A/1-B/1-A/1-B/1|B/2-C/2	none
+s321_idxs_vector_minus_1	error	idxs should be a non negative integer or a strictly positive vector.	none
+s321_idxs_vector_0_1	error	idxs should be a non negative integer or a strictly positive vector.	none
+s320_fractional_levels	text	1.5|2|10	none
+s320_fractional_indices	value	0 3 0 2.3094010767585034 -1 2.3094010767585034 2.3094010767585034 1 0 0 1 2.3094010767585034 0 1 2.3094010767585034 2.3094010767585034 1 0	none
+s320_whole_doubles_levels	text	2|10	none
+s320_whole_doubles_indices	value	-1 3 3 -1 1 1 1 1 1 1 1 1	none
+s320_large_levels	text	2|1e+05	none
+s320_large_indices	value	3 -1 -1 3 1 1 1 1 1 1 1 1	none
+s320_float_neighbours_levels	text	0.3|1	none
+s320_float_neighbours_indices	value	1 1 1 1 1 1 1 1 -1 3 3 -1	none
+s320_logical_levels	text	FALSE|TRUE	none
+s320_logical_indices	value	3 -1 -1 3 1 1 1 1 1 1 1 1	none
+s322_letter_case_ltext	text	a|A|b	none
+s322_letter_case_strata	text	a|A|b	none
+s322_letter_case_curve1	value	1 4 1 0.75 3 2 1 0.375	none
+s322_letter_case_curve2	value	2 3 1 0.66666666666666663 3 1 1 0	none
+s322_letter_case_curve3	value	1 4 1 0.75 2 3 1 0.5	none
+s322_mixed_case_words_ltext	text	ab|aB|Ab	none
+s322_mixed_case_words_strata	text	ab|aB|Ab	none
+s322_mixed_case_words_curve1	value	1 4 1 0.75 2 3 1 0.5	none
+s322_mixed_case_words_curve2	value	1 4 1 0.75 3 2 1 0.375	none
+s322_mixed_case_words_curve3	value	2 3 1 0.66666666666666663 3 1 1 0	none
+s322_fractional_ltext	text	1.5|2|10	none
+s322_fractional_strata	text	1.5|2|10	none
+s322_fractional_curve1	value	2 3 1 0.66666666666666663 3 1 1 0	none
+s322_fractional_curve2	value	1 4 1 0.75 2 3 1 0.5	none
+s322_fractional_curve3	value	1 4 1 0.75 3 2 1 0.375	none
+s322_logical_ltext	text	FALSE|TRUE	none
+s322_logical_strata	text	FALSE|TRUE	none
+s322_logical_curve1	value	1 6 1 0.83333333333333337 2 4 1 0.625 3 2 1 0.3125	none
+s322_logical_curve2	value	1 6 1 0.83333333333333337 2 4 1 0.625 3 2 1 0.3125	none

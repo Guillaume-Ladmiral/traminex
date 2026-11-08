@@ -1,0 +1,13 @@
+adjusted|message|Adjusted p-value threshold : 0.111111111111111
+cloglog_all|output|[1] "END"
+logit_all|output|[1] "END"
+adjusted|output|[1] "END"
+topt|output|[1] "END"
+dep_c|output|[1] "END"
+dep_unknown|output|[1] "END"
+duplicates|output|[1] "END"
+low_event|output|[1] "END"
+supvars|warning|Stop time must be > start time, NA created
+supvars|simpleError|object 'model' not found
+bad_link|simpleError|‘bad’ link not recognised
+empty_subseqs|subscriptOutOfBoundsError|subscript out of bounds

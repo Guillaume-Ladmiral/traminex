@@ -1,0 +1,16 @@
+# seqrep.grp with LCS distances and a missing group value; statistics column-major per level
+input	rows	AABB
+input	rows	ABBB
+input	rows	AAAB
+input	rows	BBCC
+input	rows	BCCC
+input	rows	AABC
+input	rows	CCCC
+input	rows	ABCC
+input	diss	0 2 2 4 6 2 8 4 2 0 4 4 6 4 8 4 2 4 0 6 6 2 8 4 4 4 6 0 2 4 4 2 6 6 6 2 0 4 2 2 2 4 2 4 4 0 6 2 8 8 8 4 2 6 0 4 4 4 4 2 2 2 4 0
+character	group	x x x y y NA y x
+character	stat_x	4 4 100 100 1 1 25 25 8 8 2 2 5 5 1.25 1.25 -60 -60
+character	stat_y	3 3 100 100 1 1 33.333333333333329 33.333333333333329 6 6 2 2 2.666666666666667 2.666666666666667 0.88888888888888895 0.88888888888888895 -124.99999999999997 -124.99999999999997
+numeric	group	1 1 1 2 2 NA 2 1
+numeric	stat_1	4 4 100 100 1 1 25 25 8 8 2 2 5 5 1.25 1.25 -60 -60
+numeric	stat_2	3 3 100 100 1 1 33.333333333333329 33.333333333333329 6 6 2 2 2.666666666666667 2.666666666666667 0.88888888888888895 0.88888888888888895 -124.99999999999997 -124.99999999999997

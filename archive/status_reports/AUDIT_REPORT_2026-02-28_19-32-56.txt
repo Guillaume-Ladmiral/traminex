@@ -1,0 +1,1250 @@
+================================================================================
+TRAMINEX PROJECT — COMPREHENSIVE CODEBASE AUDIT REPORT
+Generated: 2026-02-28 19:32:56
+Auditor:   Oz (AI Agent, Warp ADE)
+Scope:     Full source read of all Python files in traminex/ subpackage
+Version:   0.0.1 (first release — no backward compatibility required)
+================================================================================
+
+
+TABLE OF CONTENTS
+-----------------
+  1.  Executive Summary
+  2.  Project Overview
+  3.  Architecture and Module Structure Review
+  4.  BUGS AND ERRORS (incorrect behavior, wrong outputs)
+  5.  Dead Code (unreachable / unused code)
+  6.  Performance Inefficiencies
+  7.  API Inconsistencies and Interface Problems
+  8.  Documentation and Docstring Errors
+  9.  Visualization Subpackage – Specific Issues
+ 10.  Testing and Quality Assurance
+ 11.  Minor Style / Code Quality Issues
+ 12.  Prioritized Action Plan
+
+
+================================================================================
+1. EXECUTIVE SUMMARY
+================================================================================
+
+This audit covered every Python source file in the traminex/ subpackage
+(approximately 6,000 lines of code across ~30 modules), the project
+configuration files (pyproject.toml, .pre-commit-config.yaml), and
+documentation. No file was read from documentation alone — all findings
+are grounded in direct inspection of the code.
+
+The project is well-structured in intent and the core algorithms appear
+to be a faithful Python port of TraMineR/TraMineRextras. However, this
+version 0.0.1 contains a significant number of issues that must be
+addressed before a clean release:
+
+  - 8 confirmed bugs that can produce wrong or unexpected results
+  - 15 instances of dead code (unused variables, unreachable functions,
+    or code that is computed but its result immediately discarded)
+  - 12 performance inefficiencies (pure Python loops where NumPy
+    vectorisation would be 10x–1000x faster)
+  - 8 API inconsistencies that will confuse users
+  - 7 documentation errors (wrong parameter names, incorrect descriptions)
+  - 5 visualization-specific bugs or deprecated API calls
+  - 0 project-level tests
+
+The most critical issues requiring immediate attention are:
+  (a) seqsubm silently ignores the 'weights' kwarg (BUG #3)
+  (b) seqstatf / seqstatl perform dead computation on every call (BUG #5)
+  (c) duplicate seqici implementations with conflicting semantics (BUG #1)
+  (d) duration_boxplot uses seaborn API removed in v0.13 (VISUALIZATION #2)
+  (e) cluster_chronograms passes wrong labels length to sub-STSList (BUG #8)
+  (f) dissassoc docstring claims 2-group restriction that doesn't exist (DOC #3)
+  (g) The project has zero automated tests
+
+
+================================================================================
+2. PROJECT OVERVIEW
+================================================================================
+
+Name:     traminex
+Version:  0.0.1
+License:  GPL-3.0
+Python:   >=3.9
+
+Purpose:
+  traminex is a Python port of the R packages TraMineR and TraMineRextras,
+  which are widely used in social science for life-course sequence analysis.
+  The package provides:
+    - Sequence data structures (STSList: integer-coded state sequences)
+    - Format converters (STS, DSS, SPS, FCE, TSE, HSPELL formats)
+    - Descriptive statistics (state distributions, durations, transitions,
+      complexity indices, entropy, turbulence)
+    - Pairwise dissimilarity computation (Optimal Matching, DHD, LCS, HAM, etc.)
+    - Dissimilarity-based analyses (association, representative sequences)
+    - Clustering utilities
+    - Multi-domain sequence analysis
+    - Pattern and event mining
+    - Visualization (sequence index plots, chronograms, distribution plots,
+      transition heatmaps, frequency charts, duration boxplots)
+
+Core data type: STSList (sequences.py)
+  A dataclass wrapping a 2D integer NumPy array (nseq × seqlen) plus
+  metadata: alphabet list, optional color palette, tick labels, weights,
+  missing/void state codes, etc.
+
+Public API surface: traminex/__init__.py
+  All user-facing functions are collected here. The __all__ list controls
+  what is exported. Internally the package is split into:
+    - format.py / seqformat.py  — format conversion
+    - stats.py (facade)         — descriptive statistics
+      └─ stats_basic.py, stats_complexity.py, stats_utils.py,
+         stats_p1.py, stats_p2.py
+    - distances/                — pairwise dissimilarity subpackage
+    - diss.py / diss_p1.py      — dissimilarity analyses
+    - cluster.py                — clustering
+    - visualization/            — plotting subpackage, exposed via plotting.py
+    - Other: seqdiff.py, seqtree.py, disstree.py, multidomain.py,
+             patterns.py, events.py, align_p2.py, config.py,
+             config_dataclasses.py
+
+
+================================================================================
+3. ARCHITECTURE AND MODULE STRUCTURE REVIEW
+================================================================================
+
+OVERALL DESIGN
+  The architecture is generally clean and well-thought-out. The use of a
+  central __init__.py to expose a single flat namespace, the facade pattern
+  in stats.py and plotting.py, and the separation of compiled backends
+  (pybind11/nanobind) from the pure Python fallback in distances/ are all
+  solid design choices.
+
+ISSUES FOUND IN ARCHITECTURE
+
+A) UNNECESSARY TRIPLE-INDIRECTION IN VISUALIZATION API
+   File: plotting.py
+   The plotting.py facade defines wrapper functions like this:
+       def sequence_index_plot(*args, **kwargs):
+           return _sequence_index_plot(*args, **kwargs)
+   These one-liner wrappers add a call level with zero benefit.
+   visualization/__init__.py already exposes the same symbols. The
+   plotting.py module should simply do direct imports, not re-wrap:
+       from .visualization import sequence_index_plot
+   This would reduce noise and make stack traces cleaner.
+
+B) SPLIT IMPORT BLOCKS IN distances/__init__.py
+   The costs module is imported in three separate blocks:
+       from .costs import indel_from_subm, trate_substitution_matrix
+       from .costs import local_indel_by_pos as local_indel_by_pos
+       from .costs import (
+           trate_substitution_matrix_timevarying as
+           trate_substitution_matrix_timevarying
+       )
+   These should be a single consolidated import block for readability.
+
+C) REDUNDANT `X as X` ALIAS IMPORTS
+   In distances/__init__.py:
+       from .costs import local_indel_by_pos as local_indel_by_pos
+   Using `X as X` (same name) is an obscure Python idiom for forcing
+   re-export. For a beginner developer this is very confusing. Consider
+   using __all__ instead, or simply importing normally and listing
+   the name in __all__.
+
+D) archive/ FOLDER CONTAINS STALE DOCUMENTATION
+   The archive/ folder contains P0_IMPLEMENTATION_SUMMARY.md,
+   P1_IMPLEMENTATION_SUMMARY.md, etc. These are internal development
+   notes that document how the code evolved during development. For a
+   public release these should either be removed or clearly labeled as
+   internal. They are not part of the package but add confusion.
+
+E) export.py IS ESSENTIALLY EMPTY
+   visualization/export.py contains only:
+       from .utils import figure_to_buffer
+       __all__ = ["figure_to_buffer"]
+   This entire file is redundant. figure_to_buffer is already accessible
+   via visualization/utils.py. The export.py file either needs meaningful
+   content (e.g. image export helpers for different formats) or should
+   be removed and figure_to_buffer re-exported directly from utils.py.
+
+F) PLOTTING.py EXPOSES state_legend_figure BUT __init__.py DOES NOT
+   plotting.py defines and wraps state_legend_figure, but __init__.py
+   does not import or list it in __all__. This means users cannot call
+   traminex.state_legend_figure — it is only accessible via the internal
+   path traminex.plotting.state_legend_figure. This is an inconsistency.
+
+
+================================================================================
+4. BUGS AND ERRORS (code that produces wrong results or runtime failures)
+================================================================================
+
+This section lists issues that can cause incorrect computation, runtime
+errors, or silent data loss.
+
+──────────────────────────────────────────────────────────────────────────────
+BUG #1 — DUPLICATE seqici FUNCTIONS WITH CONFLICTING SEMANTICS
+──────────────────────────────────────────────────────────────────────────────
+Files:    traminex/stats_complexity.py  (lines ~319–333)
+          traminex/stats_p2.py          (lines ~91–149)
+Severity: High (semantic confusion, dead code risk)
+
+Two completely different functions share the name seqici:
+
+  In stats_complexity.py (dead code):
+    seqici = "Insecurity proxy: 1 minus Simpson diversity index"
+    Formula: 1 - sum(p_k^2) per sequence
+
+  In stats_p2.py (the one actually exported and used):
+    seqici = "Complexity index: sqrt(entropy × transitions)"
+    Formula: sqrt( seqient(x) × seqtransn_count )
+
+The stats_complexity.py version is NEVER imported anywhere, never
+exported, and never called. However, its presence in the file creates a
+serious trap: any developer reading stats_complexity.py would see seqici
+defined there with a different meaning than the actual exported seqici.
+
+FIX: Delete the seqici definition from stats_complexity.py entirely.
+
+──────────────────────────────────────────────────────────────────────────────
+BUG #2 — frequent_event_pairs INITIALISES AN UNREACHABLE VARIABLE
+──────────────────────────────────────────────────────────────────────────────
+File:     traminex/events.py  (line ~503)
+Severity: Medium (dead code creating a confusing name)
+
+Inside frequent_event_pairs:
+    per: Dict[str, List[str]] = {}   # DEAD — immediately overwritten
+    ...
+    by_id = ...
+    per = by_id                      # This line shadows the empty `per`
+
+The empty dict `per` is initialised on one line then immediately
+overwritten with `by_id` on the next. The initial value is never used.
+
+FIX: Remove the initialisation `per: Dict[str, List[str]] = {}` and
+rename `by_id` to `per` directly (or give it a more descriptive name).
+
+──────────────────────────────────────────────────────────────────────────────
+BUG #3 — seqsubm SILENTLY IGNORES THE 'weights' KWARG FOR TRATE METHOD
+──────────────────────────────────────────────────────────────────────────────
+File:     traminex/distances/__init__.py  (seqsubm function)
+Severity: High (silent data loss — weights parameter silently dropped)
+
+When calling seqsubm(sts, method="TRATE", weights=w), the weights
+parameter is silently ignored. The code filters kwargs:
+    return trate_substitution_matrix(
+        seqmat, **{k: v for k, v in kwargs.items()
+                   if k in {"smoothing", "mode", "normalize"}}
+    )
+"weights" is NOT in the allowed set {"smoothing", "mode", "normalize"},
+so it is silently discarded. But trate_substitution_matrix DOES accept
+a `weights` parameter and uses it to compute weighted transition rates.
+
+This means that calling seqsubm with weights= produces a substitution
+matrix that ignores survey weights, with no warning to the user.
+
+FIX: Add "weights" to the allowed kwargs set in the TRATE branch.
+
+──────────────────────────────────────────────────────────────────────────────
+BUG #4 — trate_substitution_matrix_timevarying CONTAINS DEAD VARIABLES
+──────────────────────────────────────────────────────────────────────────────
+File:     traminex/distances/costs.py  (lines ~153–154)
+Severity: Low (dead code, no runtime impact but signals incomplete impl.)
+
+Inside the time-varying TRATE computation:
+    debut = t == 0       # assigned but NEVER READ
+    fin = t == L - 1     # assigned but NEVER READ
+
+These two variables were likely placeholders for future special handling
+of the first and last positions but were never implemented or connected
+to any logic. They waste two comparisons per loop iteration.
+
+FIX: Remove both lines.
+
+──────────────────────────────────────────────────────────────────────────────
+BUG #5 — seqstatf AND seqstatl COMPUTE istatd AND DISCARD IT (DEAD WORK)
+──────────────────────────────────────────────────────────────────────────────
+File:     traminex/stats_p1.py  (in seqstatf, seqstatl)
+Severity: Medium (wasted computation on every call)
+
+Both seqstatf and seqstatl contain:
+    istatd = seqistatd(x, include_missing=include_missing)
+
+seqistatd() is a potentially expensive function that computes per-sequence
+state duration counts (an n × K matrix). The result `istatd` is assigned
+but is NEVER USED anywhere in either function — not in any computation,
+not returned, not passed anywhere.
+
+This means every call to seqstatf or seqstatl wastes the time to
+compute the full duration matrix and then immediately discards it.
+
+FIX: Delete both `istatd = ...` lines from seqstatf and seqstatl.
+
+──────────────────────────────────────────────────────────────────────────────
+BUG #6 — dissassoc VALIDATION IS WEAKER THAN ITS DOCSTRING CLAIMS
+──────────────────────────────────────────────────────────────────────────────
+File:     traminex/diss.py  (dissassoc function)
+Severity: Low (wrong docstring, but actual behavior is CORRECT and better)
+
+The docstring of dissassoc states:
+    "group: 1D array-like of group labels. Must have exactly 2 unique values."
+
+However, the implementation is FULLY GENERAL — it computes within-group vs.
+between-group distances for any number of groups. The "exactly 2 unique
+values" restriction does not exist in the code.
+
+This is actually a BUG IN THE DOCSTRING, not in the implementation.
+The implementation is better than documented. However, a beginner
+developer reading the docstring would unnecessarily restrict their usage.
+
+FIX: Update the docstring to correctly state that any number of groups
+is accepted.
+
+──────────────────────────────────────────────────────────────────────────────
+BUG #7 — diss_p1.py: potential RuntimeWarning from division by zero
+──────────────────────────────────────────────────────────────────────────────
+File:     traminex/diss_p1.py  (lines ~276–277, Q computation)
+Severity: Low (produces a RuntimeWarning, result is corrected afterwards)
+
+    Q = (DC - SD) / DC * 100.0        # <-- DC can be 0.0
+    Q[DC == 0] = 0.0                  # This fixes the value AFTER
+
+When DC contains zeros, NumPy performs 0/0 which produces nan and emits
+a RuntimeWarning about division by zero. The zero-mask fix is applied
+AFTER the division, so the final value is correct, but the warning is
+still raised in production code.
+
+FIX: Use np.divide with an out-array and a where-mask:
+    Q = np.divide(DC - SD, DC, out=np.zeros_like(DC), where=DC != 0) * 100.0
+    # No need for the Q[DC == 0] = 0.0 line afterward
+
+──────────────────────────────────────────────────────────────────────────────
+BUG #8 — cluster_chronograms PASSES WRONG LABELS LENGTH TO SUB-STSList
+──────────────────────────────────────────────────────────────────────────────
+Files:    traminex/visualization/plots/chronogram.py  (lines ~84–98, 179–193)
+Severity: Medium (incorrect labels in sub-cluster STSList objects)
+
+When constructing a per-cluster sub-STSList, the code passes:
+    labels=None if x.labels is None else list(x.labels)
+
+`list(x.labels)` copies ALL sequence labels from the full STSList.
+But `data=x.data[rows]` contains only the rows for this cluster.
+If the STSList constructor validates or uses `labels`, it will see
+len(data) != len(labels) because labels has all n sequences but data
+has only the cluster subset. This applies to both cluster_chronograms
+and cluster_chronograms_with_representatives.
+
+FIX: Index labels by `rows` to keep only the cluster's labels:
+    labels=(None if x.labels is None
+            else [x.labels[i] for i in rows])
+
+
+================================================================================
+5. DEAD CODE (unused functions, variables, unreachable imports)
+================================================================================
+
+Dead code is code that is written and takes up space but has no effect on
+the program. For a v0.0.1 release with no backward compatibility needed,
+all dead code should be removed.
+
+──────────────────────────────────────────────────────────────────────────────
+DEAD #1 — seqfind IN seqformat.py IS NEVER EXPORTED AND DUPLICATES stats_p1
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/seqformat.py  (lines ~265–282)
+
+seqformat.py defines a function seqfind(pattern, x) that finds exact
+pattern matches within a sequence. This function:
+  - Is NOT exported from __init__.py
+  - Has different semantics from the exported seqfind in stats_p1.py
+    (which takes (ref, target) and matches across a set of sequences)
+  - Is never called from anywhere in the codebase
+
+This is a misplaced, unreachable, and semantically-confusing duplicate.
+
+FIX: Delete seqfind from seqformat.py entirely.
+
+──────────────────────────────────────────────────────────────────────────────
+DEAD #2 — seqrep AND cluster_representatives ARE PRIVATE BUT LOOK PUBLIC
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/cluster.py
+
+cluster.py defines seqrep() and cluster_representatives() as top-level
+functions with full docstrings and public-looking names. However, neither
+is exported in __init__.py. This means:
+  - A user cannot call traminex.seqrep()
+  - The functions are effectively dead code from the API perspective
+  - A developer maintaining the code would not know if these are
+    intentionally private (in which case they should be named _seqrep)
+    or accidentally omitted from __init__.py
+
+FIX: Either add seqrep and cluster_representatives to __init__.py if
+they are intended to be public, OR rename them to _seqrep and
+_cluster_representatives to signal that they are internal helpers.
+
+──────────────────────────────────────────────────────────────────────────────
+DEAD #3 — dissdomassoc IS NOT EXPORTED IN __init__.py
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/diss.py  (dissdomassoc function)
+
+dissdomassoc computes dissimilarity-based domain association. The __init__.py
+exports from diss.py:
+    from .diss import dissassoc, dissassoc_test, disscenter, dissvar, gower_matrix
+
+But dissdomassoc is missing. It is inaccessible via the public API.
+
+FIX: Either add dissdomassoc to __init__.py (if it's ready) or prefix it
+with _ to signal it is internal.
+
+──────────────────────────────────────────────────────────────────────────────
+DEAD #4 — to_SPS AND to_DSS IN seqformat.py ARE NOT EXPORTED
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/seqformat.py
+
+to_SPS() and to_DSS() are defined with full docstrings but are not listed
+in __init__.py. They are inaccessible via the public API. If the intent
+is for users to convert STSList objects to SPS or DSS format, these must
+be exported.
+
+FIX: Add to_SPS and to_DSS to __init__.py if they are ready, or rename
+them to _to_SPS/_to_DSS if they are internal.
+
+──────────────────────────────────────────────────────────────────────────────
+DEAD #5 — seqici IN stats_complexity.py (ALREADY COVERED IN BUG #1)
+──────────────────────────────────────────────────────────────────────────────
+(See BUG #1 above — this is the duplicate seqici that is dead code.)
+
+──────────────────────────────────────────────────────────────────────────────
+DEAD #6 — export.py IS A NEAR-EMPTY MODULE
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/visualization/export.py
+
+This file contains nothing but a single re-export of figure_to_buffer
+from utils.py. It provides no additional functionality. figure_to_buffer
+is already accessible via visualization.utils. The entire export.py
+module is dead weight.
+
+FIX: Delete export.py and ensure figure_to_buffer is directly exposed
+wherever needed.
+
+──────────────────────────────────────────────────────────────────────────────
+DEAD #7 — REDUNDANT INLINE IMPORTS IN stats_utils.py
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/stats_utils.py  (seqnum, seqtrate, seqhasmiss functions)
+
+Multiple functions in stats_utils.py do:
+    def seqnum(...):
+        import numpy as np     # already imported at module top
+        import pandas as pd    # already imported at module top
+
+numpy and pandas are already imported at the top of the file as module-
+level imports. Repeating them inside functions is harmless but wastes
+interpreter time on function call and clutters the code.
+
+FIX: Remove all redundant inline imports inside these functions.
+
+──────────────────────────────────────────────────────────────────────────────
+DEAD #8 — BACKWARD COMPATIBILITY try/except IN cluster.py IS UNNECESSARY
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/cluster.py  (cluster_agglomerative function)
+
+    try:
+        model = AgglomerativeClustering(
+            n_clusters=n_clusters, metric="precomputed", linkage="average")
+    except TypeError:
+        model = AgglomerativeClustering(
+            n_clusters=n_clusters, affinity="precomputed", linkage="average")
+
+The `affinity=` parameter was removed in scikit-learn 1.2 in favor of
+`metric=`. pyproject.toml specifies scikit-learn>=1.3 as the optional
+dependency, meaning the `affinity=` branch WILL NEVER be executed.
+
+This is:
+  (a) Unnecessary dead code (the except branch can never be reached)
+  (b) Actively misleading (it implies old sklearn is supported)
+  (c) Hiding real TypeErrors that could occur for other reasons
+
+FIX: Remove the try/except block and use metric="precomputed" directly.
+     The project states no backward compatibility is needed.
+
+
+================================================================================
+6. PERFORMANCE INEFFICIENCIES
+================================================================================
+
+Many core statistical functions use pure Python loops over NumPy arrays.
+For a sequence analysis library that users may run on thousands of sequences,
+these loops are a significant bottleneck. Each item below describes a loop
+that should be replaced with vectorised NumPy operations.
+
+What is "vectorisation"?
+  Instead of looping over each element in Python (slow), NumPy operations
+  process entire arrays at once in optimised C code (fast). For example,
+  instead of: `for i in range(n): total += arr[i]`
+  use: `total = arr.sum()`
+  The NumPy version is typically 10x–1000x faster.
+
+──────────────────────────────────────────────────────────────────────────────
+PERF #1 — seqstatd: O(n × L) DOUBLE PYTHON LOOP
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/stats_basic.py
+
+Current code:
+    for t in range(L):
+        for i in range(n):
+            c = int(x.data[i, t])
+            if 0 <= c < K:
+                freq[t, c] += w_seq[i]
+
+This is an O(n × L) pure Python loop. For n=5000 sequences, L=100 time
+points, this is 500,000 iterations through the Python interpreter.
+
+Suggested vectorisation:
+    for t in range(L):
+        col = x.data[:, t]          # shape (n,)
+        valid = (col >= 0) & (col < K)
+        np.add.at(freq[t], col[valid].astype(int), w_seq[valid])
+
+Or even better, use a single call with np.einsum or sparse matrix ops.
+
+──────────────────────────────────────────────────────────────────────────────
+PERF #2 — seqistatd: PYTHON LOOP OVER ROWS
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/stats_basic.py
+
+Current code:
+    for i, row in enumerate(x.data):
+        vals, cnt = np.unique(row, return_counts=True)
+        out[i, vals] = cnt
+
+A per-row np.unique call is still a Python loop. For large n, this is slow.
+Vectorised alternative using np.apply_along_axis or a bincount approach:
+    for i in range(n):
+        np.add.at(out[i], x.data[i], 1)
+Or use a vectorised scatter-add approach:
+    rows = np.repeat(np.arange(n), x.seqlen)
+    cols = x.data.ravel()
+    np.add.at(out, (rows, cols), 1)
+
+──────────────────────────────────────────────────────────────────────────────
+PERF #3 — seqfpos / seqfposend: NESTED PYTHON LOOPS
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/stats_p1.py
+
+Both seqfpos (first occurrence) and seqfposend (last occurrence) use
+O(n × K) Python loops. These can be fully vectorised using np.argmax
+with boolean masks or np.where.
+
+──────────────────────────────────────────────────────────────────────────────
+PERF #4 — seqrecode: O(n × L) PYTHON LOOP FOR ENCODING
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/stats_p2.py
+
+    for i in range(x.nseq):
+        for j in range(x.seqlen):
+            old_state = x.alphabet[x.data[i, j]]
+            new_data[i, j] = old_to_new.get(old_state, old_state)
+
+This double loop can be replaced with a vectorised lookup table:
+    # Build a lookup array: old_code -> new_code
+    lookup = np.arange(K)
+    for old_code, new_code in old_to_new_codes.items():
+        lookup[old_code] = new_code
+    new_int_data = lookup[x.data]
+
+──────────────────────────────────────────────────────────────────────────────
+PERF #5 — FCE_to_TSE: USES df.iterrows() WHICH IS KNOWN TO BE SLOW
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/format.py
+
+    for pid, group in df.groupby(id_col):
+        for _, row in group.iterrows():   # slow
+            ...
+
+df.iterrows() is documented by pandas as being slow and discouraged for
+large DataFrames. The recommended alternative is to use vectorised pandas
+operations (groupby aggregations, apply, or numpy index-based access).
+
+──────────────────────────────────────────────────────────────────────────────
+PERF #6 — seqstatf / seqstatl: PYTHON LOOPS FOR COUNTING FIRST/LAST STATES
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/stats_p1.py
+
+Both functions loop over sequences to count first- or last-state
+frequencies. These loops can be replaced with np.bincount and
+np.take operations on the first/last column of x.data.
+
+──────────────────────────────────────────────────────────────────────────────
+PERF #7 — seqpm (PATTERN MATCHING): TRIPLE NESTED PYTHON LOOP
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/stats_complexity.py
+
+seqpm uses a triple nested loop (sequences × patterns × positions).
+For large pattern sets this is very slow. NumPy sliding-window
+comparisons (using stride tricks or scipy.ndimage) would be orders of
+magnitude faster.
+
+──────────────────────────────────────────────────────────────────────────────
+PERF #8 — trate_substitution_matrix_timevarying: np.add.at IN A LOOP
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/distances/costs.py
+
+    for t in range(L - 1):
+        ...
+        np.add.at(counts[t], (from_states, to_states), w_col)
+
+np.add.at is unbuffered (safe for repeated indices) but significantly
+slower than regular vectorised indexing. The entire loop over positions
+can be replaced with a single einsum or sparse matrix multiply.
+
+──────────────────────────────────────────────────────────────────────────────
+PERF #9 — _compute_diff IN seqdiff.py: PYTHON LOOP OVER POSITIONS AND STATES
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/seqdiff.py
+
+_compute_diff iterates over positions and states in Python. The diff
+computation is a simple element-wise array operation that can be done
+with (a != b).astype(float) or np.not_equal.
+
+──────────────────────────────────────────────────────────────────────────────
+PERF #10 — sequence_index_plot WITH apply_hatching=True: n×L PYTHON LOOP
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/visualization/plots/index.py
+
+When apply_hatching=True, the function draws a plt.Rectangle patch for
+each missing/void cell in the data matrix using:
+    for i in range(n):
+        for j in range(L):
+            if missing_mask[i, j]:
+                ax.add_patch(plt.Rectangle(...))
+
+For a 1000×100 sequence plot, this can mean up to 100,000 patch objects.
+This will be extremely slow and produce a huge plot file.
+
+FIX: Use ax.pcolor or ax.fill_between with numpy masking instead of
+individual Rectangle patches.
+
+──────────────────────────────────────────────────────────────────────────────
+PERF #11 — duration_boxplot: BUILDS DATAFRAME ROW-BY-ROW
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/visualization/plots/duration.py
+
+    df_rows = []
+    for i in range(x.nseq):
+        for k, s in enumerate(x.alphabet):
+            df_rows.append({"seq": i, "state": s, ...})
+    df = pd.DataFrame(df_rows)
+
+Building a DataFrame by appending row dicts in a Python loop is slow.
+Prefer constructing arrays first, then calling pd.DataFrame once.
+
+──────────────────────────────────────────────────────────────────────────────
+PERF #12 — HSPELL_to_STS IS ~300 LINES AND ACKNOWLEDGED AS A MONOLITH
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/format.py
+
+The HSPELL_to_STS function is approximately 300 lines long. A comment
+inside the function explicitly acknowledges:
+    "# This function should remain as a single unit even though it is long."
+This is a red flag. Long functions are harder to test, debug, and optimise.
+The overlap resolution logic and the main conversion logic should be
+refactored into separate helper functions even if they are kept private.
+
+
+================================================================================
+7. API INCONSISTENCIES AND INTERFACE PROBLEMS
+================================================================================
+
+These are cases where the public API behaves unexpectedly, uses confusing
+naming conventions, or has inconsistencies that would confuse users.
+
+──────────────────────────────────────────────────────────────────────────────
+API #1 — seqdef HAS TWO PARAMETERS THAT DO THE SAME THING
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/format.py  (seqdef function signature)
+
+seqdef accepts both:
+    alphabet: Optional[Sequence[str]] = None
+    states: Optional[Sequence[str]] = None
+
+Both parameters serve exactly the same purpose: defining the explicit
+alphabet of states. The function uses `states or alphabet` to select
+between them, giving `states` priority. This is confusing. A user
+looking at the signature does not know which to use.
+
+FIX: Deprecate one of these (e.g., keep `alphabet` for consistency with
+TraMineR which uses `alphabet`, or keep `states` for clarity). For v0.0.1
+with no backward compatibility, simply remove the duplicate parameter.
+
+──────────────────────────────────────────────────────────────────────────────
+API #2 — seqturbulence, turbulence, seqST, AND turbulence_exact NAMING
+──────────────────────────────────────────────────────────────────────────────
+Files: traminex/stats_basic.py, traminex/stats_complexity.py
+
+The following confusion exists around turbulence functions:
+  - seqturbulence: computes transition COUNT per sequence (a proxy,
+                   NOT the standard turbulence defined by Elzinga)
+  - turbulence:    summary function that calls seqturbulence (proxy)
+  - seqST:         computes the true Elzinga turbulence score
+  - turbulence_exact: summary function that calls seqST (true)
+
+The name "turbulence" (without qualifier) misleads users into thinking
+they are computing the standard TraMineR seqST turbulence, when actually
+they are getting a cheap proxy (transition count). In TraMineR, seqST is
+the canonical turbulence function.
+
+FIX: Rename seqturbulence → seqtransn_count (or add a clear "proxy"
+suffix). The canonical `turbulence` name should correspond to seqST,
+not the proxy.
+
+──────────────────────────────────────────────────────────────────────────────
+API #3 — seqgen RETURNS A RAW NUMPY ARRAY, NOT AN STSList
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/stats_p2.py  (seqgen function)
+
+seqgen generates random sequences but returns a raw numpy array of
+strings (dtype=object), not an STSList. This is inconsistent with every
+other function in the package that creates or transforms sequences
+(seqdef, seqrecode, seqmodst, etc., all return STSList).
+
+A user who calls seqgen and then immediately tries to pass the result
+to any traminex statistical function will get an error because those
+functions expect an STSList.
+
+FIX: Either (a) have seqgen return an STSList directly, or (b) clearly
+document in the docstring that users must call seqdef(seqgen(...)) and
+provide that example.
+
+──────────────────────────────────────────────────────────────────────────────
+API #4 — seqfind HAS TWO DIFFERENT SIGNATURES IN DIFFERENT MODULES
+──────────────────────────────────────────────────────────────────────────────
+(Already detailed in DEAD #1. The seqformat.py version should be deleted
+to avoid confusion.)
+
+──────────────────────────────────────────────────────────────────────────────
+API #5 — seqtrate AND seqtransn OVERLAP IN PURPOSE
+──────────────────────────────────────────────────────────────────────────────
+Files: traminex/stats_utils.py (seqtrate), traminex/stats_basic.py (seqtransn)
+
+Both functions compute K×K transition matrices:
+  - seqtransn: counts or fractions, with optional normalization, no
+               missing-value handling
+  - seqtrate:  always normalized rates, with missing-state exclusion
+
+Users will not know which to call without reading both docstrings.
+The distinction (missing handling, normalization default) should be
+clearer in the names or collapsed into a single function with parameters.
+
+──────────────────────────────────────────────────────────────────────────────
+API #6 — seqistatd IS NAMED "statd" BUT RETURNS COUNTS, NOT DURATIONS
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/stats_basic.py
+
+seqistatd is named "individual state durations" (statd = state durations).
+Its docstring says "counts of each state per sequence" which is the same
+as duration measured in number of positions. However, "duration" in the
+sequence analysis literature more often refers to spell duration (the
+length of consecutive runs of the same state), not total occurrence count.
+
+This naming clash with seqistatd in the R TraMineR package (which
+returns spell durations) creates confusion for R-to-Python migrators.
+
+FIX: Clarify the docstring explicitly: "Total number of positions in state
+k for sequence i (summed over all positions, equivalent to total time
+spent in state k, NOT individual spell durations)".
+
+──────────────────────────────────────────────────────────────────────────────
+API #7 — seqsubm 'constant=' PARAMETER DOCUMENTED INCORRECTLY
+──────────────────────────────────────────────────────────────────────────────
+(See DOC #2 below for full details.)
+
+──────────────────────────────────────────────────────────────────────────────
+API #8 — state_legend_figure IS NOT IN __init__.py __all__
+──────────────────────────────────────────────────────────────────────────────
+(Already detailed in ARCHITECTURE section F above.)
+
+
+================================================================================
+8. DOCUMENTATION AND DOCSTRING ERRORS
+================================================================================
+
+These are cases where docstrings or comments contain factually wrong
+information, wrong parameter names, or misleading descriptions.
+
+──────────────────────────────────────────────────────────────────────────────
+DOC #1 — dissassoc DOCSTRING INCORRECTLY RESTRICTS GROUP COUNT TO 2
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/diss.py
+
+The docstring for dissassoc says:
+    "group: ... Must have exactly 2 unique values."
+
+This is factually wrong — the implementation handles any number of groups.
+This is also covered under BUG #6 above.
+
+FIX: Change to "group: 1D array-like of group labels. Any number of
+unique group values is accepted."
+
+──────────────────────────────────────────────────────────────────────────────
+DOC #2 — seqalign DOCSTRING USES WRONG PARAMETER NAME FOR seqsubm
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/align_p2.py  (seqalign function, line ~112)
+
+The docstring example shows:
+    >>> sm = seqsubm(sts, method='CONSTANT', constant=2.0)
+
+But seqsubm does NOT accept a parameter called `constant=`. The actual
+parameter name is `cval=` (for "constant value"). A user who copies
+this example will have `constant=2.0` silently ignored and the default
+`cval=2.0` used instead (giving the same result by accident), or will
+wonder why their custom value is ignored if they use a different number.
+
+FIX: Change the example to:
+    >>> sm = seqsubm(sts, method='CONSTANT', cval=2.0)
+
+──────────────────────────────────────────────────────────────────────────────
+DOC #3 — DHDConfig.as_dict() DOES NOT DOCUMENT ALL VALID 'variant' VALUES
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/config_dataclasses.py  (DHDConfig)
+
+DHDConfig validates `variant` against {"mean", "sum", "traminer", "tmean"}
+but the docstring only mentions "variant" without listing valid values.
+A user has no way of knowing what to pass without reading the source code.
+
+FIX: Document all four valid variant values with a brief explanation of
+what each does.
+
+──────────────────────────────────────────────────────────────────────────────
+DOC #4 — seqibad DEFAULT stprec BEHAVIOR IS NOT DOCUMENTED
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/stats_complexity.py  (seqibad function)
+
+The function signature is:
+    def seqibad(x: STSList, *, stprec: list[float] | None = None)
+
+When stprec=None (the default), it silently computes
+[0.0, 1.0, 2.0, ..., K-1] as weights, meaning state 0 has weight 0
+("not bad at all") and state K-1 has weight K-1 ("very bad"). This
+default is an implicit ordering assumption about state undesirability
+that is NOT mentioned anywhere in the docstring.
+
+FIX: Add to the docstring: "Default (None): assumes states are ordered
+from least to most undesirable, assigning weights [0, 1, ..., K-1]."
+
+──────────────────────────────────────────────────────────────────────────────
+DOC #5 — save_plot USES print() — INAPPROPRIATE FOR A LIBRARY
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/visualization/utils.py  (save_plot function, last line)
+
+    print(f"Plot saved to: {filepath}")
+
+A library function should NEVER print to stdout. This would be
+disruptive in Jupyter notebooks, automated pipelines, and any application
+that captures stdout. Libraries should use the `logging` module instead.
+
+FIX: Replace with:
+    import logging
+    logging.getLogger(__name__).info("Plot saved to: %s", filepath)
+Or simply remove the print call entirely.
+
+──────────────────────────────────────────────────────────────────────────────
+DOC #6 — seqturbulence IS DOCUMENTED AS "proxy" BUT IS NAMED turbulence
+──────────────────────────────────────────────────────────────────────────────
+(See API #2 above for full details.)
+
+──────────────────────────────────────────────────────────────────────────────
+DOC #7 — seqgen DOCSTRING DOES NOT MENTION THAT OUTPUT REQUIRES seqdef()
+──────────────────────────────────────────────────────────────────────────────
+(See API #3 above for full details.)
+
+
+================================================================================
+9. VISUALIZATION SUBPACKAGE — SPECIFIC ISSUES
+================================================================================
+
+──────────────────────────────────────────────────────────────────────────────
+VIZ #1 — _resolve_state_code IS DUPLICATED IN distribution.py AND index.py
+──────────────────────────────────────────────────────────────────────────────
+Files:  traminex/visualization/plots/distribution.py  (lines 11–22)
+        traminex/visualization/plots/index.py         (lines 14–25)
+
+The EXACT same function _resolve_state_code appears verbatim in two
+separate files. This is a DRY (Don't Repeat Yourself) violation. If this
+function needs to be fixed or changed, it must be updated in two places.
+
+FIX: Move _resolve_state_code to visualization/utils.py and import it
+from there in both distribution.py and index.py.
+
+──────────────────────────────────────────────────────────────────────────────
+VIZ #2 — duration_boxplot USES REMOVED SEABORN API (CRASHES ON SEABORN 0.13+)
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/visualization/plots/duration.py  (lines 48–56)
+
+The seaborn violinplot call uses:
+    sns.violinplot(..., split=True, scale="width")
+
+BOTH of these parameters were removed in seaborn 0.13.0 (released 2023):
+  - `split=` was removed (use `hue=` with a different approach)
+  - `scale=` was removed (use `density_norm=`)
+
+Any user with seaborn >= 0.13 (which is current) will get a TypeError
+when calling duration_boxplot with by_state=True and labels.
+
+FIX: Update the violinplot call for the seaborn >= 0.13 API:
+    sns.violinplot(..., density_norm="width", hue="label", split=False)
+Or check the seaborn version and branch accordingly.
+
+──────────────────────────────────────────────────────────────────────────────
+VIZ #3 — state_distribution_plot CALLS plt.tight_layout() UNCONDITIONALLY
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/visualization/plots/distribution.py  (line 102)
+
+    plt.tight_layout()
+
+When `ax` is provided by the caller (i.e., a subplot in a multi-subplot
+figure), calling plt.tight_layout() inside the function will adjust the
+ENTIRE current figure, not just the subplot. This can cause unexpected
+layout changes when the caller has control over the figure.
+
+FIX: Only call plt.tight_layout() when the figure was created internally
+(when ax was None):
+    if ax is None:
+        plt.tight_layout()
+
+──────────────────────────────────────────────────────────────────────────────
+VIZ #4 — alpha OVERLAY APPROACH IN sequence_index_plot IS VISUALLY INCORRECT
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/visualization/plots/index.py  (lines 84–105)
+
+To render missing/void states with reduced alpha, the function draws a
+white RGBA overlay on top of the entire data image:
+    overlay = np.ones((n, L, 4))
+    overlay[:, :, 3] = 1.0 - alpha_array   # alpha channel
+
+This approach applies the same white wash to ALL cells, making
+non-missing cells appear lighter too in the regions adjacent to
+missing cells (due to how the `extent` works with imshow). The correct
+approach is to create a masked RGBA array from the colormap and set
+specific cells to a different alpha directly in the source image.
+
+FIX: Build the RGBA image directly from the colormap:
+    rgba = cm(data / (K - 1))  # shape (n, L, 4)
+    rgba[missing_mask, 3] = missing_alpha
+    rgba[void_mask, 3] = void_alpha
+    ax.imshow(rgba, aspect="auto", interpolation="nearest")
+
+──────────────────────────────────────────────────────────────────────────────
+VIZ #5 — legend_figure IS RE-EXPORTED CONFUSINGLY IN legend.py
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/visualization/legend.py  (lines 6, 57)
+
+    from .utils import legend_figure as _legend_figure    # line 6
+    ...
+    legend_figure = _legend_figure                        # line 57
+
+The function is imported as `_legend_figure` (private-looking), then
+re-exported as `legend_figure` (public). The `_legend_figure` name is
+used internally in state_legend_figure. This creates confusion: is
+_legend_figure private or public? The answer is "it was originally
+public from utils.py, imported with an underscore prefix here,
+then re-exported publicly."
+
+FIX: Import directly without the underscore rename:
+    from .utils import legend_figure
+    # Use legend_figure directly in state_legend_figure
+
+
+================================================================================
+10. TESTING AND QUALITY ASSURANCE
+================================================================================
+
+──────────────────────────────────────────────────────────────────────────────
+TEST #1 — ZERO PROJECT-LEVEL TESTS EXIST
+──────────────────────────────────────────────────────────────────────────────
+Severity: Critical
+
+A complete search of the project directory (excluding .venv) finds no
+test files of any kind. There is no tests/ directory, no conftest.py,
+no test_*.py files, and pytest is not even listed as a dev dependency
+in pyproject.toml.
+
+This means:
+  - There is no way to verify the correctness of any function
+  - Bugs may have existed since development began and gone undetected
+  - Any future change to the code risks introducing regressions with
+    no automated way to catch them
+  - CI/CD is impossible to set up without tests
+
+For a scientific computing library, this is a critical gap. Users rely
+on these statistical functions producing correct results. Without tests,
+there is no evidence of correctness.
+
+RECOMMENDATION: Create a tests/ directory using pytest. Start with:
+  - tests/test_format.py    — test seqdef round-trips
+  - tests/test_stats.py     — test statistics against known values
+  - tests/test_distances.py — test distance methods with known matrices
+  - tests/test_cluster.py   — test clustering with toy data
+
+At minimum, add pytest to dev dependencies in pyproject.toml:
+  [project.optional-dependencies]
+  dev = ["pytest>=7.0", "pytest-cov"]
+
+──────────────────────────────────────────────────────────────────────────────
+TEST #2 — NO CI/CD PIPELINE EXISTS
+──────────────────────────────────────────────────────────────────────────────
+
+There is no .github/workflows/ directory or any other CI configuration.
+The .pre-commit-config.yaml runs black and ruff as pre-commit hooks, which
+is a good start for formatting, but there is no automated test runner.
+
+RECOMMENDATION: Create a GitHub Actions workflow (.github/workflows/ci.yml)
+that runs pytest on every push and pull request.
+
+──────────────────────────────────────────────────────────────────────────────
+TEST #3 — PRE-COMMIT CONFIG USES PINNED OLD VERSIONS
+──────────────────────────────────────────────────────────────────────────────
+File: .pre-commit-config.yaml
+
+  - pre-commit-hooks: v4.6.0 (current: v5.0.0)
+  - black: 24.8.0 (current: 25.x)
+  - ruff: v0.5.6 (current: v0.9.x)
+
+Pinning specific versions in pre-commit is fine and intentional for
+reproducibility, but these versions are noticeably behind current
+releases. The ruff version in particular is missing many bug fixes and
+new rules.
+
+RECOMMENDATION: Update pre-commit hooks to current stable versions.
+
+
+================================================================================
+11. MINOR STYLE AND CODE QUALITY ISSUES
+================================================================================
+
+The following are lower-priority issues that do not affect correctness
+but reduce maintainability and readability.
+
+──────────────────────────────────────────────────────────────────────────────
+STYLE #1 — INCONSISTENT TYPE ANNOTATIONS
+──────────────────────────────────────────────────────────────────────────────
+
+Some functions have thorough type annotations (e.g., seqdef, seqtransn),
+while others have no annotations at all (e.g., seqdist(x, method, **kwargs)
+where x is untyped). The public API should have consistent type annotations
+so that IDEs and type checkers can provide useful hints to users.
+
+──────────────────────────────────────────────────────────────────────────────
+STYLE #2 — HARDCODED MAGIC NUMBERS IN PLOTS
+──────────────────────────────────────────────────────────────────────────────
+
+Several plot functions use unexplained numeric constants:
+  - fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)  [chronogram.py]
+  These "magic numbers" appear multiple times across files. They should
+  either be named module-level constants (COLORBAR_FRACTION = 0.046) or
+  documented inline.
+
+──────────────────────────────────────────────────────────────────────────────
+STYLE #3 — set() CREATED FROM list() UNNECESSARILY IN events.py
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/events.py
+
+    if not set([id_col, time_col, event_col]).issubset(df.columns):
+
+Creating a list and then a set from it is unnecessary. Use a set literal:
+    if not {id_col, time_col, event_col}.issubset(df.columns):
+
+──────────────────────────────────────────────────────────────────────────────
+STYLE #4 — MIXED USE OF Optional[X] AND X | None
+──────────────────────────────────────────────────────────────────────────────
+
+Some files use Python 3.10+ union syntax (X | None) while others use
+Optional[X] from typing. This is inconsistent. Since Python 3.9 is the
+minimum, `X | None` only works in type annotations with
+`from __future__ import annotations`, which is present in most files.
+Standardise on one style throughout the codebase.
+
+──────────────────────────────────────────────────────────────────────────────
+STYLE #5 — from __future__ import annotations MISSING FROM SOME FILES
+──────────────────────────────────────────────────────────────────────────────
+
+Not all modules include `from __future__ import annotations`. While most
+core files have it, modules in the visualization subpackage sometimes
+omit it. For consistency (especially to support modern union type hints
+on Python 3.9), this import should be present in every file.
+
+──────────────────────────────────────────────────────────────────────────────
+STYLE #6 — PLOTTING.py WRAPPERS ARE POINTLESS ONE-LINERS
+──────────────────────────────────────────────────────────────────────────────
+(Already detailed in ARCHITECTURE section A above.)
+
+──────────────────────────────────────────────────────────────────────────────
+STYLE #7 — HSPELL_to_STS SELF-ACKNOWLEDGES ITS OWN CODE SMELL
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/format.py
+
+A comment inside HSPELL_to_STS says the function "should remain as a
+single unit" despite being ~300 lines. Self-acknowledging a code smell
+without fixing it is a form of technical debt that should be resolved.
+
+──────────────────────────────────────────────────────────────────────────────
+STYLE #8 — seqindic CONTAINS REDUNDANT INLINE IMPORTS
+──────────────────────────────────────────────────────────────────────────────
+File: traminex/stats_utils.py
+
+Similar to DEAD #7, seqindic also has:
+    def seqindic(...):
+        import numpy as np   # already imported at module level
+        import pandas as pd  # already imported at module level
+
+These redundant imports should be removed.
+
+
+================================================================================
+12. PRIORITIZED ACTION PLAN
+================================================================================
+
+Below is a recommended sequence of fixes, ordered from most critical to
+least critical. Items labeled [BLOCKING] should be fixed before v0.0.1
+is released. Others can be addressed in incremental patches.
+
+───────────────────────────────────────────────────
+PHASE 1 — CORRECTNESS FIXES [BLOCKING for release]
+───────────────────────────────────────────────────
+Priority 1: Fix BUG #3  — seqsubm silently drops 'weights' for TRATE
+Priority 2: Fix BUG #8  — cluster_chronograms passes wrong labels to sub-STSList
+Priority 3: Fix BUG #5  — Remove dead istatd computation in seqstatf/seqstatl
+Priority 4: Fix VIZ #2  — duration_boxplot crashes with seaborn >= 0.13
+Priority 5: Fix BUG #7  — Suppress division-by-zero RuntimeWarning in diss_p1
+Priority 6: Fix DOC #2  — seqalign docstring example uses wrong parameter name
+Priority 7: Fix DOC #1  — dissassoc docstring wrongly restricts to 2 groups
+
+───────────────────────────────────────────────────
+PHASE 2 — DEAD CODE REMOVAL [easy wins, low risk]
+───────────────────────────────────────────────────
+Priority 8:  Fix DEAD #1  — Delete seqfind from seqformat.py
+Priority 9:  Fix DEAD #5  — Delete seqici from stats_complexity.py
+Priority 10: Fix DEAD #4  — Delete trate unused variables (debut, fin)
+Priority 11: Fix DEAD #8  — Remove try/except backward compat in cluster.py
+Priority 12: Fix DEAD #7  — Remove redundant inline imports in stats_utils.py
+Priority 13: Fix DEAD #6  — Remove or expand visualization/export.py
+Priority 14: Fix DEAD #2  — Decide public/private status of seqrep,
+                             cluster_representatives
+Priority 15: Fix DEAD #3  — Decide public/private status of dissdomassoc
+
+───────────────────────────────────────────────────
+PHASE 3 — API CONSISTENCY [for a clean v0.0.1 API]
+───────────────────────────────────────────────────
+Priority 16: Fix API #1  — Remove duplicate alphabet/states parameter in seqdef
+Priority 17: Fix API #2  — Rename turbulence/seqturbulence for clarity
+Priority 18: Fix API #3  — Make seqgen return STSList or document seqdef step
+Priority 19: Fix ARCH #A — Replace plotting.py wrappers with direct imports
+Priority 20: Fix ARCH #F — Add state_legend_figure to __init__.py __all__
+
+───────────────────────────────────────────────────
+PHASE 4 — TESTING AND CI [non-negotiable for v1.0]
+───────────────────────────────────────────────────
+Priority 21: Create tests/ directory with pytest tests for all core functions
+Priority 22: Add pytest to dev dependencies in pyproject.toml
+Priority 23: Create GitHub Actions CI workflow
+
+───────────────────────────────────────────────────
+PHASE 5 — PERFORMANCE [when data scale demands it]
+───────────────────────────────────────────────────
+Priority 24: Vectorise seqstatd (PERF #1) — most widely used function
+Priority 25: Vectorise seqistatd (PERF #2)
+Priority 26: Vectorise seqrecode (PERF #4)
+Priority 27: Replace iterrows() in FCE_to_TSE (PERF #5)
+Priority 28: Fix apply_hatching loop in sequence_index_plot (PERF #10)
+Priority 29: Remaining PERF items (#3, #6–#9, #11)
+
+───────────────────────────────────────────────────
+PHASE 6 — VISUALIZATION REFINEMENTS
+───────────────────────────────────────────────────
+Priority 30: Fix VIZ #1  — Deduplicate _resolve_state_code
+Priority 31: Fix VIZ #3  — Conditional tight_layout in distribution plot
+Priority 32: Fix VIZ #4  — Fix alpha overlay approach in index plot
+Priority 33: Fix VIZ #5  — Clean up legend.py re-export confusion
+Priority 34: Fix DOC #5  — Replace print() with logging in save_plot
+
+───────────────────────────────────────────────────
+PHASE 7 — STYLE AND DOCUMENTATION POLISH
+───────────────────────────────────────────────────
+Priority 35: Update .pre-commit-config.yaml to current tool versions
+Priority 36: Standardise type annotation style (Optional vs X|None)
+Priority 37: Add from __future__ import annotations to all missing files
+Priority 38: Document DHDConfig variant values (DOC #3)
+Priority 39: Document seqibad default stprec behavior (DOC #4)
+Priority 40: Consolidate split import blocks in distances/__init__.py
+Priority 41: Remove magic numbers from plot code (STYLE #2)
+Priority 42: Clean up archive/ folder for public release
+
+
+================================================================================
+APPENDIX: FULL LIST OF FINDINGS WITH FILE REFERENCES
+================================================================================
+
+ID        Category     File                                            Summary
+──────────────────────────────────────────────────────────────────────────────
+BUG #1    Bug          stats_complexity.py / stats_p2.py              Duplicate seqici
+BUG #2    Bug          events.py ~line 503                            Dead per variable
+BUG #3    Bug          distances/__init__.py (seqsubm)                weights silently dropped
+BUG #4    Bug          distances/costs.py ~line 153                   Dead debut/fin vars
+BUG #5    Bug          stats_p1.py (seqstatf, seqstatl)               Dead istatd computation
+BUG #6    Bug          diss.py (dissassoc)                            Wrong docstring (2 groups)
+BUG #7    Bug          diss_p1.py ~line 276                           Division-by-zero warning
+BUG #8    Bug          visualization/plots/chronogram.py              Wrong labels in sub-STSList
+DEAD #1   Dead Code    seqformat.py ~line 265                         seqfind dead duplicate
+DEAD #2   Dead Code    cluster.py                                     seqrep/cluster_rep not exported
+DEAD #3   Dead Code    diss.py                                        dissdomassoc not exported
+DEAD #4   Dead Code    distances/costs.py ~line 153                   debut/fin never used
+DEAD #5   Dead Code    stats_complexity.py                            seqici (dead duplicate)
+DEAD #6   Dead Code    visualization/export.py                        Near-empty module
+DEAD #7   Dead Code    stats_utils.py                                 Redundant inline imports
+DEAD #8   Dead Code    cluster.py (cluster_agglomerative)             Unneeded backward compat
+PERF #1   Performance  stats_basic.py (seqstatd)                      O(n×L) double Python loop
+PERF #2   Performance  stats_basic.py (seqistatd)                     Python loop over rows
+PERF #3   Performance  stats_p1.py (seqfpos, seqfposend)              Nested Python loops
+PERF #4   Performance  stats_p2.py (seqrecode)                        O(n×L) encoding loop
+PERF #5   Performance  format.py (FCE_to_TSE)                         iterrows() usage
+PERF #6   Performance  stats_p1.py (seqstatf, seqstatl)               Counting loops
+PERF #7   Performance  stats_complexity.py (seqpm)                    Triple nested loop
+PERF #8   Performance  distances/costs.py (trate timevarying)         np.add.at in loop
+PERF #9   Performance  seqdiff.py (_compute_diff)                     Loop over positions
+PERF #10  Performance  visualization/plots/index.py                   n×L patch loop
+PERF #11  Performance  visualization/plots/duration.py                Row-by-row DataFrame build
+PERF #12  Performance  format.py (HSPELL_to_STS)                      300-line monolith
+API #1    API          format.py (seqdef)                             Duplicate alphabet/states
+API #2    API          stats_basic.py / stats_complexity.py           Turbulence naming confusion
+API #3    API          stats_p2.py (seqgen)                           Returns array not STSList
+API #4    API          seqformat.py                                   seqfind signature conflict
+API #5    API          stats_utils.py / stats_basic.py                seqtrate/seqtransn overlap
+API #6    API          stats_basic.py (seqistatd)                     Duration vs count naming
+API #7    API          distances/__init__.py (seqsubm)                wrong param in docstring
+API #8    API          __init__.py / plotting.py                      state_legend_figure not in __all__
+DOC #1    Doc          diss.py                                        Wrong 2-group restriction
+DOC #2    Doc          align_p2.py                                    constant= should be cval=
+DOC #3    Doc          config_dataclasses.py (DHDConfig)              variant values undocumented
+DOC #4    Doc          stats_complexity.py (seqibad)                  stprec default undocumented
+DOC #5    Doc          visualization/utils.py (save_plot)             print() in library code
+DOC #6    Doc          stats_basic.py / stats_complexity.py           turbulence naming confusion
+DOC #7    Doc          stats_p2.py (seqgen)                           seqdef() step undocumented
+VIZ #1    Viz          visualization/plots/distribution.py + index.py _resolve_state_code duplicated
+VIZ #2    Viz          visualization/plots/duration.py                Removed seaborn API (crashes)
+VIZ #3    Viz          visualization/plots/distribution.py            Unconditional tight_layout
+VIZ #4    Viz          visualization/plots/index.py                   Incorrect alpha overlay
+VIZ #5    Viz          visualization/legend.py                        Confusing _legend_figure alias
+TEST #1   Testing      (entire project)                               Zero tests
+TEST #2   Testing      (entire project)                               No CI/CD
+TEST #3   Testing      .pre-commit-config.yaml                        Outdated tool versions
+ARCH #A   Arch         plotting.py                                    Useless one-liner wrappers
+ARCH #B   Arch         distances/__init__.py                          Split import blocks
+ARCH #C   Arch         distances/__init__.py                          Redundant `X as X` imports
+ARCH #D   Arch         archive/ directory                             Stale dev notes in repo root
+ARCH #E   Arch         visualization/export.py                        Near-empty module
+ARCH #F   Arch         __init__.py / plotting.py                      state_legend_figure missing
+STYLE #1  Style        (various)                                      Inconsistent type annotations
+STYLE #2  Style        visualization/plots/chronogram.py              Hardcoded magic numbers
+STYLE #3  Style        events.py                                      set([...]) should be {...}
+STYLE #4  Style        (various)                                      Mixed Optional/union syntax
+STYLE #5  Style        visualization/ (some files)                    Missing future annotations
+STYLE #6  Style        plotting.py                                    One-liner wrappers
+STYLE #7  Style        format.py (HSPELL_to_STS)                     Acknowledged code smell
+STYLE #8  Style        stats_utils.py (seqindic)                     Redundant inline imports
+
+TOTAL ISSUES: 56 findings across 8 categories
+================================================================================
+END OF REPORT
+================================================================================

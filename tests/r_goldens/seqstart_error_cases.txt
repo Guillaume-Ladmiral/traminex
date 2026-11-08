@@ -1,0 +1,4 @@
+# R 4.6.2; TraMineR 2.2.14; TraMineRextras 0.6.9
+# case	data.start	new.start	tmin	tmax	error
+length_mismatch	2000,2001,2002	2000	NULL	NULL	 [!] number of individual in seqdata, data.start and/or new.start mismatch.
+negative_tmax	2000	2000	NULL	-1	[!] There are no data in the specified new time frame.

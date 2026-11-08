@@ -1,0 +1,22 @@
+# TraMineR 2.2-14 seqformat output schema
+# case|source|target|class|nrow|ncol|columns|row_names|column_types|factor_levels|compressed
+route_sts_sts|STS|STS|matrix;array|2|1|Sequence|p2;p1|Sequence:character|<NONE>|TRUE
+route_sts_dss|STS|DSS|matrix;array|2|4|<NONE>|[1];[2]|[1]:character;[2]:character;[3]:character;[4]:character|<NONE>|FALSE
+route_sts_sps|STS|SPS|matrix;array|2|4|[1];[2];[3];[4]|p2;p1|[1]:character;[2]:character;[3]:character;[4]:character|<NONE>|FALSE
+route_sts_srs|STS|SRS|data.frame|6|8|id;idx;T-3;T-2;T-1;T;group;id.1|1;2;3;4;5;6|id:integer;idx:numeric;T-3:character;T-2:character;T-1:character;T:character;group:character;id.1:character|<NONE>|FALSE
+route_sts_tse|STS|TSE|data.frame|7|3|id;time;event|1;2;3;4;5;6;7|id:character;time:numeric;event:character|<NONE>|FALSE
+route_sts_spell|STS|SPELL|data.frame|4|4|id;begin;end;states|1;2;3;4|id:character;begin:numeric;end:numeric;states:factor|states=A,B,C|FALSE
+route_sps_sts|SPS|STS|matrix;array|2|4|[1];[2];[3];[4]|[1];[2]|[1]:character;[2]:character;[3]:character;[4]:character|<NONE>|FALSE
+route_sps_dss|SPS|DSS|matrix;array|2|1|Sequence|[1];[2]|Sequence:character|<NONE>|TRUE
+route_sps_sps|SPS|SPS|matrix;array|2|4|[1];[2];[3];[4]|[1];[2]|[1]:character;[2]:character;[3]:character;[4]:character|<NONE>|FALSE
+route_sps_srs|SPS|SRS|data.frame|4|6|id;idx;T-3;T-2;T-1;T|[1];[1]1;[2];[2]1|id:integer;idx:numeric;T-3:character;T-2:character;T-1:character;T:character|<NONE>|FALSE
+route_sps_tse|SPS|TSE|data.frame|4|3|id;time;event|1;2;3;4|id:character;time:numeric;event:character|<NONE>|FALSE
+route_sps_spell|SPS|SPELL|data.frame|5|4|id;begin;end;states|1;2;3;4;5|id:character;begin:numeric;end:numeric;states:factor|states=A,B,C,*|FALSE
+route_spell_sts|SPELL|STS|data.frame|2|4|a1;a2;a3;a4|p2;p1|a1:character;a2:character;a3:character;a4:character|<NONE>|FALSE
+route_spell_dss|SPELL|DSS|matrix;array|2|4|<NONE>|[1];[2]|[1]:character;[2]:character;[3]:character;[4]:character|<NONE>|FALSE
+route_spell_sps|SPELL|SPS|matrix;array|2|1|Sequence|p2;p1|Sequence:character|<NONE>|TRUE
+route_spell_srs|SPELL|SRS|data.frame|6|6|id;idx;T-3;T-2;T-1;T|p2;p21;p22;p1;p11;p12|id:integer;idx:numeric;T-3:character;T-2:character;T-1:character;T:character|<NONE>|FALSE
+route_spell_tse|SPELL|TSE|data.frame|4|3|id;time;event|1;2;3;4|id:character;time:numeric;event:character|<NONE>|FALSE
+route_spell_spell|SPELL|SPELL|data.frame|6|4|id;begin;end;states|1;2;3;4;5;6|id:character;begin:numeric;end:numeric;states:factor|states=A,B,C,*|FALSE
+matrix_covar|STS_MATRIX|SRS|data.frame|4|5|id;idx;T-1;T;subset.data....covar.|1;2;3;4|id:integer;idx:numeric;T-1:character;T:character;subset.data....covar.:character|<NONE>|FALSE
+stslist_covar|STSLIST|SRS|data.frame|4|5|id;idx;T-1;T;T1|1;2;3;4|id:integer;idx:numeric;T-1:character;T:character;T1:factor|T1=A,B,C,*,%|FALSE

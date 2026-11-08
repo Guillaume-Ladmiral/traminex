@@ -1,0 +1,14 @@
+"section","key","value"
+"sequence","nrow","6"
+"sequence","ncol","4"
+"sequence","alphabet","AlphaBetaGamma"
+"sequence","labels","AlphaBetaGamma"
+"sequence","start","7"
+"sequence","xtstep","2"
+"sequence","tick.last","TRUE"
+"sequence","ids","row-1row-2row-3row-4row-5row-6"
+"deliberate_divergence","python_sampling_none","all rows (Rd contract; R code defaults idxs to first ten when idxs is NULL)"
+"deliberate_divergence","python_random_stream","isolated numpy.random.Generator; no byte match to R"
+"source","sort_before_sampling","TRUE"
+"source","systematic_expression","as.integer(seq(1, length(idxs), length.out=sampling))"
+"source","random_expression","sort(sample.int(length(idxs), size=sampling, prob=weights[idxs]))"

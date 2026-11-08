@@ -1,0 +1,26 @@
+exclude: ^(?:SOURCES|DATA|DEMOS|DOCUMENTATION)/
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+        # These evidence files are sealed by VERIFICATION_EVIDENCE_INDEX.json.
+        # Adding a final newline would invalidate their recorded byte hashes.
+        exclude: '^\.codebase-memory/audit-results-verification-20261005T102915Z/(?:coverage-and-suite-reconciliation|integrity|provenance-reconciliation)\.json$'
+  - repo: https://github.com/psf/black
+    rev: 26.5.1
+    hooks:
+      - id: black
+        args: ["--line-length=100"]
+      - id: black
+        alias: black-check
+        name: black (read-only check)
+        args: ["--check", "--line-length=100"]
+        stages: [manual]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.9
+    hooks:
+      - id: ruff
+        args: ["--fix"]

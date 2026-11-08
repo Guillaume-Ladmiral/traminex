@@ -1,0 +1,2 @@
+class=subscriptOutOfBoundsError
+message=subscript out of bounds

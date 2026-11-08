@@ -1,0 +1,4 @@
+# R 4.6.2; TraMineR 2.2.14; TraMineRextras 0.6.9
+# id	pvar	begin	end	status	R_columns	cells
+case-z	1998	2000	2002	A	a0,a1,a2,a3,a4	_,_,A,A,A
+case-a	2000	2000	2002	B	a0,a1,a2,a3,a4	B,B,B,_,_

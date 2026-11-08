@@ -1,0 +1,105 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install maintained development profile
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev,plot,perf,extras,tree]" pybind11
+      - name: Run release consistency gates
+        run: make release-check PYTHON=python
+      - name: Build the sdist with the declared scikit-build-core floor
+        # pyproject.toml requires scikit-build-core>=0.11.0 (audit TX-AUD-20261010-047).
+        run: |
+          python -m pip install "scikit-build-core==0.11.0"
+          python -c "import scikit_build_core.build as b; print(b.build_sdist('dist-floor'))"
+
+  typecheck-newest:
+    # The floors carry no upper bounds, so the newest NumPy, pandas and SciPy
+    # they permit must type-check too (audit TX-AUD-20261010-010). mypy targets
+    # the interpreter it runs under, so the 3.11 row checks the standard
+    # library 3.11 users have.
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install with the newest permitted dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]" pybind11
+          python -m pip install --upgrade numpy pandas scipy
+      - name: Type-check against the newest dependencies
+        run: make typecheck PYTHON=python
+
+  test:
+    needs: consistency
+    runs-on: ubuntu-latest
+    env:
+      R_LIBS: ${{ runner.temp }}/traminex-r-library
+      R_LIBS_USER: ${{ runner.temp }}/traminex-r-library
+      R_LIBS_SITE: ${{ runner.temp }}/traminex-r-library
+      R_PROFILE: /dev/null
+      R_PROFILE_USER: /dev/null
+      R_ENVIRON: /dev/null
+      R_ENVIRON_USER: /dev/null
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+        backend: [python, pybind11]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install test profile
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev,plot,perf,extras,tree]" pybind11
+      - name: Install R and oracle build prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y r-base-dev build-essential libcurl4-openssl-dev libssl-dev libxml2-dev graphviz
+      - name: Prepare isolated exact vendored R oracle
+        run: |
+          mkdir -p "$R_LIBS_USER"
+          Rscript --vanilla -e 'install.packages(c("cluster", "boot", "colorspace", "RColorBrewer", "vegan", "survival", "doParallel", "foreach", "parallelly"), lib=Sys.getenv("R_LIBS_USER"), repos="https://cloud.r-project.org"); stopifnot(packageVersion("survival") >= "3.8.9")'
+          R CMD INSTALL --library="$R_LIBS_USER" SOURCES/TraMineR_2.2-14.tar.gz
+          R CMD INSTALL --library="$R_LIBS_USER" SOURCES/TraMineRextras_0.6.9.tar.gz
+          Rscript --vanilla -e 'stopifnot(getRversion() == "4.6.2", packageVersion("TraMineR") == "2.2.14", packageVersion("TraMineRextras") == "0.6.9", packageVersion("survival") >= "3.8.9"); print(.libPaths()); print(sessionInfo())'
+      - name: Run pure-Python suite with branch coverage
+        if: matrix.backend == 'python'
+        env:
+          MPLBACKEND: Agg
+          TRAMINEX_BINDING: python
+        run: python -m pytest -q --cov=traminex --cov-branch --cov-report=term-missing
+      - name: Run pybind11 and OpenMP suite
+        if: matrix.backend == 'pybind11'
+        env:
+          MPLBACKEND: Agg
+        run: TRAMINEX_PYTHON="$(command -v python)" scripts/run_pybind11_tests.sh -q

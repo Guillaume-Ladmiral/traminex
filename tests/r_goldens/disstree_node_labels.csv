@@ -1,0 +1,15 @@
+"position","node_name","main","sub"
+1,"tree_none","Root
+n: 15 s2: 5.39","Split: X R2:0.257"
+2,"tree_none_left","<= 3.1
+n: 3 s2: 0.706",""
+3,"tree_none_right","> 3.1
+n: 12 s2: 4.82","Split: A R2:0.157"
+4,"tree_none_right_left","[ a ]
+n: 4 s2: 4.51",""
+5,"tree_none_right_right","[ b,c ]
+n: 8 s2: 3.85","Split: A R2:0.156"
+6,"tree_none_right_right_left","[ b ]
+n: 5 s2: 3.01",""
+7,"tree_none_right_right_right","[ c ]
+n: 3 s2: 3.63",""

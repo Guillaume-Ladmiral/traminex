@@ -1,0 +1,110 @@
+traminex
+Copyright (c) the traminex authors.
+Licensed under the GNU General Public License v3.0 or later (see LICENSE).
+
+================================================================================
+Third-party material adapted into traminex
+================================================================================
+
+Current-source status (2026-07-22): the ten modules inventoried below were
+independently reimplemented from the exact vendored TraMineR 2.2-14 and
+TraMineRextras 0.6.9 authorities (and the exact WeightedCluster 2.0 ASW source
+where TraMineR delegates that statistic). No current implementation in those
+modules is adapted from Sequenzo. The following inventory and license text are
+retained unchanged as historical provenance for earlier revisions; its
+present-tense wording describes those historical revisions, not the current
+source tree.
+
+This product includes software adapted from Sequenzo
+(https://github.com/Liang-Team/Sequenzo), licensed under the BSD 3-Clause License.
+
+Portions of the following traminex modules are adapted (not verbatim copies) from
+Sequenzo source. Each such module carries an attribution header; the numerics were
+re-verified against live TraMineR / TraMineRextras and the public symbols renamed
+to their TraMineR-faithful names:
+
+  - traminex/multidomain_cat.py
+        adapted from sequenzo/multidomain/cat.py
+        (CAT combined-OM multidomain: seqdistmc / seqMD)
+
+  - traminex/diss_mfa.py
+        adapted from sequenzo/discrepancy_analysis/stats/multifactor_association.py
+        (weighted multi-factor analysis of a distance matrix: dissmfacw)
+
+  - traminex/seqemlt.py
+        adapted from sequenzo/emlt/seqemlt.py
+        (EMLT situations/profiles/coordinates/correlations: seqemlt)
+
+  - traminex/disstree_helpers.py
+        adapted from sequenzo/discrepancy_analysis/trees/tree_leaf_helpers.py
+        (tree leaf membership / classification rules / assignment:
+        disstreeleaf / disstree_get_rules / disstree_assign)
+
+  - traminex/disstree_viz.py
+        adapted from sequenzo/discrepancy_analysis/trees/tree_visualization.py
+        (the optional-graphviz / graceful-fallback mechanism and node-recursion
+        shape of the tree display helpers: disstree2dotp / seqtree2dot /
+        disstreedisplay / seqtreedisplay; the DOT bytes follow TraMineR directly)
+
+  - traminex/diss_indic.py
+        adapted from sequenzo/discrepancy_analysis/stats/individual_indicators.py
+        (individual diss-based marginality / gain indicators: dissindic)
+
+  - traminex/diss_merge.py
+        the greedy merge control-flow shape follows
+        sequenzo/discrepancy_analysis/stats/merge_cluster_groups.py
+        (group merging by ASW quality: dissmergegroups). The ASW itself follows
+        WeightedCluster / TraMineR directly (Sequenzo's own ASW helper is not
+        faithful to WeightedCluster::wcClusterQuality and was not used).
+
+  - traminex/domassoc.py
+        adapted from sequenzo/multidomain/association_between_domains.py
+        (cross-domain position-wise LRT / Cramer's V association: seqdomassoc)
+
+  - traminex/repseq_rf.py
+        adapted from sequenzo/representative_sequences.py
+        (relative-frequency groups + representatives: dissrf / seqrf). The
+        weighted "prop" frequency grouping follows TraMineR dissrf.R / seqrf.R.
+
+  - cpp/src/accel_kernels.h
+        adapted from sequenzo/dissimilarity_measures/src/
+        {HAMdistance,LCSdistance,OMdistance}.cpp and dp_utils.h
+        (the OpenMP-parallel pairwise loop and the per-pair OM / LCS / HAM
+        edit-distance kernels behind seqdist -- a speed accelerator gated on
+        byte-identity, atol=0, to traminex's pure-Python kernels). The OMspell
+        sub-family and the xsimd vectorisation paths are deliberately not
+        borrowed; normalisation and deduplication remain in traminex's Python
+        layer (the kernels return raw distances).
+
+--------------------------------------------------------------------------------
+Sequenzo — BSD 3-Clause License
+--------------------------------------------------------------------------------
+
+BSD 3-Clause License
+
+Copyright (c) 2025, Yuqi Liang
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

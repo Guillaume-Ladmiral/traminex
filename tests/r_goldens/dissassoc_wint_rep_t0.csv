@@ -1,0 +1,6 @@
+# R: dissassoc(D, grp, weights=wint, R=1, weight.permutation='replicate') -> stat t0 rows [Pseudo F, Pseudo Fbf, Pseudo R2, Bartlett, Levene]
+65.4257145181101
+73.566452795879
+0.828953084778189
+0.121893788854033
+1.74891874126906

@@ -1,0 +1,5 @@
+case|class|message
+empty_string_only|simpleError,error,condition|length of 'dimnames' [2] not equal to array extent
+dataframe_multicolumn_rows|simpleError,error,condition|length of 'dimnames' [1] not equal to array extent
+vnames_length|simpleError,error,condition|length of 'dimnames' [2] not equal to array extent
+unknown_column|simpleError,error,condition|undefined columns selected

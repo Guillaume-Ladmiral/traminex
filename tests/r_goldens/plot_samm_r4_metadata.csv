@@ -1,0 +1,10 @@
+"case","key","value"
+"ragged","transition_count","5"
+"ragged","group_order","AlphaBeta*"
+"ragged","group_labels","Transition out of AlphaTransition out of BetaTransition out of *"
+"repeated","transition_count","6"
+"repeated","group_order","State AState B"
+"repeated","group_labels","Transition out of State ATransition out of State B"
+"no_transitions","transition_count","0"
+"no_transitions","group_order",""
+"no_transitions","group_labels","Transition out of "

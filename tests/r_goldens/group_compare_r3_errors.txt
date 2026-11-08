@@ -1,0 +1,18 @@
+na_removed|message|[!!] 2 cases removed because of NA values of the grouping variable(s)
+set_without_group|simpleError|'set' not NULL while 'group' is NULL!
+group_length|simpleError|group length not equal to nrow(diss)!
+one_group|simpleError|There is only one group among valid cases!
+three_groups|simpleError|Currently dissCompare supports only 2 groups!
+weighted_value|simpleError|weighted must be logical or 'by.group'
+weight_length|simpleError|length(w) must be equal to nrow(diss)!
+squared_value|simpleError|squared must be logical or 'LRTonly'
+stat_value|simpleError|Bad stat value, must be one of 'LRT', 'BIC', or 'all'
+negative_s|simpleError|invalid 'ncol' value (< 0)
+bfopt_three|success
+seq_both_null|simpleError|'seqdata2' and 'group' cannot both be NULL!
+seq_set_without_group|simpleError|'seqdata2' and 'group' cannot both be NULL!
+seq_list_length|simpleError|When 'seqdata' is a list, seqdata2 must be a list of same length
+seq_list_element|simpleError|At least one element of the seqdata lists is not a state sequence object!
+seq_single_bad_second|simpleError|If not a list, 'seqdata2' must be a state sequence object (stslist) created with seqdef()
+seq_bad_stat|simpleError|Bad stat value, must be one of 'LRT', 'BIC', or 'all'
+seq_bad_opt|success

@@ -1,0 +1,12 @@
+nomissing_model_shape=4x4x5;states=A|B|C|D
+missing_model_shape=4x4x5;states=A|B|C|*
+phantom_missing_alphabet_width=5;observed_model_width=4
+invalid_prob_global.trate=ERROR:Unknow method to compute transition rate
+invalid_prob_global.freq=ERROR:Unknow method to compute transition rate
+malformed_prob_vector=ERROR:Unknow method to compute transition rate
+malformed_prob_matrix=ERROR:Transition rate should be a matrix of size (state x state) 4x4
+malformed_prob_array=ERROR:Transition rate should be an array of size (state x state x transition) 4x4x5
+malformed_prob_rank4=ERROR:Transition rate should be an array of size (state x state x transition) 4x4x5 or a matrix of size (state x state) 4x4
+malformed_begin_length=ERROR:Begin frequencies should be a numeric vector of length 4
+malformed_begin_string=ERROR:Unknow method to compute starting frequencies
+phantom_missing_begin5=ERROR:Begin frequencies should be a numeric vector of length 4

@@ -1,0 +1,5 @@
+# R: seqindic.dyn(sdC ragged, cplx, ws=0.5); NA where window-end is void
+0.538228652287155,               1,0.538228652287155,              -0
+0.538228652287155,              NA,              NA,              NA
+              -0,0.561662600486919,              NA,              NA
+              NA,              NA,              NA,              NA

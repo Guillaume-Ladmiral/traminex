@@ -1,0 +1,9 @@
+twed_nu|error|missing value where TRUE/FALSE needed
+twed_h|error|missing value where TRUE/FALSE needed
+omspell_expcost|error|missing value where TRUE/FALSE needed
+omloc_expcost|error|missing value where TRUE/FALSE needed
+omloc_context|error|missing value where TRUE/FALSE needed
+omslen_h|error|missing value where TRUE/FALSE needed
+omstran_otto|error|missing value where TRUE/FALSE needed
+omspell_tpow|values|  0 NaN NaN NaN
+twed_nu_inf|values|  0 Inf Inf Inf

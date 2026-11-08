@@ -1,0 +1,15 @@
+# R: TraMineR::dissvar on D=matrix(c(0,1,2,1,0,3,2,3,0),3,byrow=TRUE); rows = ones,varied,negative_middle,all_negative,zeros,one_zero,sum_zero,inf_first,nan_first,nan_two,nan_all,neg_inf_middle,neg_inf_all,mixed_inf; cols = [dissvar, dissvar(squared=TRUE), tmrWeightedInertiaDist(var=FALSE)]
+0.666666666666667,1.55555555555556,2
+0.638888888888889,1.47222222222222,3.83333333333333
+-2,-6,-2
+6,14,6
+0,0,0
+0.75,2.25,1.5
+-1,-1,-1
+NaN,NaN,NaN
+NaN,NaN,NaN
+NaN,NaN,NaN
+NaN,NaN,NaN
+-Inf,-Inf,-Inf
+Inf,Inf,Inf
+NaN,NaN,NaN

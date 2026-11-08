@@ -1,0 +1,11 @@
+kind|case|message
+warning|empty_prec_args|[!!] No prec.args list. Alphabet order used as state order.
+warning|overwritten_ranked_args|[!!] seqdata argument in prec.args will be overwritten!
+warning|overwritten_ranked_args|[!!] with.missing argument in prec.args will be overwritten!
+warning|ipos_type_source_bug|[!!] type argument in prec.args will be overwritten!
+error|prec_spell_integr_duplicate|formal argument "spell.integr" matched by multiple actual arguments
+error|insec_spell_integr_duplicate|formal argument "spell.integr" matched by multiple actual arguments
+error|prec_single_state_order|NA/NaN argument
+error|insec_single_state_order|NA/NaN argument
+error|prec_constant_stprec|NA/NaN argument
+error|insec_constant_stprec|NA/NaN argument

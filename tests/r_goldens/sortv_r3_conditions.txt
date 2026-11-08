@@ -1,0 +1,4 @@
+invalid_start|warning|start should be one of "beg" or "end"
+invalid_start|result|1,2,3
+zero_width_sorti|simpleError|second argument must be a list
+zero_width_sortv|simpleError|second argument must be a list

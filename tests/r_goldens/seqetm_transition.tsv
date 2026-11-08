@@ -1,0 +1,5 @@
+# R: seqetm(sd, method='transition', use.labels=TRUE)
+A	B	C
+A	Apple	Apple>Banana	Apple>Cherry
+B	Banana>Apple	Banana	Banana>Cherry
+C	Cherry>Apple	Cherry>Banana	Cherry

@@ -1,0 +1,97 @@
+"case","ok","n","index","kind","text"
+"seqcost_trate",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.5714286) and then B with C (cost=0.4285714)
+ [!] costs less than replacing directly A with C (cost=2)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -1"
+"seqsubm_trate",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.5714286) and then B with C (cost=0.4285714)
+ [!] costs less than replacing directly A with C (cost=2)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -1"
+"seqdist_om_trate_indel1",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.5714286) and then B with C (cost=0.4285714)
+ [!] costs less than replacing directly A with C (cost=2)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -1"
+"seqdist_om_trate_auto",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.5714286) and then B with C (cost=0.4285714)
+ [!] costs less than replacing directly A with C (cost=2)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -1"
+"seqcost_constant_cval0",TRUE,1,1,"message"," [!!] max substitution cost less or equal to 0!"
+"seqcost_constant",TRUE,0,0,"",""
+"seqcost_constant_cval5",TRUE,1,1,"message"," [!!] At least one substitution cost greater than twice the indel cost.
+      Such substitution costs will never be used."
+"seqdist_om_constant",TRUE,0,0,"",""
+"seqcost_indels",TRUE,0,0,"",""
+"seqcost_indelslog",TRUE,0,0,"",""
+"seqdist_om_indels",TRUE,0,0,"",""
+"seqdist_om_indelslog",TRUE,0,0,"",""
+"seqcost_indels_one_state",TRUE,1,1,"message"," [!!] max substitution cost less or equal to 0!"
+"seqcost_indelslog_one_state",TRUE,1,1,"message"," [!!] max substitution cost less or equal to 0!"
+"seqdist_om_indels_one_state",TRUE,1,1,"message"," [!!] max substitution cost less or equal to 0!"
+"seqdist_om_indelslog_one_state",TRUE,1,1,"message"," [!!] max substitution cost less or equal to 0!"
+"seqcost_future",TRUE,2,1,"message"," [!!] [!]  1 substitution cost value(s) is 0!"
+"seqcost_future",TRUE,2,2,"message"," [!!]      for example, cost is zero for the pair ( A , C )"
+"seqcost_trate_time_varying",TRUE,0,0,"",""
+"seqdist_dhd",TRUE,0,0,"",""
+"seqdist_ham_trate",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.5714286) and then B with C (cost=0.4285714)
+ [!] costs less than replacing directly A with C (cost=2)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -1"
+"seqdist_lcs_one_state",TRUE,1,1,"message"," [!!] max substitution cost less or equal to 0!"
+"seqdist_ham_one_state",TRUE,1,1,"message"," [!!] max substitution cost less or equal to 0!"
+"seqdist_ham_default",TRUE,0,0,"",""
+"seqmd_trate",TRUE,3,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.5714286) and then B with C (cost=0.4285714)
+ [!] costs less than replacing directly A with C (cost=2)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -1"
+"seqmd_trate",TRUE,3,2,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.5714286) and then B with C (cost=0.4285714)
+ [!] costs less than replacing directly A with C (cost=2)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -1"
+"seqmd_trate",TRUE,3,3,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A+A with B+B (cost=1.142857) and then B+B with C+C (cost=0.8571429)
+ [!] costs less than replacing directly A+A with C+C (cost=4)
+ [!] total difference ([A+A=>B+B] + [B+B=>C+C] - [A+A=>C+C]): -2"
+"seqcost_trate_time_varying_alternating",TRUE,1,1,"message"," [!!] max substitution cost less or equal to 0!"
+"seqdist_dhd_alternating",TRUE,1,1,"message"," [!!] max substitution cost less or equal to 0!"
+"seqdist_dhd_trate_alternating",TRUE,1,1,"message"," [!!] max substitution cost less or equal to 0!"
+"seqdist_dhd_indels_alternating",TRUE,0,0,"",""
+"seqdist_om_trate_refseq_1",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.7272727) and then B with C (cost=0.7045455)
+ [!] costs less than replacing directly A with C (cost=1.75)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -0.3181818"
+"seqdist_om_trate_refseq_0",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.7272727) and then B with C (cost=0.7045455)
+ [!] costs less than replacing directly A with C (cost=1.75)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -0.3181818"
+"seqdist_om_trate_sets",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.7272727) and then B with C (cost=0.7045455)
+ [!] costs less than replacing directly A with C (cost=1.75)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -0.3181818"
+"seqdist_om_trate_external",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.7272727) and then B with C (cost=0.7045455)
+ [!] costs less than replacing directly A with C (cost=1.75)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -0.3181818"
+"seqdist_om_trate_norm_refseq_1",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.7272727) and then B with C (cost=0.7045455)
+ [!] costs less than replacing directly A with C (cost=1.75)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -0.3181818"
+"seqdist_om_constant_refseq_1",TRUE,0,0,"",""
+"seqdist_ham_trate_refseq_1",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.7272727) and then B with C (cost=0.7045455)
+ [!] costs less than replacing directly A with C (cost=1.75)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -0.3181818"
+"seqdist_omspell_trate_refseq_1",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=0.7272727) and then B with C (cost=0.7045455)
+ [!] costs less than replacing directly A with C (cost=1.75)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -0.3181818"
+"seqdist_dhd_refseq_1",TRUE,0,0,"",""
+"seqdist_om_matrix_refseq_1",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=1) and then B with C (cost=1)
+ [!] costs less than replacing directly A with C (cost=3)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -1"
+"seqdist_om_matrix_sets",TRUE,1,1,"message"," [!!]  at least, one substitution cost doesn't respect the triangle inequality.
+ [!!] replacing A with B (cost=1) and then B with C (cost=1)
+ [!] costs less than replacing directly A with C (cost=3)
+ [!] total difference ([A=>B] + [B=>C] - [A=>C]): -1"
+"seqdist_lcs_one_state_refseq_1",TRUE,1,1,"message"," [!!] max substitution cost less or equal to 0!"
+"seqdist_ham_one_state_refseq_1",TRUE,1,1,"message"," [!!] max substitution cost less or equal to 0!"

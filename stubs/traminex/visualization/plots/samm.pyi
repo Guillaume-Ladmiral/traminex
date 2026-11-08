@@ -1,0 +1,3 @@
+from ...samm import SAMMResult
+
+def plot_SAMM(x: SAMMResult, type: str = "d", **kwargs: object): ...

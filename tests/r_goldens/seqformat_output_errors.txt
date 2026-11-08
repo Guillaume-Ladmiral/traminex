@@ -1,0 +1,18 @@
+# TraMineR 2.2-14 seqformat output errors and warnings
+ERROR|missing_tevent|'tevent' must be specified
+ERROR|duplicate_tse_ids|'id' must contain unique IDs
+ERROR|empty_tse_ids|'id' invalid type or unknown value
+ERROR|incomplete_tevent|argument is of length zero
+ERROR|compress_srs|SRS is not a compressible format
+ERROR|compress_tse|TSE is not a compressible format
+ERROR|compress_spell|SPELL is not a compressible format
+ERROR|spell_bad_pdata_length|'pdata' id column must contain one entry per sequence
+ERROR|bad_covar|undefined columns selected
+ERROR|srs_short_nrep|invalid 'times' argument
+ERROR|srs_negative_nrep|numbers of columns of arguments do not match
+WARN|covar_ignored_non_srs| [!!] covar ignored when to is not "SRS"
+WARN|deprecated_compressed_output| [!!] In seqformat() : compressed is deprecated, use compress instead.
+WARN|deprecated_nr_output| [!!] In seqformat() : nr is deprecated, use missing instead.
+WARN|tse_default_ids_1| [!!] 'id' set to NULL as it is not specified (backward compatibility with TraMineR 1.8)
+WARN|tse_default_ids_2| [!!] replacing original IDs in the output by the sequence indexes
+WARN|spell_pvar_ignored_without_dataframe| [!!] 'pvar' ignored because 'pdata' is not a data frame

@@ -1,0 +1,3 @@
+# R: seqpm(A_DD, 'DD', sep=''); line1=nbocc line2=MIndex(1-based)
+1
+3

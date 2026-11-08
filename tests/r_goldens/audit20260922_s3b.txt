@@ -1,0 +1,274 @@
+# case	kind (value, error or text)	payload	R warnings
+s311_k1_type1_seqivardur_value	value	0 NaN	none
+s311_k1_type1_seqivardur_vmax	value	0 NaN	none
+s311_k1_type1_seqivardur_meand	value	3 NaN	none
+s311_k1_type1_seqST	value	1 NaN	none
+s311_k1_type1_seqST_norm	value	NaN NaN	none
+s311_k1_type2_seqivardur_value	value	0 0	none
+s311_k1_type2_seqivardur_vmax	value	0 NaN	none
+s311_k1_type2_seqivardur_meand	value	3 0	none
+s311_k1_type2_seqST	value	1 NaN	none
+s311_k1_type2_seqST_norm	value	NaN NaN	none
+s311_k1_seqindic_Dustd	value	0 NaN	none
+s311_k1_seqindic_Dustd2	value	0 0	none
+s311_k1_seqindic_Turb	value	1 NaN	none
+s311_k1_seqindic_Turbn	value	NaN NaN	none
+s311_k1_seqindic_Turb2	value	1 NaN	none
+s311_k1_seqindic_Turb2n	value	NaN NaN	none
+s311_k2_type1_seqivardur_value	value	0.25 NaN	none
+s311_k2_type1_seqivardur_vmax	value	0.25 NaN	none
+s311_k2_type1_seqivardur_meand	value	1.5 NaN	none
+s311_k2_type1_seqST	value	2 NaN	none
+s311_k2_type1_seqST_norm	value	0.55329475566511221 NaN	none
+s311_k2_type2_seqivardur_value	value	0.25 0	none
+s311_k2_type2_seqivardur_vmax	value	0.25 NaN	none
+s311_k2_type2_seqivardur_meand	value	1.5 0	none
+s311_k2_type2_seqST	value	2 NaN	none
+s311_k2_type2_seqST_norm	value	0.55329475566511221 NaN	none
+s311_k2_seqindic_Dustd	value	0.5 NaN	none
+s311_k2_seqindic_Dustd2	value	0.5 0	none
+s311_k2_seqindic_Turb	value	2 NaN	none
+s311_k2_seqindic_Turbn	value	0.55329475566511221 NaN	none
+s311_k2_seqindic_Turb2	value	2 NaN	none
+s311_k2_seqindic_Turb2n	value	0.55329475566511221 NaN	none
+s311_k3_type1_seqivardur_value	value	0.25 NaN 0.25	none
+s311_k3_type1_seqivardur_vmax	value	0.25 NaN 0.25	none
+s311_k3_type1_seqivardur_meand	value	1.5 NaN 1.5	none
+s311_k3_type1_seqST	value	2 NaN 2	none
+s311_k3_type1_seqST_norm	value	0.34401019478019379 NaN 0.34401019478019379	none
+s311_k3_type2_seqivardur_value	value	0.66666666666666663 0 0.66666666666666663	none
+s311_k3_type2_seqivardur_vmax	value	0.66666666666666663 0 0.66666666666666663	none
+s311_k3_type2_seqivardur_meand	value	1 0 1	none
+s311_k3_type2_seqST	value	2 0 2	none
+s311_k3_type2_seqST_norm	value	0.32040854386427253 0 0.32040854386427253	none
+s311_k3_seqindic_Dustd	value	0.5 NaN 0.5	none
+s311_k3_seqindic_Dustd2	value	0.81649658092772603 0 0.81649658092772603	none
+s311_k3_seqindic_Turb	value	2 NaN 2	none
+s311_k3_seqindic_Turbn	value	0.34401019478019379 NaN 0.34401019478019379	none
+s311_k3_seqindic_Turb2	value	2 0 2	none
+s311_k3_seqindic_Turb2n	value	0.32040854386427253 0 0.32040854386427253	none
+s311_k4_type1_seqivardur_value	value	0 NaN	none
+s311_k4_type1_seqivardur_vmax	value	0 NaN	none
+s311_k4_type1_seqivardur_meand	value	1 NaN	none
+s311_k4_type1_seqST	value	4 NaN	none
+s311_k4_type1_seqST_norm	value	1 NaN	none
+s311_k4_type2_seqivardur_value	value	0 0	none
+s311_k4_type2_seqivardur_vmax	value	0.22222222222222224 0	none
+s311_k4_type2_seqivardur_meand	value	1 0	none
+s311_k4_type2_seqST	value	4.2895066171949852 0	none
+s311_k4_type2_seqST_norm	value	1 0	none
+s311_k4_seqindic_Dustd	value	0 NaN	none
+s311_k4_seqindic_Dustd2	value	0 0	none
+s311_k4_seqindic_Turb	value	4 NaN	none
+s311_k4_seqindic_Turbn	value	1 NaN	none
+s311_k4_seqindic_Turb2	value	4.2895066171949852 0	none
+s311_k4_seqindic_Turb2n	value	1 0	none
+s310_k1_wm0_seqient_norm	value	NaN NaN	none
+s310_k1_wm0_seqient_raw	value	-0 -0	none
+s310_k1_wm0_seqici	value	NaN NaN	none
+s310_k1_wm0_type1_seqST	value	1 1	none
+s310_k1_wm0_type1_seqST_norm	value	NaN NaN	none
+s310_k1_wm0_type2_seqST	value	1 1	none
+s310_k1_wm0_type2_seqST_norm	value	NaN NaN	none
+s310_k1_wm0_seqindic_Entr	value	NaN NaN	none
+s310_k1_wm0_seqindic_Cplx	value	NaN NaN	none
+s310_k1_wm0_seqindic_Turbn	value	NaN NaN	none
+s310_k1_wm0_seqindic_Turb2n	value	NaN NaN	none
+s310_k1_wm1_seqient_norm	value	-0 -0	none
+s310_k1_wm1_seqient_raw	value	-0 -0	none
+s310_k1_wm1_seqici	value	-0 -0	none
+s310_k1_wm1_type1_seqST	value	1 1	none
+s310_k1_wm1_type1_seqST_norm	value	0 0	none
+s310_k1_wm1_type2_seqST	value	1 1	none
+s310_k1_wm1_type2_seqST_norm	value	0 0	none
+s310_k1_wm1_seqindic_Entr	value	-0 -0	none
+s310_k1_wm1_seqindic_Cplx	value	-0 -0	none
+s310_k1_wm1_seqindic_Turbn	value	0 0	none
+s310_k1_wm1_seqindic_Turb2n	value	0 0	none
+s310_k1miss_wm0_seqient_norm	value	NaN NaN	none
+s310_k1miss_wm0_seqient_raw	value	-0 -0	none
+s310_k1miss_wm0_seqici	value	NaN NaN	none
+s310_k1miss_wm0_type1_seqST	value	1 1	none
+s310_k1miss_wm0_type1_seqST_norm	value	NaN NaN	none
+s310_k1miss_wm0_type2_seqST	value	1 1	none
+s310_k1miss_wm0_type2_seqST_norm	value	NaN NaN	none
+s310_k1miss_wm0_seqindic_Entr	value	NaN NaN	none
+s310_k1miss_wm0_seqindic_Cplx	value	NaN NaN	none
+s310_k1miss_wm0_seqindic_Turbn	value	NaN NaN	none
+s310_k1miss_wm0_seqindic_Turb2n	value	NaN NaN	none
+s310_k1miss_wm1_seqient_norm	value	-0 0.91829583405448945	none
+s310_k1miss_wm1_seqient_raw	value	-0 0.63651416829481278	none
+s310_k1miss_wm1_seqici	value	-0 0.9582775349837277	none
+s310_k1miss_wm1_type1_seqST	value	1 2.8073549220576042	none
+s310_k1miss_wm1_type1_seqST_norm	value	0 1	none
+s310_k1miss_wm1_type2_seqST	value	1 2.8073549220576042	none
+s310_k1miss_wm1_type2_seqST_norm	value	0 1	none
+s310_k1miss_wm1_seqindic_Entr	value	-0 0.91829583405448945	none
+s310_k1miss_wm1_seqindic_Cplx	value	-0 0.9582775349837277	none
+s310_k1miss_wm1_seqindic_Turbn	value	0 1	none
+s310_k1miss_wm1_seqindic_Turb2n	value	0 1	none
+s310_len1_wm0_seqient_norm	value	-0 -0 -0	none
+s310_len1_wm0_seqient_raw	value	-0 -0 -0	none
+s310_len1_wm0_seqici	value	-0 -0 -0	none
+s310_len1_wm0_type1_seqST	value	1 1 1	none
+s310_len1_wm0_type1_seqST_norm	value	NaN NaN NaN	none
+s310_len1_wm0_type2_seqST	value	1 1 1	none
+s310_len1_wm0_type2_seqST_norm	value	NaN NaN NaN	none
+s310_len1_wm0_seqindic_Entr	value	-0 -0 -0	none
+s310_len1_wm0_seqindic_Cplx	value	-0 -0 -0	none
+s310_len1_wm0_seqindic_Turbn	value	NaN NaN NaN	none
+s310_len1_wm0_seqindic_Turb2n	value	NaN NaN NaN	none
+s310_len1_wm1_seqient_norm	value	-0 -0 -0	none
+s310_len1_wm1_seqient_raw	value	-0 -0 -0	none
+s310_len1_wm1_seqici	value	-0 -0 -0	none
+s310_len1_wm1_type1_seqST	value	1 1 1	none
+s310_len1_wm1_type1_seqST_norm	value	NaN NaN NaN	none
+s310_len1_wm1_type2_seqST	value	1 1 1	none
+s310_len1_wm1_type2_seqST_norm	value	NaN NaN NaN	none
+s310_len1_wm1_seqindic_Entr	value	-0 -0 -0	none
+s310_len1_wm1_seqindic_Cplx	value	-0 -0 -0	none
+s310_len1_wm1_seqindic_Turbn	value	NaN NaN NaN	none
+s310_len1_wm1_seqindic_Turb2n	value	NaN NaN NaN	none
+s310_len1k1_wm0_seqient_norm	value	NaN NaN	none
+s310_len1k1_wm0_seqient_raw	value	-0 -0	none
+s310_len1k1_wm0_seqici	value	NaN NaN	none
+s310_len1k1_wm0_type1_seqST	value	1 1	none
+s310_len1k1_wm0_type1_seqST_norm	value	NaN NaN	none
+s310_len1k1_wm0_type2_seqST	value	1 1	none
+s310_len1k1_wm0_type2_seqST_norm	value	NaN NaN	none
+s310_len1k1_wm0_seqindic_Entr	value	NaN NaN	none
+s310_len1k1_wm0_seqindic_Cplx	value	NaN NaN	none
+s310_len1k1_wm0_seqindic_Turbn	value	NaN NaN	none
+s310_len1k1_wm0_seqindic_Turb2n	value	NaN NaN	none
+s310_len1k1_wm1_seqient_norm	value	-0 -0	none
+s310_len1k1_wm1_seqient_raw	value	-0 -0	none
+s310_len1k1_wm1_seqici	value	-0 -0	none
+s310_len1k1_wm1_type1_seqST	value	1 1	none
+s310_len1k1_wm1_type1_seqST_norm	value	NaN NaN	none
+s310_len1k1_wm1_type2_seqST	value	1 1	none
+s310_len1k1_wm1_type2_seqST_norm	value	NaN NaN	none
+s310_len1k1_wm1_seqindic_Entr	value	-0 -0	none
+s310_len1k1_wm1_seqindic_Cplx	value	-0 -0	none
+s310_len1k1_wm1_seqindic_Turbn	value	NaN NaN	none
+s310_len1k1_wm1_seqindic_Turb2n	value	NaN NaN	none
+s310_control_wm0_seqient_norm	value	0.94639463035718596 0.63092975357145742 -0	none
+s310_control_wm0_seqient_raw	value	1.0397207708399179 0.69314718055994529 -0	none
+s310_control_wm0_seqici	value	0.79431086708634258 0.45859559293254493 -0	none
+s310_control_wm0_type1_seqST	value	2.9999999999999996 3 1	none
+s310_control_wm0_type1_seqST_norm	value	0.68802038956038736 0.68802038956038758 0	none
+s310_control_wm0_type2_seqST	value	3.2954558835261709 2.4360991148066735 1	none
+s310_control_wm0_type2_seqST_norm	value	0.73548367714529761 0.46013842621997697 0	none
+s310_control_wm0_seqindic_Entr	value	0.94639463035718596 0.63092975357145742 -0	none
+s310_control_wm0_seqindic_Cplx	value	0.79431086708634258 0.45859559293254493 -0	none
+s310_control_wm0_seqindic_Turbn	value	0.68802038956038736 0.68802038956038758 0	none
+s310_control_wm0_seqindic_Turb2n	value	0.73548367714529761 0.46013842621997697 0	none
+s310_control_wm1_seqient_norm	value	0.75 0.5 -0	none
+s310_control_wm1_seqient_raw	value	1.0397207708399179 0.69314718055994529 -0	none
+s310_control_wm1_seqici	value	0.70710678118654757 0.40824829046386302 -0	none
+s310_control_wm1_type1_seqST	value	2.9999999999999996 3 1	none
+s310_control_wm1_type1_seqST_norm	value	0.66666666666666652 0.66666666666666663 0	none
+s310_control_wm1_type2_seqST	value	3.0565835283663674 2.3219280948873622 1	none
+s310_control_wm1_type2_seqST_norm	value	0.62519513340272559 0.40186211755202106 0	none
+s310_control_wm1_seqindic_Entr	value	0.75 0.5 -0	none
+s310_control_wm1_seqindic_Cplx	value	0.70710678118654757 0.40824829046386302 -0	none
+s310_control_wm1_seqindic_Turbn	value	0.66666666666666652 0.66666666666666663 0	none
+s310_control_wm1_seqindic_Turb2n	value	0.62519513340272559 0.40186211755202106 0	none
+s313_level_seen_only_beside_na	value	NaN NaN	none
+s313_zero_row_after_first_position	value	NaN NaN	none
+s313_level_only_in_current_column	value	0.53748384988657005 0.17669444575659674	none
+s313_one_column	value	Inf 0.31731050786291415	none
+s313_one_by_one	error	'x' must at least have 2 elements	none
+s313_control_order2	value	0.33333333333333331 0.24821307898992362 0 1	none
+s313_control_lag2_uneven	value	0.28571428571428575 0.39136593830755206 0.31622776601683794 0.43857802608099994	none
+s313_unobserved_alphabet_state	value	0.33333333333333331 0.24821307898992362	none
+s313_missing_cells	value	0.20000000000000001 0.52708925686553809	none
+s314_integer_A	value	2 2 2 0 NaN NA NA	none
+s314_integer_B	value	1 8 6 0.25 0.15309310892394862 0.07528139295608835 0.83021843175054244 3 1 1 0 NaN NA NA	none
+s314_integer_C	value	1 8 4 0.5 0.17677669529663689 0.25004882186280469 0.9998047506785237 2 1 1 0 NaN NA NA	none
+s314_fractional_A	value	2 3.5 3.5 0 0 0 0	none
+s314_fractional_B	value	1 5 1.5 0.69999999999999996 0.19287301521985911 0.40790969571371721 1 3 1.5 1.5 0 0 0 0	none
+s314_fractional_C	value	1 5 1 0.80000000000000004 0.15231546211727817 0.55084072532508044 1 2 2 2 0 0 0 0	none
+s314_per_state_g1	value	none	none
+s314_per_state_g2	value	1 10 6 0.40000000000000002 0.1549193338482967 0.1872367314822905 0.85453318231595687 2 4 2 0.20000000000000001 0.12649110640673519 0.05790057421798929 0.69083943536387749 3 1 1 0 NaN NA NA	none
+s314_after_weighted_end_A	value	1 2 2 0 NaN NA NA	none
+s314_after_weighted_end_B	value	1 3 1 0.66666666666666663 0.27216552697590868 0.29950713035902232 1	none
+s315_numeric_groups_levels	text	1|2|10	none
+s315_numeric_groups_alphabet	text	A|B	none
+s315_numeric_groups_labels	text	A|B	none
+s315_numeric_groups_cpal	text	#7FC97F|#BEAED4	none
+s315_numeric_groups_indices	value	0 3 0 2.3094010767585034 -1 2.3094010767585034 2.3094010767585034 1 0 0 1 2.3094010767585034 0 1 2.3094010767585034 2.3094010767585034 1 0	none
+s315_character_case_levels	text	a|A|b	none
+s315_character_case_alphabet	text	A|B	none
+s315_character_case_labels	text	A|B	none
+s315_character_case_cpal	text	#7FC97F|#BEAED4	none
+s315_character_case_indices	value	0 2.3094010767585034 1 2.3094010767585034 0 1 0 0 3 2.3094010767585034 2.3094010767585034 -1 2.3094010767585034 0 1 0 2.3094010767585034 1	none
+s315_declared_factor_levels	text	y|x	none
+s315_declared_factor_alphabet	text	A|B	none
+s315_declared_factor_labels	text	A|B	none
+s315_declared_factor_cpal	text	#7FC97F|#BEAED4	none
+s315_declared_factor_indices	value	3 -1 -1 3 1 1 1 1 1 1 1 1	none
+s315_missing_state_absent_levels	text	1|2	none
+s315_missing_state_absent_alphabet	text	A|B|*	none
+s315_missing_state_absent_labels	text	A|B|Missing	none
+s315_missing_state_absent_cpal	text	#7FC97F|#BEAED4|darkgrey	none
+s315_missing_state_absent_indices	value	-1 3 3 -1 NA NA 1 1 1 1 NA NA 1 1 1 1 NA NA	none
+s315_missing_state_present_levels	text	1|2	none
+s315_missing_state_present_alphabet	text	A|B|*	none
+s315_missing_state_present_labels	text	A|B|Missing	none
+s315_missing_state_present_cpal	text	#7FC97F|#BEAED4|darkgrey	none
+s315_missing_state_present_indices	value	-1 3 3 -1 NA NA 1 1 2.3094010767585034 0 0 2.3094010767585034 1 1 2.3094010767585034 0 0 2.3094010767585034	none
+s315_na_group_kept_levels	text	1|2	none
+s315_na_group_kept_indices	value	NA NA NA NA NA NA NA NA NA NA NA NA	none
+s316_no_weights_weighted1_seqmodst_weighted	text	FALSE	none
+s316_no_weights_weighted1_seqmodst_nbseq	value	3	none
+s316_no_weights_weighted1_seqmeant_weighted	text	FALSE	none
+s316_no_weights_weighted1_seqmeant_nbseq	value	3	none
+s316_no_weights_weighted0_seqmodst_weighted	text	FALSE	none
+s316_no_weights_weighted0_seqmodst_nbseq	value	3	none
+s316_no_weights_weighted0_seqmeant_weighted	text	FALSE	none
+s316_no_weights_weighted0_seqmeant_nbseq	value	3	none
+s316_unit_weights_weighted1_seqmodst_weighted	text	FALSE	none
+s316_unit_weights_weighted1_seqmodst_nbseq	value	3	none
+s316_unit_weights_weighted1_seqmeant_weighted	text	FALSE	none
+s316_unit_weights_weighted1_seqmeant_nbseq	value	3	none
+s316_unit_weights_weighted0_seqmodst_weighted	text	FALSE	none
+s316_unit_weights_weighted0_seqmodst_nbseq	value	3	none
+s316_unit_weights_weighted0_seqmeant_weighted	text	FALSE	none
+s316_unit_weights_weighted0_seqmeant_nbseq	value	3	none
+s316_other_weights_weighted1_seqmodst_weighted	text	TRUE	none
+s316_other_weights_weighted1_seqmodst_nbseq	value	3.5	none
+s316_other_weights_weighted1_seqmeant_weighted	text	TRUE	none
+s316_other_weights_weighted1_seqmeant_nbseq	value	3.5	none
+s316_other_weights_weighted0_seqmodst_weighted	text	FALSE	none
+s316_other_weights_weighted0_seqmodst_nbseq	value	3	none
+s316_other_weights_weighted0_seqmeant_weighted	text	FALSE	none
+s316_other_weights_weighted0_seqmeant_nbseq	value	3	none
+s317_seqST_type3	error	[!] type should be 1 or 2!	none
+s317_seqST_type0_norm	error	[!] type should be 1 or 2!	none
+s317_seqivolatility_adjust_text	error	[!] adjust should be logical	none
+s317_seqivolatility_adjust_number	error	[!] adjust should be logical	none
+s317_seqintegr_nr_without_missing_flag	error	state  *  not in the alphabet!	none
+s317_seqintegr_nr_with_missing_flag	value	0.20000000000000001 0.29999999999999999 0	none
+s317_seqintegr_nr_absent_from_data	value	0 0 0	none
+s317_seqintegr_void	error	state  %  not in the alphabet!	none
+s317_seqintegr_unknown	error	state  Z  not in the alphabet!	none
+s317_seqintegr_two_states	error	When non null, 'state' must be a single state	none
+s317_seqintegr_valid	value	0.125 0 0.40000000000000002	none
+s317_seqipos_integration	value	0.29999999999999999 0 0.40000000000000002	none
+s317_seqipos_integr	value	0.29999999999999999 0 0.40000000000000002	none
+s8_012_integr_with_missing	value	0.5 0.10000000000000001 0.69999999999999996 0.5 0.20000000000000001 0.10000000000000001 0 0 0.20000000000000001	none
+s8_012_integr_without_missing	value	0.5 0.33333333333333331 0.875 0.5 0.66666666666666663 0.125	none
+s8_012_integr_width3_with_missing	value	0.16666666666666666 0.16666666666666666 0.33333333333333331 0.83333333333333337 0 0	none
+s8_012_ibad_with_missing	value	0.25 0.10000000000000001 0.25	none
+s8_012_ipos_integr_with_missing	value	0.5 0.10000000000000001 0.69999999999999996	none
+s8_rep006_integr_empty_without_missing	value	0.33333333333333331 NaN 0.29999999999999999	none
+s8_rep006_integr_empty_with_missing	value	0.10000000000000001 0 0.29999999999999999	none
+s8_rep006_ibad_empty_without_missing	value	0.66666666666666663 NaN 0.69999999999999996	none
+s8_rep006_ibad_empty_with_missing	value	0.10000000000000001 0 0.34999999999999998	none
+s8_rep006_ipos_integr_empty_with_missing	value	0.10000000000000001 0 0.29999999999999999	none
+s8_rep006_seqindic_empty_without_missing	value	0.33333333333333331 NaN 0.29999999999999999 0.66666666666666663 NaN 0.69999999999999996	none
+s8_rep006_seqindic_empty_with_missing	value	0.10000000000000001 0 0.29999999999999999 0.10000000000000001 0 0.34999999999999998	none
+s312_r_seqipos_missing_gap	value	0.66666666666666663	none
+s312_r_seqipos_unlisted_gap	value	0.66666666666666663	none
+s312_r_seqindic_vpos_missing_gap	value	0.66666666666666663	none
+s312_seqivolatility_without_gap	value	0.83333333333333326	none

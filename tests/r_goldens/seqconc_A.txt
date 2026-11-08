@@ -1,0 +1,5 @@
+# R: seqconc(A, sep='-')
+A-A-B-C-C-C
+A-B-B-B-C-A
+D-D-D-D-D-D
+A-B-A-B-A-B

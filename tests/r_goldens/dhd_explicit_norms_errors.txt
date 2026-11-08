@@ -1,0 +1,4 @@
+negative|[!] Negative substitution costs are not allowed
+nan|missing value where TRUE/FALSE needed
+diagonal|[!] Non-zero diagonal elements in substitution cost matrix (sm)!
+undersized|[!] size of substitution cost matrix must be 4x4

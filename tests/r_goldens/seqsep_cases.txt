@@ -1,0 +1,16 @@
+# R oracle: TraMineR 2.2-14 seqsep
+# TSV columns: case, sl, sep, position, input, output
+"sl1_default"	"1"	"-"	"1"	"ABCD"	"A-B-C-D"
+"sl1_default"	"1"	"-"	"2"	"XYZ"	"X-Y-Z"
+"sl1_pipe"	"1"	"|"	"1"	"AA"	"A|A"
+"sl1_pipe"	"1"	"|"	"2"	"B"	"B"
+"sl2_default"	"2"	"-"	"1"	"AABB"	"AA-BB"
+"sl2_default"	"2"	"-"	"2"	"CCDD"	"CC-DD"
+"sl2_default"	"2"	"-"	"3"	"EE"	"EE"
+"sl2_double_colon"	"2"	"::"	"1"	"AABBCC"	"AA::BB::CC"
+"sl2_double_colon"	"2"	"::"	"2"	"DDEE"	"DD::EE"
+"sl3_slash"	"3"	"/"	"1"	"AAABBB"	"AAA/BBB"
+"sl3_slash"	"3"	"/"	"2"	"CCCDDDFFF"	"CCC/DDD/FFF"
+"sl3_slash"	"3"	"/"	"3"	"XYZ"	"XYZ"
+"empty_after_value"	"1"	"-"	"1"	"AB"	"A-B"
+"empty_after_value"	"1"	"-"	"2"	""	"A-B"

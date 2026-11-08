@@ -1,0 +1,10 @@
+# kind	fields (tab separated); numbers are sprintf('%.17g')
+eha	whole	SAMM1 SAMM2	None 1 2	None 1 None None 2 1 2
+indicator	whole	SAMM1	0 1 0 0 0 1 0
+indicator	whole	SAMM2	0 0 0 0 1 0 1
+eha	fractional	SAMM1.5 SAMM2.5	None 1.5 2.5	None 1.5 None None 2.5 1.5 2.5
+indicator	fractional	SAMM1.5	0 1 0 0 0 1 0
+indicator	fractional	SAMM2.5	0 0 0 0 1 0 1
+eha	reversed	SAMM2 SAMM1	None 1 2	None 2 None None 1 2 1
+indicator	reversed	SAMM2	0 0 0 0 1 0 1
+indicator	reversed	SAMM1	0 1 0 0 0 1 0

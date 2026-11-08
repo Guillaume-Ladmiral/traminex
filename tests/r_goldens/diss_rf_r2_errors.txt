@@ -1,0 +1,5 @@
+dissrf_weighted_first=ERROR:Selected grp.meth 'first' does not apply to weighted data! Use grp.meth='prop'.
+dissrf_weighted_random=ERROR:Selected grp.meth 'random' does not apply to weighted data! Use grp.meth='prop'.
+seqrf_weighted_first=ERROR:Selected grp.meth 'first' does not apply to weighted data! Use grp.meth='prop'.
+seqrf_explicit_weighted_random=ERROR:Selected grp.meth 'random' does not apply to weighted data! Use grp.meth='prop'.
+dissrf_invalid_method=ERROR: grp.meth must be one of 'first', 'random', 'prop'

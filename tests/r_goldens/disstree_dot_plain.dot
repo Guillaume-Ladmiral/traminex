@@ -1,0 +1,15 @@
+digraph distree{
+"tree_none"[shape=box,  label="n: 15 s2: 5.39Split: X R2:0.257"];
+"tree_none_left"[shape=box,  label="n: 3 s2: 0.706"];
+"tree_none_right"[shape=box,  label="n: 12 s2: 4.82Split: A R2:0.157"];
+"tree_none_right_left"[shape=box,  label="n: 4 s2: 4.51"];
+"tree_none_right_right"[shape=box,  label="n: 8 s2: 3.85Split: A R2:0.156"];
+"tree_none_right_right_left"[shape=box,  label="n: 5 s2: 3.01"];
+"tree_none_right_right_right"[shape=box,  label="n: 3 s2: 3.63"];
+"tree_none"->"tree_none_left";
+"tree_none"->"tree_none_right";
+"tree_none_right"->"tree_none_right_left";
+"tree_none_right"->"tree_none_right_right";
+"tree_none_right_right"->"tree_none_right_right_left";
+"tree_none_right_right"->"tree_none_right_right_right";
+}

@@ -1,0 +1,5 @@
+case|class|message
+both_maps|simpleError,error,condition|In tryCatch() : seqdist.args and seqdist_arg cannot be specified together. seqdist_arg is deprecated, use seqdist.args instead.
+empty_map|getvarError,missingArgError,error,condition|argument "method" is missing, with no default
+cmprange_reversed|simpleError,error,condition|undefined columns selected
+cmprange_outside|simpleError,error,condition|only 0's may be mixed with negative subscripts

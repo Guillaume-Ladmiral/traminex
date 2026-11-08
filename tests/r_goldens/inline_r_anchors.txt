@@ -1,0 +1,61 @@
+# case	kind	fields (tab-separated; newlines written as \n)
+no_sm_OM	error	'sm' must be specified
+no_sm_OMloc	error	'sm' must be specified
+no_sm_OMslen	error	'sm' must be specified
+no_sm_OMspell	error	'sm' must be specified
+no_sm_OMstran	error	'otto' must be specified
+no_sm_TWED	error	'nu' must be specified
+lcs_maxlength	values	0	0.40000000000000002	1.2	0.40000000000000002	0	1.2	1.2	1.2	0
+lcs_norm_length	error	'norm' must be one of: auto, none, maxlength, gmean, maxdist, YujianBo
+om_asymmetric_maxdist	values	0	0.46666666666666667	0.66666666666666663	0.46666666666666667	0	0.20000000000000001	0.66666666666666663	0.20000000000000001	0
+fixture_b_d12_OM	values	1	1	0.49999999999999989	0.5	0.66666666666666663
+fixture_b_d12_LCS	values	0.49999999999999989	1	0.49999999999999989	0.5	0.66666666666666663
+fixture_b_d12_LCP	values	1	2	1	1	1
+fixture_b_d12_RLCP	values	1	2	1	1	1
+fixture_b_d12_HAM	values	0.83333333333333337	0.83333333333333337	0.91666666666666663	0.83333333333333337	0.90909090909090906
+fixture_b_d12_DHD	values	0.8125	0.8125	0.90625	0.8125	0.89655172413793105
+om_asymmetric_upper_bound_maxdist	values	1
+om_asymmetric_upper_bound_gmean	values	1
+fx_c_seqient_raw	values	1.0397207708399179	0.69314718055994529
+fx_c_seqient_norm	values	0.94639463035718596	0.63092975357145742
+seqrecode_otherwise_alphabet	strings	W	O
+seqrecode_otherwise_rows	strings	W-W-W-O	W-W-O-O
+sort_c_utf8	strings	_x	1	10	2	a	A	b	B	e	é	Z
+dissrf_weighted_wsum	values	4
+seqmeant_without_missing	dim	3	1
+seqmeant_with_missing	dim	4	1
+seqstatd_frequencies	dim	3	6
+seqistatd	dim	6	3
+seqstatf	dim	3	2
+seqtrate	dim	3	3
+cpal	length	3
+stlab	length	3
+per_sequence_seqient	dim	6	1
+per_sequence_seqtransn	dim	6	1
+per_sequence_seqlength	dim	6	1
+per_sequence_seqici	dim	6	1
+per_sequence_seqST	dim	6	1
+per_sequence_seqivolatility	length	6
+per_sequence_seqivardur	length	6
+refseq_missing_CONSTANT	values	2	4	6
+refseq_missing_TRATE	values	2	3.5	5.25
+refseq_missing_INDELS	values	2	4	6
+refseq_missing_INDELSLOG	values	1.0986122886681096	1.9134564042055746	2.6031373767890336
+seqcost_constant_with_missing_sm	values	0	2	2	2	2	0	2	2	2	2	0	2	2	2	2	0
+seqcost_constant_with_missing_sm	dim	4	4
+seqcost_constant_with_missing_indel	values	1
+unobserved_cost_2	values	0.33333333333333331	0.33333333333333331	0.33333333333333331
+unobserved_cost_50	values	0.040000000000000001	0.026666666666666668	0.013333333333333334
+infinite_cost_1_2	error	missing value where TRUE/FALSE needed
+infinite_cost_4_5	error	missing value where TRUE/FALSE needed
+infinite_cost_3_4	error	missing value where TRUE/FALSE needed
+infinite_unobserved_cost_given_indel	error	missing value where TRUE/FALSE needed
+indels_refseq_unobserved	error	missing value where TRUE/FALSE needed
+indels_refseq_unobserved_no_check	values	Inf	Inf	Inf
+nms_refseq_with_missing	values	3.1622776601683795	2.8284271247461903
+llcs_rows_1_2	values	2
+llcp_rows_1_2	values	0
+llcs_row_1_itself	values	4
+llcp_row_1_itself	values	4
+llcs_two_rows	error	'list' object cannot be coerced to type 'integer'
+llcp_two_rows	error	'list' object cannot be coerced to type 'integer'

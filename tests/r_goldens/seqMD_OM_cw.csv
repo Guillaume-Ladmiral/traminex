@@ -1,0 +1,5 @@
+# R: TraMineR::seqdistmc(list(ch1,ch2), method='OM', sm='CONSTANT', indel=1, cweight=c(2,1)); see make_goldens_seqMD.R
+0,14,26,10
+14,0,20,16
+26,20,0,24
+10,16,24,0

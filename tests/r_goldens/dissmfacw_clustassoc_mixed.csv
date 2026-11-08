@@ -1,0 +1,6 @@
+# R 4.6.2; TraMineR 2.2-14
+# TraMineR::dissmfacw(toy_D ~ clustf + covar, toy_data, R=1, squared=FALSE); rows clustf,covar,Total
+# columns: PseudoF, PseudoR2, explained SS (SS = PseudoR2 * SCtot)
+1.17880794701988,0.0368377483443712,0.0589403973509939
+1,0.03125,0.05
+14.5000000000001,0.90625,1.45

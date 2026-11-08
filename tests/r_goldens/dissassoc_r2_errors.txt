@@ -1,0 +1,7 @@
+invalid_method=ERROR:attempt to set 'rownames' on an object with no dimensions
+fractional_replicate=ERROR: [!] to permute replicate, you should specify integer weights
+weights_short=ERROR:missing value where TRUE/FALSE needed
+group_short=VALUE
+negative_R=VALUE
+negative_sampling_weight=ERROR:negative probability
+zero_sampling_weights=ERROR:missing value where TRUE/FALSE needed

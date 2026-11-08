@@ -1,0 +1,13 @@
+---
+format:
+  html:
+    embed-resources: true
+    number-sections: true
+    toc: true
+    toc-expand: 4
+    toc-title: Contents
+execute:
+  enabled: false
+---
+
+{{< include SEQTREE.md >}}

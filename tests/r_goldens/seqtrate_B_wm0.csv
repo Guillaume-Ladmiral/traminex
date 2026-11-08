@@ -1,0 +1,4 @@
+# R: seqtrate(B_wm0, weighted=TRUE, lag=1, with.missing=FALSE) KxK rates
+            0.75,            0.25,               0
+               0,            0.75,            0.25
+               0,               0,               1

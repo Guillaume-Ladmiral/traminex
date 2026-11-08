@@ -1,0 +1,4 @@
+case=message
+multi_group_state_route=[!] With per.state = FALSE, only a single group is supported. Considerusing seqsplot() instead.
+unobserved_state=[!] state contains only unobserved states
+not_sequence=[!] seqdata isn't a sequence object, use the seqdef function to createone

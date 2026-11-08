@@ -1,0 +1,15 @@
+# TraMineR 2.2-14 seqdef errors
+ERROR|duplicate_alphabet|\n [!] duplicated element(s) in alphabet: A
+ERROR|unknown_state|\n [!] state(s) B found in 'data' should be in 'alphabet'
+ERROR|weights_length|\n [!] number of weights must equal number of sequences
+ERROR|weights_na|\n [!] Negative or NA weights!
+ERROR|weights_negative|\n [!] Negative or NA weights!
+ERROR|palette_length|\n [!] number of colors in 'cpal' must equal length of alphabet
+ERROR|label_length|\n [!] number of labels must equal number of states in the alphabet
+ERROR|void_type|'void' must be a character different from left, gaps, and right!
+ERROR|void_equals_left|'void' must be a character different from left, gaps, and right!
+ERROR|void_equals_gaps|'void' must be a character different from left, gaps, and right!
+ERROR|void_equals_right|'void' must be a character different from left, gaps, and right!
+ERROR|id_length|invalid 'row.names' length
+ERROR|id_duplicate|duplicate 'row.names' are not allowed
+ERROR|id_missing|missing values in 'row.names' are not allowed

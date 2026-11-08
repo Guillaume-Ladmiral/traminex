@@ -1,0 +1,4 @@
+E S E S E S
+A A B C C C
+A B B B C A
+               0                2                0                2                0                2

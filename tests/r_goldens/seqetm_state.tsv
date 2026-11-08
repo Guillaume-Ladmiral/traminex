@@ -1,0 +1,5 @@
+# R: seqetm(sd, method='state', use.labels=TRUE)
+A	B	C
+A	Apple	Banana	Cherry
+B	Apple	Banana	Cherry
+C	Apple	Banana	Cherry

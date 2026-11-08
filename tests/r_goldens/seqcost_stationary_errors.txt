@@ -1,0 +1,22 @@
+case|class|message
+non_stslist|simpleError,error,condition| [!] data is NOT a sequence object, see seqdef function to create one
+missing_method|simpleError,error,condition| [!] method must be one of: CONSTANT TRATE FEATURES FUTURE INDELS INDELSLOG
+invalid_method|simpleError,error,condition| [!] method must be one of: CONSTANT TRATE FEATURES FUTURE INDELS INDELSLOG
+trate_one_state_stationary|subscriptOutOfBoundsError,error,condition|subscript out of bounds
+constant_one_state_timevarying|simpleError,error,condition|only matrix diagonals can be replaced
+trate_one_state_timevarying|subscriptOutOfBoundsError,error,condition|subscript out of bounds
+invalid_transition|simpleError,error,condition| [!] transition must be one of: previous next both
+constant_na|simpleError,error,condition|no value for the constant substitution-cost
+features_missing|simpleError,error,condition| [!] state.features should be a data.frame containing one row per state (possibly one for missing values).
+features_wrong_rows|simpleError,error,condition| [!] state.features should be a data.frame containing one row per state (possibly one for missing values).
+features_zero_columns|simpleError,error,condition|incorrect number of dimensions
+features_bad_weights|simpleError,error,condition|'weights' must be of length p (or 1)
+features_unnamed_type|simpleError,error,condition|invalid ‘type’; must be named list
+features_bad_type_column|simpleError,error,condition|type$asymm has invalid column names
+features_bad_binary|simpleError,error,condition|at least one binary variable has more than 2 levels.
+future_timevarying|simpleError,error,condition| [!] time.varying substitution cost is not (yet) implemented for method FUTURE.
+features_timevarying|simpleError,error,condition| [!] time.varying substitution cost is not (yet) implemented for method FEATURES.
+trate_time_lag2_previous|subscriptOutOfBoundsError,error,condition|subscript out of bounds
+trate_time_lag2_next|subscriptOutOfBoundsError,error,condition|subscript out of bounds
+trate_time_lag2_both|subscriptOutOfBoundsError,error,condition|subscript out of bounds
+trate_time_negative_lag|subscriptOutOfBoundsError,error,condition|subscript out of bounds
